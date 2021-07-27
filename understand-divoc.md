@@ -6,10 +6,6 @@ description: 'Presentations, Videos, and Articles'
 
 ## DIVOC Presentations <a id="divoc-presentations"></a>
 
-{% file src=".gitbook/assets/divoc-overview-v4.pdf" caption="DIVOC Overview" %}
-
-{% file src=".gitbook/assets/c-19-digital-credentialing.pdf" caption="Digital Credentialing" %}
-
 ## DIVOC Videos <a id="divoc-videos"></a>
 
 {% embed url="https://www.youtube.com/watch?v=vl\_EP9fpzh0&feature=youtu.be" caption="" %}
@@ -31,10 +27,4 @@ description: 'Presentations, Videos, and Articles'
 ## DIVOC Adoption Playbook <a id="divoc-presentations"></a>
 
 Country Adoption Playbook
-
-{% file src=".gitbook/assets/13072021\_country-adoption-playbook.pdf" caption="Country Adoption Playbook" %}
-
-
-
-
 
