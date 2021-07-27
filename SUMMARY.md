@@ -4,7 +4,7 @@
 * [Understand iFIX](understand-divoc.md)
 * [Tech Docs](tech-docs.md)
 * [FAQ](faq.md)
-* [About DIVOC Project](about-project-team.md)
+* [About iFIX Project](about-project-team.md)
 * [Demo Videos](demo-videos/README.md)
   * [1. Create Facility Registry](demo-videos/1.-create-facility-registry.md)
   * [2. Create Vaccinator Registry](demo-videos/2.-create-vaccinator-registry.md)
