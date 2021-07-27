@@ -1,8 +1,8 @@
 ---
-description: DIVOC - Digital Infrastructure for Vaccination Open Credentialing
+description: iFIX - India Fiscal Information Exchange Platform
 ---
 
-# DIVOC
+# iFIX
 
 ## Brief
 
