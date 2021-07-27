@@ -62,5 +62,5 @@ If the vaccine recipient has provided her/his mobile/email, then a link to downl
 
 ## **Unlike India, we don't have Digilocker and Aadhaar. Does DIVOC come with a built-in certificate repository?**
 
-**Yes**, a certificate repository is integrated within the DIVOC system. Certificates are natively digital, machine readable, digitally signed, verifiable, and also printable with a QR code making it easy for people to keep it electronically or physically. Any digitally authenticable ID such as mobile, email, etc can be used to allow users securely access their certificate from the repository. 
+**Yes**, a certificate repository is integrated within the DIVOC system. Certificates are natively digital, machine readable, digitally signed, verifiable, and also printable with a QR code making it easy for people to keep it electronically or physically. Any digitally authenticable ID such as mobile, email, etc can be used to allow users securely access their certificate from the repository.
 
