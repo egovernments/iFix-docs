@@ -24,7 +24,7 @@
 
 ## Tech Community <a id="community"></a>
 
-* [Ideas & Discussions](https://github.com/egovernments/DIVOC/discussions)
+* [Ideas & Discussions](https://github.com/egovernments/iFix/discussions)
 * [Issues](https://github.com/egovernments/DIVOC/issues)
 * [Project Repo](https://github.com/egovernments/DIVOC)
 
