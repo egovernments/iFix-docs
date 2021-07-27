@@ -9,7 +9,7 @@
 
 ## Tech Community <a id="community"></a>
 
-* [Ideas & Discussions](https://github.com/egovernments/DIVOC/discussions)
-* [Issues](https://github.com/egovernments/DIVOC/issues)
-* [Project Repo](https://github.com/egovernments/DIVOC)
+* [Ideas & Discussions](https://github.com/egovernments/iFix/discussions)
+* [Issues](https://github.com/egovernments/iFix/issues)
+* [Project Repo](https://github.com/egovernments/iFix)
 
