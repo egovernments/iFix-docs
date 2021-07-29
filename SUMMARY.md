@@ -4,7 +4,7 @@
 * [Platform](platform.md)
 * [Standards](standards.md)
 * [People](people.md)
-* [Get Started](getting-started.md)
+* [Getting Started](getting-started.md)
 
 ## Community
 
