@@ -4,6 +4,16 @@ description: Standards
 
 # Standards
 
+## Information Model
+
+1. Government
+2. Department
+3. EAT \(Expenditure,Advance and Transfers\) e.g. Schemes
+4. Project
+5. Fiscal Event
+
+## APIs
+
 {% api-method method="post" host="https://api.ifix.org.in" path="/v1/fiscal/" %}
 {% api-method-summary %}
 Post Fiscal Event

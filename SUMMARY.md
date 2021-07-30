@@ -3,12 +3,12 @@
 * [Mission](README.md)
 * [Platform](platform/README.md)
   * [Standards](platform/standards.md)
+  * [Getting Started](platform/getting-started.md)
+  * [Source Code](https://github.com/egovernments/DIVOC)
 * [People](people.md)
-* [Getting Started](getting-started.md)
 
 ## Community
 
 * [Discussions](https://github.com/egovernments/iFix/discussions)
 * [Issues](https://github.com/egovernments/DIVOC/issues)
-* [Source Code](https://github.com/egovernments/DIVOC)
 
