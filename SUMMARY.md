@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Mission](README.md)
-* [Platform](platform.md)
-* [Standards](standards.md)
+* [Platform](platform/README.md)
+  * [Standards](platform/standards.md)
 * [People](people.md)
 * [Getting Started](getting-started.md)
 
