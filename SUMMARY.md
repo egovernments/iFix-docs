@@ -3,7 +3,7 @@
 * [Mission](README.md)
 * [Platform](platform/README.md)
   * [Standards](platform/standards.md)
-  * [Source Code](https://github.com/egovernments/DIVOC)
+  * [Source Code](https://github.com/egovernments/iFix)
   * [Getting Started](platform/getting-started.md)
 * [Ecosystem](ecosystem.md)
 * [Exemplars](exemplars.md)
