@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Getting Started](README.md)
+* [FIX](README.md)
 * [Platform](platform/README.md)
   * [Principles](platform/principles.md)
   * [Architecture](platform/architecture.md)
