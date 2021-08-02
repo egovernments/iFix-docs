@@ -8,9 +8,12 @@ description: Standards
 
 1. Government
 2. Department
-3. EAT \(Expenditure,Advance and Transfers\) e.g. Schemes
-4. Project
-5. Fiscal Event
+3. Fund
+4. Location
+5. Chart of Account
+6. Program
+7. Project
+8. Fiscal Event
 
 ## APIs
 

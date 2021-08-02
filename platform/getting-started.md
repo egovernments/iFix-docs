@@ -1,8 +1,8 @@
 ---
-description: Frequently Asked Questions (FAQs)
+description: Step by Step Installation Guide
 ---
 
-# Getting Started
+# Installation
 
 ## Getting Super Powers
 

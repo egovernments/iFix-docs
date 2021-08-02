@@ -1,22 +1,18 @@
 ---
-description: About the iFIX Platform
+description: About the Platform
 ---
 
 # Platform
 
-## Principles <a id="divoc-presentations"></a>
+The platform is built as a Public Digital Good and is being designed using a key set of design principles available [here]().
 
-## Architecture <a id="divoc-presentations"></a>
+The platform is built using Micro Services architecture. The list of services are available [here]().
 
-#### iFIX Platform
+The services are designed to comply with standards which consists of the Common Information Model and APIs. Click [here ](https://docs.ifix.org.in/standards)to view the details.
 
-#### iFIX Adapter
+The source code for the platform is hosted [here](https://github.com/egovernments/iFix).
 
-#### iFIX Dashboard
-
-## Standards <a id="divoc-presentations"></a>
-
-iFIX standards consists of the Information Model and APIs. Click [here ](https://docs.ifix.org.in/standards)to view the details.
+To setup the platform, follow the installation steps listed here.
 
 ## Technology <a id="divoc-presentations"></a>
 
