@@ -4,7 +4,7 @@ description: About the Platform
 
 # Platform
 
-The platform is built as a Public Digital Good and is being designed using a key set of design principles available [here]().
+The platform is built as a Public Digital Good and is being designed using a key set of design principles available [here](principles.md).
 
 The platform is built using Micro Services architecture. The list of services are available [here]().
 

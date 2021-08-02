@@ -13,5 +13,5 @@
 ## Community
 
 * [Discussions](https://github.com/egovernments/iFix/discussions)
-* [Issues](https://github.com/egovernments/DIVOC/issues)
+* [Issues](https://github.com/egovernments/iFix/issues)
 
