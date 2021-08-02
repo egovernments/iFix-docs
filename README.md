@@ -20,9 +20,5 @@ FIX can be used for variety of use cases
 2. State Governments can use FIX to exchange fiscal information about various national funded and state funded programs across various departments.
 3. Local Governments can use FIX to exchange fiscal information with various state and national departments. 
 
-## News/Events 
-
-Punjab to build first of its kind fiscal information exchange platform [https://www.thehindu.com/news/national/other-states/punjab-to-build-first-of-its-kind-fiscal-information-exchange-platform/article33642970.ece](https://www.thehindu.com/news/national/other-states/punjab-to-build-first-of-its-kind-fiscal-information-exchange-platform/article33642970.ece)
-
 \*\*\*\*
 
