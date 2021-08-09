@@ -43,7 +43,7 @@ Post infra setup \(Kubernetes Cluster\), the deployment has got 2 stages and 2 m
 ```text
 cd iFix-DevOps/deploy-as-code/egov-deployer
 
-go run digit_setup.go
+go run ifix_setup.go
 
 #Be prepared for the following questions
 1. Do you have the Kubernetes Setup?
