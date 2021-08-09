@@ -31,7 +31,7 @@ The [**Amazon Elastic Kubernetes Service \(EKS\)**](https://docs.aws.amazon.com/
    Default output format []: text
    ```
 
-   5. The above will create the following file In your machine as /Users//.aws/credentials
+   5. The above will create the following file In your machine as /Users/.aws/credentials
 
    ```text
    [egov-test-account] 
@@ -39,7 +39,7 @@ The [**Amazon Elastic Kubernetes Service \(EKS\)**](https://docs.aws.amazon.com/
    aws_secret_access_key=****************************
    ```
 
-Before we provision the cloud resources, we need to understand and be sure about what resources need to be provisioned by terraform to deploy DIGIT. The following picture shows the various key components. \(EKS, Worker Nodes, PostGres DB, EBS Volumes, Load Balancer\)
+Before we provision the cloud resources, we need to understand and be sure about what resources need to be provisioned by terraform to deploy DIGIT. The following picture shows the various key components. \(EKS, Worker Nodes, Postgress DB, EBS Volumes, Load Balancer\)
 
 ![](https://gblobscdn.gitbook.com/assets%2F-MEQnEQWBZ6Gjip-3pEg%2F-Md1lfe6NwE0P1OdZlxg%2F-Md1rBSubx1ny2pReDeE%2Fimage.png?alt=media&token=45a75d9d-f45a-466c-9298-9c1db825cd8d)
 
