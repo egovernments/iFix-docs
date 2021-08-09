@@ -4,7 +4,9 @@ The [**Amazon Elastic Kubernetes Service \(EKS\)**](https://docs.aws.amazon.com/
 
 ## Pre-read: <a id="pre-read"></a>
 
-* * 
+* Know about EKS: [https://www.youtube.com/watch?v=SsUnPWp5ilc](https://www.youtube.com/watch?v=SsUnPWp5ilc)
+* Know what is terraform: [https://youtu.be/h970ZBgKINg](https://youtu.be/h970ZBgKINg)
+
 ## Prerequisites <a id="Prerequisites"></a>
 
 1. ​[**AWS account**](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=default&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) with the admin access to provision EKS Service, you can always subscribe to free AWS account to learn the basics and try, but there is a limit to [**what is offered as free**](https://aws.amazon.com/free/), for this demo you need to have a commercial subscription to the EKS service, if you want to try out for a day or two, it might cost you about Rs 500 - 1000. **\(Note: Post the Demo, for the internal folks, eGov will provide a 2-3 hrs time bound access to eGov's AWS account based on the request and available number of slots per day\)**
@@ -56,10 +58,36 @@ Considering the above deployment architecture, the following is the resource gra
 * Let's Clone the [DIGIT-DevOps GitHub repo](https://github.com/egovernments/DIGIT-DevOps/tree/release) where the terraform script to provision EKS cluster is available and below is the structure of the files.
 
 ```text
-git clone --branch release https://github.com/egovernments/DIGIT-DevOps.gitcd DIGIT-DevOps/infra-as-code/terraform​​└── modules    ├── db    │   └── aws    │       ├── main.tf    │       ├── outputs.tf    │       └── variables.tf    ├── kubernetes    │   └── aws    │       ├── eks-cluster    │       │   ├── main.tf    │       │   ├── outputs.tf    │       │   └── variables.tf    │       ├── network    │       │   ├── main.tf    │       │   ├── outputs.tf    │       │   └── variables.tf    │       └── workers    │           ├── main.tf    │           ├── outputs.tf    │           └── variables.tf    └── storage        └── aws            ├── main.tf            ├── outputs.tf            └── variables.tf
-```
+git clone --branch release https://github.com/egovernments/iFix-DevOps.git
+cd iFix-DevOps/infra-as-code/terraform
 
-In here, you will find the **main.tf** under each of the modules that has the provisioning definition for DIGIT resources like EKS cluster, RDS, and Storage, etc. All these are modularized and reacts as per the customized options provided.
+
+└── modules
+    ├── db
+    │   └── aws
+    │       ├── main.tf
+    │       ├── outputs.tf
+    │       └── variables.tf
+    ├── kubernetes
+    │   └── aws
+    │       ├── eks-cluster
+    │       │   ├── main.tf
+    │       │   ├── outputs.tf
+    │       │   └── variables.tf
+    │       ├── network
+    │       │   ├── main.tf
+    │       │   ├── outputs.tf
+    │       │   └── variables.tf
+    │       └── workers
+    │           ├── main.tf
+    │           ├── outputs.tf
+    │           └── variables.tf
+    └── storage
+        └── aws
+            ├── main.tf
+            ├── outputs.tf
+            └── variables.tf
+```
 
 **Example:**
 
