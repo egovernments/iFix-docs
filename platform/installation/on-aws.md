@@ -23,18 +23,21 @@ The [**Amazon Elastic Kubernetes Service \(EKS\)**](https://docs.aws.amazon.com/
    2. Open the terminal and Run the following command you have already installed the AWS CLI and you have the credentials saved. \(Provide the credentials and you can leave the region and output format as blank\)
 
    ```text
-   aws configure --profile egov-workshop-account ​AWS Access Key ID []:AWS Secret Access Key []:Default region name []: ap-south-1Default output format []: text
+   aws configure --profile egov-workshop-account 
+
+   AWS Access Key ID []:<Your access key>
+   AWS Secret Access Key []:<Your secret key>
+   Default region name []: ap-south-1
+   Default output format []: text
    ```
 
    5. The above will create the following file In your machine as /Users//.aws/credentials
 
    ```text
-   [egov-test-account] aws_access_key_id=*********** aws_secret_access_key=****************************
+   [egov-test-account] 
+   aws_access_key_id=*********** 
+   aws_secret_access_key=****************************
    ```
-
-## **DIGIT - Infra Resource Graph on AWS** <a id="Set-up-and-initialize-your-Terraform-workspace"></a>
-
-​[**Terraform**](https://www.terraform.io/intro/index.html) helps you build a graph of all your resources, and parallelizes the creation and modification of any non-dependent resources. Because of this, Terraform builds infrastructure as efficiently as possible, and operators get insight into dependencies in their infrastructure.
 
 Before we provision the cloud resources, we need to understand and be sure about what resources need to be provisioned by terraform to deploy DIGIT. The following picture shows the various key components. \(EKS, Worker Nodes, PostGres DB, EBS Volumes, Load Balancer\)
 
