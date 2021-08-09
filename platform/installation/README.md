@@ -9,7 +9,7 @@
 * Know how to port forward to a pod running inside k8s cluster and work locally [https://www.youtube.com/watch?v=TT3nd5n5Yus](https://www.youtube.com/watch?v=TT3nd5n5Yus)
 * Know sops to secure your keys/creds: [https://www.youtube.com/watch?v=DWzJ87KbwxA](https://www.youtube.com/watch?v=DWzJ87KbwxA)
 
-## v1. Choose the Cloud <a id="v-1-choose-the-cloud"></a>
+## 1. Choose the Cloud <a id="v-1-choose-the-cloud"></a>
 
 Choose you cloud and follow the Instruction to setup a Kubernetes cluster before moving on to the Deployment.
 
