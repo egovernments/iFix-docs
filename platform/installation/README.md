@@ -15,15 +15,11 @@ Choose you cloud and follow the Instruction to setup a Kubernetes cluster before
 
 {% page-ref page="on-aws.md" %}
 
-
-
 ## 2. Deployment <a id="2-deploy-digit"></a>
 
 {% page-ref page="ifix-deployment-1.md" %}
 
 {% page-ref page="mgramseva-deployment.md" %}
-
-
 
 ## 3. Destroy the Cluster <a id="5-destroy-the-cluster"></a>
 
