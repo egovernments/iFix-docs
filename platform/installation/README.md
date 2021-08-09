@@ -73,5 +73,5 @@ terraformdestroy​
 
 ## Conclusion: <a id="conclusion"></a>
 
-All Done, we have successfully Created infra on Cloud, Deployed Digit, Bootstrapped DIGIT, Performed a Transaction on PGR and Finally Destroyed the cluster.
+All Done, we have successfully Created infra on Cloud, Deployed Digit in the cluster.
 
