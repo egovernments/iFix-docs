@@ -23,9 +23,7 @@ Choose you cloud and follow the Instruction to setup a Kubernetes cluster before
 
 ## 3. Destroy the Cluster <a id="5-destroy-the-cluster"></a>
 
-Post validating the PGR functionality share the API response of the following request to assess the correctness of successful DIGIT PGR Deployment.
-
-Finally, cleanup the DIGIT Setup if you wish, using the following command. This will delete the entire cluster and other cloud resources that were provisioned for the DIGIT Setup.
+Finally, cleanup the cluster Setup if you wish, using the following command. This will delete the entire cluster and other cloud resources that were provisioned for the DIGIT Setup.
 
 ```text
 cd DIGIT-DevOps/infra-as-code/terraform/my-digit-eks
