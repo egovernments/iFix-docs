@@ -8,6 +8,8 @@
     * [Information Model](platform/standards/information-model.md)
     * [APIs](platform/standards/apis.md)
   * [Full Installation](platform/installation/README.md)
+    * [Mgramseva Deployment](platform/installation/mgramseva-deployment.md)
+    * [Ifix Deployment](platform/installation/ifix-deployment.md)
     * [On AWS](platform/installation/on-aws.md)
   * [Source Code](https://github.com/egovernments/iFix)
 * [Ecosystem](ecosystem/README.md)
