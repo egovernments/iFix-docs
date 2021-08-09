@@ -354,7 +354,7 @@ module "kafka" {
 You can define your configurations in **variables.tf** and provide the env specific cloud requirements so that using the same terraform template you can customize the configurations.
 
 ```text
-├── sample-aws
+├── iFix-dev
 │   ├── main.tf 
 │   ├── outputs.tf
 │   ├── providers.tf
