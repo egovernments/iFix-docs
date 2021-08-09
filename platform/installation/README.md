@@ -1,4 +1,4 @@
-# Full Installation
+# Installation
 
 ## Pre-read: <a id="pre-read"></a>
 

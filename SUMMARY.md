@@ -7,7 +7,7 @@
   * [Standards](platform/standards/README.md)
     * [Information Model](platform/standards/information-model.md)
     * [APIs](platform/standards/apis.md)
-  * [Full Installation](platform/installation/README.md)
+  * [Installation](platform/installation/README.md)
     * [iFix-Deployment](platform/installation/ifix-deployment-1.md)
     * [mGramSeva-Deployment](platform/installation/mgramseva-deployment.md)
     * [On AWS](platform/installation/on-aws.md)
