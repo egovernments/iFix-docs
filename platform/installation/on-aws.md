@@ -116,22 +116,234 @@ cd iFix-DevOps/infra-as-code/terraform
 
 1. The following main.tf with create s3 bucket to store all the state of the execution to keep track.
 
- DIGIT-DevOps/Infra-as-code/terraform/sample-aws/remote-state
+ iFix-DevOps/Infra-as-code/terraform/sample-aws/remote-state
 
  [**main.tf**](https://github.com/egovernments/DIGIT-DevOps/blob/release/infra-as-code/terraform/sample-aws/remote-state/main.tf)**​**
 
 ```text
-provider "aws" {  region = "ap-south-1"}​#This is a bucket name that you can name as you wishresource "aws_s3_bucket" "terraform_state" {  bucket = "try-workshop-yourname" ​  versioning {    enabled = true  }​  lifecycle {    prevent_destroy = true  }}​#This is a bucket name that you can name as you wishresource "aws_dynamodb_table" "terraform_state_lock" {  name           = "try-workshop-yourname"  read_capacity  = 1  write_capacity = 1  hash_key       = "LockID"​  attribute {    name = "LockID"    type = "S"  }}
+provider "aws" {
+  region = "ap-south-1"
+}
+
+#This is a bucket name that you can name as you wish
+resource "aws_s3_bucket" "terraform_state" {
+  bucket = "try-workshop-yourname" 
+
+  versioning {
+    enabled = true
+  }
+
+  lifecycle {
+    prevent_destroy = true
+  }
+}
+
+#This is a bucket name that you can name as you wish
+resource "aws_dynamodb_table" "terraform_state_lock" {
+  name           = "try-workshop-yourname"
+  read_capacity  = 1
+  write_capacity = 1
+  hash_key       = "LockID"
+
+  attribute {
+    name = "LockID"
+    type = "S"
+  }
+}
 ```
 
 2. The following main.tf contains the detailed resource definitions that need to be provisioned, please have a look at it.
 
- Dir: DIGIT-DevOps/Infra-as-code/terraform/sample-aws
+ Dir: iFix-DevOps/Infra-as-code/terraform/sample-aws
 
  [**main.tf**](https://github.com/egovernments/DIGIT-DevOps/blob/release/infra-as-code/terraform/sample-aws/main.tf)
 
 ```text
-# master configs, terraform state helps to maintain the flow of the executionterraform {  backend "s3" {    bucket = "try-workshop-yourname"    key = "terraform"    region = "ap-south-1"  }}​# Network Modulemodule "network" {  source             = "../modules/kubernetes/aws/network"  vpc_cidr_block     = "${var.vpc_cidr_block}"  cluster_name       = "${var.cluster_name}"  availability_zones = "${var.network_availability_zones}"}​# PostGres DBmodule "db" {  source                        = "../modules/db/aws"  subnet_ids                    = "${module.network.private_subnets}"  vpc_security_group_ids        = ["${module.network.rds_db_sg_id}"]  availability_zone             = "${element(var.availability_zones, 0)}"  instance_class                = "db.t3.medium"  engine_version                = "11.5"  storage_type                  = "gp2"  storage_gb                    = "100"  backup_retention_days         = "7"  administrator_login           = "egovdev"  administrator_login_password  = "${var.db_password}"  db_name                       = "${var.cluster_name}-db"  environment                   = "${var.cluster_name}"}​# **********  Uses with various access like Admin, Dev, Deploymodule "iam_user_deployer" {  source  = "terraform-aws-modules/iam/aws//modules/iam-user"​  name          = "${var.cluster_name}-kube-deployer"  force_destroy = true    create_iam_user_login_profile = false  create_iam_access_key         = true​  # User "egovterraform" has uploaded his public key here - https://keybase.io/egovterraform/pgp_keys.asc  pgp_key = "${var.iam_keybase_user}"}​module "iam_user_admin" {  source  = "terraform-aws-modules/iam/aws//modules/iam-user"​  name          = "${var.cluster_name}-kube-admin"  force_destroy = true    create_iam_user_login_profile = false  create_iam_access_key         = true​  # User "egovterraform" has uploaded his public key here - https://keybase.io/egovterraform/pgp_keys.asc  pgp_key = "${var.iam_keybase_user}"}​module "iam_user_user" {  source  = "terraform-aws-modules/iam/aws//modules/iam-user"​  name          = "${var.cluster_name}-kube-user"  force_destroy = true    create_iam_user_login_profile = false  create_iam_access_key         = true​  # User "test" has uploaded his public key here - https://keybase.io/test/pgp_keys.asc  pgp_key = "${var.iam_keybase_user}"}​​​# ********** EKS Cluster (Control Plane) **********data "aws_eks_cluster" "cluster" {  name = "${module.eks.cluster_id}"}​data "aws_eks_cluster_auth" "cluster" {  name = "${module.eks.cluster_id}"}provider "kubernetes" {  host                   = "${data.aws_eks_cluster.cluster.endpoint}"  cluster_ca_certificate = "${base64decode(data.aws_eks_cluster.cluster.certificate_authority.0.data)}"  token                  = "${data.aws_eks_cluster_auth.cluster.token}"  load_config_file       = false  version                = "~> 1.11"}​module "eks" {  source          = "terraform-aws-modules/eks/aws"  cluster_name    = "${var.cluster_name}"  cluster_version = "${var.kubernetes_version}"  subnets         = "${concat(module.network.private_subnets, module.network.public_subnets)}"​  tags = "${    map(      "kubernetes.io/cluster/${var.cluster_name}", "owned",      "KubernetesCluster", "${var.cluster_name}"    )  }"​  vpc_id = "${module.network.vpc_id}"​  # ********** Worker Nodes  worker_groups_launch_template = [    {      name                    = "spot"      subnets                 = "${concat(slice(module.network.private_subnets, 0, length(var.availability_zones)), slice(module.network.public_subnets, 0, length(var.availability_zones)))}"      override_instance_types = "${var.override_instance_types}"      asg_max_size            = 4      asg_desired_capacity    = 4      kubelet_extra_args      = "--node-labels=node.kubernetes.io/lifecycle=spot"      additional_security_group_ids = ["${module.network.worker_nodes_sg_id}"]      spot_allocation_strategy= "capacity-optimized"      spot_instance_pools     = null    },  ]  map_users    = [    {      userarn  = "${module.iam_user_deployer.this_iam_user_arn}"      username = "${module.iam_user_deployer.this_iam_user_name}"      groups   = ["system:masters"]    },    {      userarn  = "${module.iam_user_admin.this_iam_user_arn}"      username = "${module.iam_user_admin.this_iam_user_name}"      groups   = ["global-readonly", "digit-user"]    },    {      userarn  = "${module.iam_user_user.this_iam_user_arn}"      username = "${module.iam_user_user.this_iam_user_name}"      groups   = ["global-readonly"]    },      ]}​# ********** EBS Volumes for the statefulsets (PVCs)module "es-master" {​  source = "../modules/storage/aws"  storage_count = 3  environment = "${var.cluster_name}"  disk_prefix = "es-master"  availability_zones = "${var.availability_zones}"  storage_sku = "gp2"  disk_size_gb = "2"}module "es-data-v1" {​  source = "../modules/storage/aws"  storage_count = 3  environment = "${var.cluster_name}"  disk_prefix = "es-data-v1"  availability_zones = "${var.availability_zones}"  storage_sku = "gp2"  disk_size_gb = "25"}​module "zookeeper" {​  source = "../modules/storage/aws"  storage_count = 3  environment = "${var.cluster_name}"  disk_prefix = "zookeeper"  availability_zones = "${var.availability_zones}"  storage_sku = "gp2"  disk_size_gb = "2"}​module "kafka" {​  source = "../modules/storage/aws"  storage_count = 3  environment = "${var.cluster_name}"  disk_prefix = "kafka"  availability_zones = "${var.availability_zones}"  storage_sku = "gp2"  disk_size_gb = "50"}
+# master configs, terraform state helps to maintain the flow of the execution
+terraform {
+  backend "s3" {
+    bucket = "try-workshop-yourname"
+    key = "terraform"
+    region = "ap-south-1"
+  }
+}
+
+# Network Module
+module "network" {
+  source             = "../modules/kubernetes/aws/network"
+  vpc_cidr_block     = "${var.vpc_cidr_block}"
+  cluster_name       = "${var.cluster_name}"
+  availability_zones = "${var.network_availability_zones}"
+}
+
+# PostGres DB
+module "db" {
+  source                        = "../modules/db/aws"
+  subnet_ids                    = "${module.network.private_subnets}"
+  vpc_security_group_ids        = ["${module.network.rds_db_sg_id}"]
+  availability_zone             = "${element(var.availability_zones, 0)}"
+  instance_class                = "db.t3.medium"
+  engine_version                = "11.5"
+  storage_type                  = "gp2"
+  storage_gb                    = "100"
+  backup_retention_days         = "7"
+  administrator_login           = "egovdev"
+  administrator_login_password  = "${var.db_password}"
+  db_name                       = "${var.cluster_name}-db"
+  environment                   = "${var.cluster_name}"
+}
+
+# **********  Uses with various access like Admin, Dev, Deploy
+module "iam_user_deployer" {
+  source  = "terraform-aws-modules/iam/aws//modules/iam-user"
+
+  name          = "${var.cluster_name}-kube-deployer"
+  force_destroy = true  
+  create_iam_user_login_profile = false
+  create_iam_access_key         = true
+
+  # User "egovterraform" has uploaded his public key here - https://keybase.io/egovterraform/pgp_keys.asc
+  pgp_key = "${var.iam_keybase_user}"
+}
+
+module "iam_user_admin" {
+  source  = "terraform-aws-modules/iam/aws//modules/iam-user"
+
+  name          = "${var.cluster_name}-kube-admin"
+  force_destroy = true  
+  create_iam_user_login_profile = false
+  create_iam_access_key         = true
+
+  # User "egovterraform" has uploaded his public key here - https://keybase.io/egovterraform/pgp_keys.asc
+  pgp_key = "${var.iam_keybase_user}"
+}
+
+module "iam_user_user" {
+  source  = "terraform-aws-modules/iam/aws//modules/iam-user"
+
+  name          = "${var.cluster_name}-kube-user"
+  force_destroy = true  
+  create_iam_user_login_profile = false
+  create_iam_access_key         = true
+
+  # User "test" has uploaded his public key here - https://keybase.io/test/pgp_keys.asc
+  pgp_key = "${var.iam_keybase_user}"
+}
+
+
+
+# ********** EKS Cluster (Control Plane) **********
+data "aws_eks_cluster" "cluster" {
+  name = "${module.eks.cluster_id}"
+}
+
+data "aws_eks_cluster_auth" "cluster" {
+  name = "${module.eks.cluster_id}"
+}
+provider "kubernetes" {
+  host                   = "${data.aws_eks_cluster.cluster.endpoint}"
+  cluster_ca_certificate = "${base64decode(data.aws_eks_cluster.cluster.certificate_authority.0.data)}"
+  token                  = "${data.aws_eks_cluster_auth.cluster.token}"
+  load_config_file       = false
+  version                = "~> 1.11"
+}
+
+module "eks" {
+  source          = "terraform-aws-modules/eks/aws"
+  cluster_name    = "${var.cluster_name}"
+  cluster_version = "${var.kubernetes_version}"
+  subnets         = "${concat(module.network.private_subnets, module.network.public_subnets)}"
+
+  tags = "${
+    map(
+      "kubernetes.io/cluster/${var.cluster_name}", "owned",
+      "KubernetesCluster", "${var.cluster_name}"
+    )
+  }"
+
+  vpc_id = "${module.network.vpc_id}"
+
+  # ********** Worker Nodes
+  worker_groups_launch_template = [
+    {
+      name                    = "spot"
+      subnets                 = "${concat(slice(module.network.private_subnets, 0, length(var.availability_zones)), slice(module.network.public_subnets, 0, length(var.availability_zones)))}"
+      override_instance_types = "${var.override_instance_types}"
+      asg_max_size            = 4
+      asg_desired_capacity    = 4
+      kubelet_extra_args      = "--node-labels=node.kubernetes.io/lifecycle=spot"
+      additional_security_group_ids = ["${module.network.worker_nodes_sg_id}"]
+      spot_allocation_strategy= "capacity-optimized"
+      spot_instance_pools     = null
+    },
+  ]
+  
+  map_users    = [
+    {
+      userarn  = "${module.iam_user_deployer.this_iam_user_arn}"
+      username = "${module.iam_user_deployer.this_iam_user_name}"
+      groups   = ["system:masters"]
+    },
+    {
+      userarn  = "${module.iam_user_admin.this_iam_user_arn}"
+      username = "${module.iam_user_admin.this_iam_user_name}"
+      groups   = ["global-readonly", "digit-user"]
+    },
+    {
+      userarn  = "${module.iam_user_user.this_iam_user_arn}"
+      username = "${module.iam_user_user.this_iam_user_name}"
+      groups   = ["global-readonly"]
+    },    
+  ]
+}
+
+# ********** EBS Volumes for the statefulsets (PVCs)
+module "es-master" {
+
+  source = "../modules/storage/aws"
+  storage_count = 3
+  environment = "${var.cluster_name}"
+  disk_prefix = "es-master"
+  availability_zones = "${var.availability_zones}"
+  storage_sku = "gp2"
+  disk_size_gb = "2"
+  
+}
+module "es-data-v1" {
+
+  source = "../modules/storage/aws"
+  storage_count = 3
+  environment = "${var.cluster_name}"
+  disk_prefix = "es-data-v1"
+  availability_zones = "${var.availability_zones}"
+  storage_sku = "gp2"
+  disk_size_gb = "25"
+  
+}
+
+module "zookeeper" {
+
+  source = "../modules/storage/aws"
+  storage_count = 3
+  environment = "${var.cluster_name}"
+  disk_prefix = "zookeeper"
+  availability_zones = "${var.availability_zones}"
+  storage_sku = "gp2"
+  disk_size_gb = "2"
+  
+}
+
+module "kafka" {
+
+  source = "../modules/storage/aws"
+  storage_count = 3
+  environment = "${var.cluster_name}"
+  disk_prefix = "kafka"
+  availability_zones = "${var.availability_zones}"
+  storage_sku = "gp2"
+  disk_size_gb = "50"
+  
+}
 ```
 
 ## Custom variables/configurations:  <a id="Set-up-an-environment"></a>
@@ -139,7 +351,14 @@ provider "aws" {  region = "ap-south-1"}​#This is a bucket name that you can n
 You can define your configurations in **variables.tf** and provide the env specific cloud requirements so that using the same terraform template you can customize the configurations.
 
 ```text
-├── sample-aws│   ├── main.tf │   ├── outputs.tf│   ├── providers.tf│   ├── remote-state│   │   └── main.tf│   └── variables.tf​
+├── sample-aws
+│   ├── main.tf 
+│   ├── outputs.tf
+│   ├── providers.tf
+│   ├── remote-state
+│   │   └── main.tf
+│   └── variables.tf
+
 ```
 
 Following are the values that you need to mention in the following files, the blank ones will be prompted for inputs while execution.
@@ -147,7 +366,58 @@ Following are the values that you need to mention in the following files, the bl
 **​**[**variables.tf**](https://github.com/egovernments/DIGIT-DevOps/blob/release/infra-as-code/terraform/sample-aws/variables.tf) ​
 
 ```text
-## Add Cluster Namevariable "cluster_name" {  default = ""  #eg: my-digit-eks}​## Add vpc_cidr_blockvariable "vpc_cidr_block" {  default = "CIDR" }​# If you want prod grade N/W, you can define HA, DRS with multi zonevariable "network_availability_zones" {    default = ["ap-south-1b", "ap-south-1a"]}​# Which zone, it mattersvariable "availability_zones" {  default = ["ap-south-1b"]}​variable "kubernetes_version" {  default = "1.18"}​# instance type for your worker nodes like r5a.large is 8 vCPU and 16GB RAMvariable "instance_type" {  default = "r5a.large"}​# spot instance configurationvariable "override_instance_types" {  default = ["r5a.large", "r5ad.large", "r5d.large", "t3a.xlarge"] }​# number of machines as per estimatevariable "number_of_worker_nodes" {  default = "3"}​##Add ssh key in case you want to ssh to nodesvariable "ssh_key_name" {  default = "ssh key name"}​# terraform users ssh public key, you need to one for you, refer below to create yoursvariable "iam_keybase_user" {  default = "keybase:egovterraform"}​# will be prompted to provide during the executionvariable "db_password" {}​
+## Add Cluster Name
+variable "cluster_name" {
+  default = "<Desired Cluster name>"  #eg: my-digit-eks
+}
+
+## Add vpc_cidr_block
+variable "vpc_cidr_block" {
+  default = "CIDR" 
+}
+
+# If you want prod grade N/W, you can define HA, DRS with multi zone
+variable "network_availability_zones" {  
+  default = ["ap-south-1b", "ap-south-1a"]
+}
+
+# Which zone, it matters
+variable "availability_zones" {
+  default = ["ap-south-1b"]
+}
+
+variable "kubernetes_version" {
+  default = "1.18"
+}
+
+# instance type for your worker nodes like r5a.large is 8 vCPU and 16GB RAM
+variable "instance_type" {
+  default = "r5a.large"
+}
+
+# spot instance configuration
+variable "override_instance_types" {
+  default = ["r5a.large", "r5ad.large", "r5d.large", "t3a.xlarge"] 
+}
+
+# number of machines as per estimate
+variable "number_of_worker_nodes" {
+  default = "3"
+}
+
+##Add ssh key in case you want to ssh to nodes
+variable "ssh_key_name" {
+  default = "ssh key name"
+}
+
+# terraform users ssh public key, you need to one for you, refer below to create yours
+variable "iam_keybase_user" {
+  default = "keybase:egovterraform"
+}
+
+# will be prompted to provide during the execution
+variable "db_password" {}
+
 ```
 
 ​
@@ -167,7 +437,16 @@ Let's begin to run the terraform scripts to provision infra required to Deploy D
 1. First CD into the following directory and run the following command 1-by-1 and watch the output closely.
 
 ```text
-cd DIGIT-DevOps/infra-as-code/terraform/sample-aws/remote-stateterraform initterraform planterraform apply​​cd DIGIT-DevOps/infra-as-code/terraform/sample-awsterraform initterraform planterraform apply
+cd DIGIT-DevOps/infra-as-code/terraform/sample-aws/remote-state
+terraform init
+terraform plan
+terraform apply
+
+
+cd DIGIT-DevOps/infra-as-code/terraform/sample-aws
+terraform init
+terraform plan
+terraform apply
 ```
 
  Upon Successful execution following resources gets created which can be verified by the command "terraform output"
@@ -183,14 +462,25 @@ cd DIGIT-DevOps/infra-as-code/terraform/sample-aws/remote-stateterraform initter
 2. Use this link to [get the kubeconfig from EKS](https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html) to get the kubeconfig file and being able to connect to the cluster from your local machine so that you should be able to deploy DIGIT services to the cluster.
 
 ```text
-aws sts get-caller-identity​# Run the below command and give the respective region-code and the cluster nameaws eks --region  update-kubeconfig --name 
+aws sts get-caller-identity
+
+# Run the below command and give the respective region-code and the cluster name
+aws eks --region <region-code> update-kubeconfig --name <cluster_name>
 ```
 
 3. Finally, Verify that you are able to connect to the cluster by running the following command
 
 ```text
-kubectl config use-context ​kubectl get nodes​NAME                                             STATUS AGE   VERSION               OS-Image           ip-192-168-xx-1.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2   ip-192-168-xx-2.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2   ip-192-168-xx-3.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2   ip-192-168-xx-4.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2 
+kubectl config use-context <your cluster name>
+
+kubectl get nodes
+
+NAME                                             STATUS AGE   VERSION               OS-Image           
+ip-192-168-xx-1.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2   
+ip-192-168-xx-2.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2   
+ip-192-168-xx-3.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2   
+ip-192-168-xx-4.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2 
 ```
 
-Whola! All set and now you can go [**Deploy DIGIT**]()...
+Whola! All set and now you can go with Deploy Product..
 
