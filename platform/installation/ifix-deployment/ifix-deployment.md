@@ -2,7 +2,7 @@
 
 ## Deploy IFix <a id="2-deploy-digit"></a>
 
-Post infra setup \(Kubernetes Cluster\), the deployment has got 2 stages and 2 modes. We can see the stages first and then the modes. As part of a sample exercise we can deploy PGR, however deployment steps are similar, just that the prerequisites will have to be configured accordingly.
+Post infra setup \(Kubernetes Cluster\), the deployment has got 2 stages and 2 modes. We can see the stages first and then the modes. 
 
 ### The 2 Stages <a id="the-2-stages"></a>
 
@@ -39,7 +39,14 @@ go run ifix_setup.go
 All Done.Essentially, DIGIT deployment means that we need to generate Kubernetes manifests for each individual service. We use the tool called helm, which is an easy, effective and customizable packaging and deployment solution. So depending on where and which env you initiate the deployment there are 2 modes that you can deploy.
 ```
 
-1. For CI/CD System like Jenkins - Depending on how you want to setup your CI/CD and the expertise the steps will vary, however [here](https://develop.digit.org/setup/more-deploy-docs/deployment-key-concepts/cicd) you can find how we have setup CI/CD on Jenkins and the pipelines are created automatically without any manual intervention.
+
+
+### The 2 Modes of Deployment
+
+Essentially, DIGIT deployment means that we need to generate Kubernetes manifests for each individual service. We use the tool called helm, which is an easy, effective and customizable packaging and deployment solution. So depending on where and which env you initiate the deployment there are 2 modes that you can deploy.
+
+1. From local machine - whatever we are trying in this sample exercise so far. 
+2. Advanced: From CI/CD System like Jenkins - Depending on how you want to setup your CI/CD and the expertise the steps will vary, however [here]() you can find how we have setup CI/CD on Jenkins and the pipelines are created automatically without any manual intervention.
 
 
 
