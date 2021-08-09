@@ -25,7 +25,7 @@ Post infra setup \(Kubernetes Cluster\), the deployment has got 2 stages and 2 m
 
 **Stage 1:  Clone the DevOps** [**repo**](https://github.com/egovernments/iFix-DevOps.git)**,  choose your respective product branch. For mgramseva product choose the mgramseva branch likewise for other products choose the respective branch.**
 
- **Prepare an &lt;**[**env.yaml**](https://github.com/egovernments/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/mgramseva-dev.yaml)**&gt; master config file, you can name this file as you wish which will have the following configurations, this env file need to be in line with your cluster name.**
+ **Prepare an &lt;**[**env.yaml**](https://github.com/egovernments/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/mgramseva-qa.yaml)**&gt; master config file, you can name this file as you wish which will have the following configurations, this env file need to be in line with your cluster name.**
 
 * each service global, local env variables
 * credentials, secrets \(You need to encrypt using [sops](https://github.com/mozilla/sops#updatekeys-command) and create a**-secret.yaml** separately\)
