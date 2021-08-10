@@ -139,7 +139,7 @@ Now that we have the Infra setup to proceed with the DIGIT Deployment. Following
 7. ​[Install Postman](https://www.postman.com/downloads/) to run some digit bootstrap scripts
 
 ```text
-root@ip:/# git clone https://github.com/egovernments/iFix-DevOps
+root@ip:/# git clone -b quickstart https://github.com/egovernments/iFix-DevOps
 ```
 
 1. After cloning the repo CD into the folder DIGIT-DevOps and type the "code ." command that will open the visual editor and opens all the files from the repo DIGIT-DevOps
