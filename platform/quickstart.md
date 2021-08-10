@@ -120,7 +120,7 @@ k3d-k3s-default-server-0   59m          0%     2286Mi          14%
 
 If the above steps are completed successfully, your Cluster is now up and running ready to proceed with the DIGIT Deployment.
 
-## **2. DIGIT Setup** <a id="2-digit-setup"></a>
+## **2. mGramSeva Setup** <a id="2-digit-setup"></a>
 
 Now that we have the Infra setup to proceed with the DIGIT Deployment. Following are the tools that need to be installed on the machine before proceeding with the DIGIT Services deployment.
 
@@ -130,19 +130,19 @@ Now that we have the Infra setup to proceed with the DIGIT Deployment. Following
 
 ### **Prerequisites** <a id="prerequisites"></a>
 
-1. DIGIT uses [golang](https://golang.org/doc/install#download) \(required v1.13.3\) automated scripts to deploy the builds on to Kubernetes - [Linux](https://golang.org/dl/go1.13.3.linux-amd64.tar.gz) or [Windows](https://golang.org/dl/go1.13.3.windows-amd64.msi) or [Mac](https://golang.org/dl/go1.13.3.darwin-amd64.pkg)​
-2. All DIGIT services are packaged using helm charts[ ![](https://helm.sh/img/favicon-152.png)Installing Helm](https://helm.sh/docs/intro/install/)​
+1. mGramSeva uses [golang](https://golang.org/doc/install#download) \(required v1.13.3\) automated scripts to deploy the builds on to Kubernetes - [Linux](https://golang.org/dl/go1.13.3.linux-amd64.tar.gz) or [Windows](https://golang.org/dl/go1.13.3.windows-amd64.msi) or [Mac](https://golang.org/dl/go1.13.3.darwin-amd64.pkg)​
+2. All mGramSeva services are packaged using helm charts[ ![](https://helm.sh/img/favicon-152.png)Installing Helm](https://helm.sh/docs/intro/install/)​
 3. ​[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) is a CLI to connect to the kubernetes cluster from your machine
 4. Install [CURL](https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux) for making api calls
 5. ​[Install Visualstudio](https://code.visualstudio.com/download) IDE Code for better code/configuration editing capabilities
-6. All the DIGIT services deployment configurations are in [GitRepo](https://github.com/egovernments/DIGIT-DevOps) which you would need to [install git](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) and then [git clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) it to your local.
+6. All the mGramSeva services deployment configurations are in [GitRepo](https://github.com/egovernments/DIGIT-DevOps) which you would need to [install git](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) and then [git clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) it to your local.
 7. ​[Install Postman](https://www.postman.com/downloads/) to run some digit bootstrap scripts
 
 ```text
 root@ip:/# git clone -b quickstart https://github.com/egovernments/iFix-DevOps
 ```
 
-1. After cloning the repo CD into the folder DIGIT-DevOps and type the "code ." command that will open the visual editor and opens all the files from the repo DIGIT-DevOps
+1. After cloning the repo CD into the folder iFix-DevOps and type the "code ." command that will open the visual editor and opens all the files from the repo iFix-DevOps
 
 ```text
 root@ip:/# cd iFix-DevOps
