@@ -4,7 +4,7 @@ description: Fiscal Information Exchange Platform
 
 # FIX
 
-## Introduction asd
+## Introduction
 
 FIX is an information exchange infrastructure \(similar to highways\) that will facilitate exchange of fiscal information across central, state and local governments and also between various departments in a standardized manner.  It is being developed as a open public digital good \(PDG\) which can be leveraged by any government. 
 
