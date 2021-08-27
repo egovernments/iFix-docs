@@ -127,6 +127,8 @@ Now that we have the Infra setup to proceed with the DIGIT Deployment. Following
 **What we'll deploy in Quickstart:**
 
 * iFix core platform services
+* iFix backbone services
+* iFix domain services 
 
 ### **Prerequisites** <a id="prerequisites"></a>
 
