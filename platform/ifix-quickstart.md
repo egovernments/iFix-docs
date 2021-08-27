@@ -138,6 +138,7 @@ Now that we have the Infra setup to proceed with the DIGIT Deployment. Following
 6. All the iFix services deployment configurations are in [GitRepo](https://github.com/egovernments/DIGIT-DevOps) which you would need to [install git](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) and then [git clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) it to your local.
 7. ​[Install Postman](https://www.postman.com/downloads/) to run some digit bootstrap scripts
 8. Mongo Database
+9. s3 bucket for Druid storage
 
 ```text
 root@ip:/# git clone -b iFix-quickstart https://github.com/egovernments/iFix-DevOps
@@ -183,10 +184,7 @@ root@ip:# go run iFix_setup.go
 All Done.
 ```
 
-You can now test the Digit application status in command prompt/terminal by using the below command.
+As mentioned in the [sample deployments secrets file](https://github.com/egovernments/iFix-DevOps/blob/iFix-quickstart/deploy-as-code/helm/environments/quickstart-config-secrets.yaml), Need two separate DB's and users in the existing Postgres database for olap module \[Druid and metabase\]
 
-```text
-curl -Is http://quickstart.local.digit/employee/login |  head -n 1
-HTTP/2 200
-```
+
 
