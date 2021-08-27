@@ -186,7 +186,7 @@ root@ip:# go run iFix_setup.go
 All Done.
 ```
 
-As mentioned in the [sample deployments secrets file](https://github.com/egovernments/iFix-DevOps/blob/iFix-quickstart/deploy-as-code/helm/environments/quickstart-config-secrets.yaml), Need two separate DB's and users in the existing Postgres database for olap module \[Druid and metabase\]
+As mentioned in the [sample deployments secrets file](https://github.com/egovernments/iFix-DevOps/blob/iFix-quickstart/deploy-as-code/helm/environments/quickstart-config-secrets.yaml), olap module needs two separate DB's and users in the existing Postgres database \[Druid and metabase\]
 
 
 
