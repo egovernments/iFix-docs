@@ -1,4 +1,4 @@
-# Quickstart
+# mGramSeva-Quickstart
 
 Quickstart Installation helps you jump start with the mGramSeva basic installation steps with the limited functionalities.
 
