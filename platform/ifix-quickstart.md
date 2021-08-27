@@ -150,10 +150,11 @@ root@ip:/# cd iFix-DevOps
 root@ip:DIGIT-DevOps# code .
 ```
 
-1. Have look at the [sample deployment config file](https://github.com/egovernments/DIGIT-DevOps/blob/quickstart/deploy-as-code/helm/environments/quickstart-config.yaml) that needs to be configured as per any specific values according to your needs. \(For a quick start you can run as it is\)
+1. Have look at the [sample deployment config file](https://github.com/egovernments/iFix-DevOps/blob/iFix-quickstart/deploy-as-code/helm/environments/quickstart-config.yaml) and [sample deployments secret file](https://github.com/egovernments/iFix-DevOps/blob/iFix-quickstart/deploy-as-code/helm/environments/quickstart-config-secrets.yaml) that needs to be configured as per any specific values according to your needs. 
 
 ```text
 https://github.com/egovernments/iFix-DevOps/blob/iFix-quickstart/deploy-as-code/helm/environments/quickstart-config.yaml
+https://github.com/egovernments/iFix-DevOps/blob/iFix-quickstart/deploy-as-code/helm/environments/quickstart-config-secrets.yaml
 ```
 
 1. Add the following entries in your host file /etc/hosts depending on your OS, instructions can be found [here](https://phoenixnap.com/kb/how-to-edit-hosts-file-in-windows-mac-or-linux).
