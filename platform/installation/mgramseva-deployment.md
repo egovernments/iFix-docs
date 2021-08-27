@@ -17,7 +17,7 @@ Post infra setup \(Kubernetes Cluster\), the deployment has got 2 stages and 2 m
 * sms g/w, email g/w, payment g/w
 * GMap key \(In case you are using Google Map services in your PGR, PT, TL, etc\)
 * S3 Bucket for Filestore
-* URL/DNS on which the DIGIT will be exposed
+* URL/DNS on which the mGramSeva will be exposed
 * SSL Certificate for the above URL
 * End-points configs \(Internal/external\)
 
@@ -41,7 +41,7 @@ All Done.Essentially, DIGIT deployment means that we need to generate Kubernetes
 
 ### The 2 Modes of Deployment
 
-Essentially, DIGIT deployment means that we need to generate Kubernetes manifests for each individual service. We use the tool called helm, which is an easy, effective and customizable packaging and deployment solution. So depending on where and which env you initiate the deployment there are 2 modes that you can deploy.
+Essentially, mGramSeva deployment means that we need to generate Kubernetes manifests for each individual service. We use the tool called helm, which is an easy, effective and customizable packaging and deployment solution. So depending on where and which env you initiate the deployment there are 2 modes that you can deploy.
 
 1. From local machine - whatever we are trying in this sample exercise so far. 
 2. Advanced: From CI/CD System like Jenkins - Depending on how you want to setup your CI/CD and the expertise the steps will vary, however [here]() you can find how we have setup CI/CD on Jenkins and the pipelines are created automatically without any manual intervention.
