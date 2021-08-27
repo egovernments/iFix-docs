@@ -139,7 +139,7 @@ Now that we have the Infra setup to proceed with the DIGIT Deployment. Following
 7. ​[Install Postman](https://www.postman.com/downloads/) to run some digit bootstrap scripts
 
 ```text
-root@ip:/# git clone -b quickstart https://github.com/egovernments/iFix-DevOps
+root@ip:/# git clone -b iFix-quickstart https://github.com/egovernments/iFix-DevOps
 ```
 
 1. After cloning the repo CD into the folder iFix-DevOps and type the "code ." command that will open the visual editor and opens all the files from the repo iFix-DevOps
@@ -152,7 +152,7 @@ root@ip:DIGIT-DevOps# code .
 1. Have look at the [sample deployment config file](https://github.com/egovernments/DIGIT-DevOps/blob/quickstart/deploy-as-code/helm/environments/quickstart-config.yaml) that needs to be configured as per any specific values according to your needs. \(For a quick start you can run as it is\)
 
 ```text
-https://github.com/egovernments/iFix-DevOps/blob/quickstart/deploy-as-code/helm/environments/quickstart-config.yaml
+https://github.com/egovernments/iFix-DevOps/blob/iFix-quickstart/deploy-as-code/helm/environments/quickstart-config.yaml
 ```
 
 1. Add the following entries in your host file /etc/hosts depending on your OS, instructions can be found [here](https://phoenixnap.com/kb/how-to-edit-hosts-file-in-windows-mac-or-linux).
@@ -168,7 +168,7 @@ Once all the prerequisites set up is complete, go to the following repo, run the
 ```text
 root@ip:# cd iFix-DevOps/deploy-as-code/egov-deployer
 
-root@ip:# go run mgramseva_setup.go
+root@ip:# go run iFix_setup.go
 
 #Be prepared for the following questions
 1. Do you have the Kubernetes Setup?
