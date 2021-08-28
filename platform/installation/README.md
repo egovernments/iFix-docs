@@ -30,7 +30,7 @@ Choose you cloud and follow the Instruction to setup a Kubernetes cluster before
 Finally, cleanup the cluster Setup if you wish, using the following command. This will delete the entire cluster and other cloud resources that were provisioned for the DIGIT Setup.
 
 ```text
-cd DIGIT-DevOps/infra-as-code/terraform/my-iFix-eks
+cd DIGIT-DevOps/infra-as-code/terraform/my-ifix-eks
 terraformdestroy​
 ```
 
