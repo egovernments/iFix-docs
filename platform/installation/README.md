@@ -9,28 +9,32 @@
 * Know how to port forward to a pod running inside k8s cluster and work locally [https://www.youtube.com/watch?v=TT3nd5n5Yus](https://www.youtube.com/watch?v=TT3nd5n5Yus)
 * Know sops to secure your keys/creds: [https://www.youtube.com/watch?v=DWzJ87KbwxA](https://www.youtube.com/watch?v=DWzJ87KbwxA)
 
-## 1. Choose the Cloud <a id="v-1-choose-the-cloud"></a>
+## 1. Deployment Architecture <a id="v-1-choose-the-cloud"></a>
+
+![](https://lh4.googleusercontent.com/JkymqACmPBvb3Y77UrqghaQifq1YYC_IfujLtK9eaXcIcMwvkBBx0thuGO7UD2BssAflbyyE2u9teNkqKLywDet09cl0fVO6GfgqFnRjUIRSLahvj5v7mT97sl8MKuYcFj2qfntM8Zs=s0)
+
+## 2. Choose the Install Type <a id="v-1-choose-the-cloud"></a>
 
 Choose you cloud and follow the Instruction to setup a Kubernetes cluster before moving on to the Deployment.
 
+{% page-ref page="ifix-quickstart.md" %}
+
 {% page-ref page="on-aws.md" %}
 
-## 2. Deployment <a id="2-deploy-digit"></a>
+## 3. Deployment-as-code
 
 {% page-ref page="ifix-deployment-1.md" %}
 
-{% page-ref page="mgramseva-deployment.md" %}
-
-## 3. Destroy the Cluster <a id="5-destroy-the-cluster"></a>
+## 4. Destroy the Setup <a id="5-destroy-the-cluster"></a>
 
 Finally, cleanup the cluster Setup if you wish, using the following command. This will delete the entire cluster and other cloud resources that were provisioned for the DIGIT Setup.
 
 ```text
-cd DIGIT-DevOps/infra-as-code/terraform/my-digit-eks
+cd DIGIT-DevOps/infra-as-code/terraform/my-iFix-eks
 terraformdestroy​
 ```
 
 ## Conclusion: <a id="conclusion"></a>
 
-All Done, we have successfully Created infra on Cloud, Deployed Digit in the cluster.
+All Done, we have successfully Created infra on Local, Cloud, Deployed iFix into kubernetes cluster.
 

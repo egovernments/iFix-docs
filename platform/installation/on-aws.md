@@ -1,3 +1,7 @@
+---
+description: Productionize iFix
+---
+
 # On AWS
 
 The [**Amazon Elastic Kubernetes Service \(EKS\)**](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html) is one of the AWS services for deploying, managing, and scaling any distributed and containerized workloads, here we can provision the EKS cluster on AWS from ground up and using an automated way \(infra-as-code\) using [**terraform**](https://www.terraform.io/intro/index.html) and then deploy the DIGIT Services config-as-code using [**Helm**](https://helm.sh/docs/).
@@ -23,7 +27,7 @@ The [**Amazon Elastic Kubernetes Service \(EKS\)**](https://docs.aws.amazon.com/
    2. Open the terminal and Run the following command you have already installed the AWS CLI and you have the credentials saved. \(Provide the credentials and you can leave the region and output format as blank\)
 
    ```text
-   aws configure --profile egov-workshop-account 
+   aws configure --profile ifix-infra-account 
 
    AWS Access Key ID []:<Your access key>
    AWS Secret Access Key []:<Your secret key>
@@ -34,7 +38,7 @@ The [**Amazon Elastic Kubernetes Service \(EKS\)**](https://docs.aws.amazon.com/
    5. The above will create the following file In your machine as /Users/.aws/credentials
 
    ```text
-   [egov-test-account] 
+   [ifix-infra-account] 
    aws_access_key_id=*********** 
    aws_secret_access_key=****************************
    ```
@@ -58,7 +62,7 @@ Considering the above deployment architecture, the following is the resource gra
 
 * Ideally, one would write the terraform script from the scratch using this [doc](https://learn.hashicorp.com/collections/terraform/modules).
 * Here we have already written the terraform script that provisions the production-grade DIGIT Infra and can be customized with the specified configuration.
-* Let's Clone the [DIGIT-DevOps GitHub repo](https://github.com/egovernments/DIGIT-DevOps/tree/release) where the terraform script to provision EKS cluster is available and below is the structure of the files.
+* Let's Clone the [iFix-DevOps](https://github.com/egovernments/iFix-DevOps) GitHub repo where the terraform script to provision EKS cluster is available and below is the structure of the files.
 
 ```text
 git clone --branch release https://github.com/egovernments/iFix-DevOps.git
