@@ -1,7 +1,7 @@
 ---
 description: >-
   Quickstart Installation helps you jump start with the iFix basic installation
-  steps with limited functionalities.
+  steps with limited functionalities to test it standalone or on local machine.
 ---
 
 # Quickstart
@@ -12,13 +12,13 @@ Here in this Quickstart guide where we'll install basic services to get the plat
 
 ## **1. Infra Setup** <a id="1-infra-setup"></a>
 
-**To provision a lightweight Kubernetes cluster, please follow the instructions below in context to your OS and install the k3d on your machine.**
+**To provision a lightweight Kubernetes cluster, please follow the instructions below in context to your OS and install the k3d on your target machine.**
 
 ### **H/W or VM Size** <a id="h-w-or-vm-size"></a>
 
-* min 4 vCPUs \(recommended 8\)
-* min 8GiB of RAM \(recommended 16\)
-* min 30GiB of HDD \(recommended 30+\)
+* min 4 vCPUs \(recommended 6vCPU\)
+* min 8GiB of RAM \(recommended 12GB\)
+* min 30GiB of HDD \(recommended 30GB+\)
 
 ### **Tools** <a id="tools"></a>
 
