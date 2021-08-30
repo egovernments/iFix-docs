@@ -10,6 +10,7 @@
   * [Installation](platform/installation/README.md)
     * [Quickstart](platform/installation/ifix-quickstart.md)
     * [On AWS](platform/installation/on-aws.md)
+    * [On Azure](platform/installation/on-azure.md)
     * [Deployment](platform/installation/ifix-deployment-1.md)
   * [Source Code](https://github.com/egovernments/iFix)
 * [Ecosystem](ecosystem/README.md)

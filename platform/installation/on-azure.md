@@ -1,32 +1,97 @@
----
-description: Productionize iFix
----
+# On Azure
 
-# On AWS
+The **Azure Kubernetes Service \(AKS\)** is one of the Azure services for deploying, managing, and scaling any distributed and containerized workloads, here we can provision the AKS cluster on Azure from ground up and using an automated way \(infra-as-code\) using [**terraform**](https://www.terraform.io/intro/index.html) and then deploy the DIGIT-iFIX Services config-as-code using [**Helm**](https://helm.sh/docs/).
 
-The [**Amazon Elastic Kubernetes Service \(EKS\)**](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html) is one of the AWS services for deploying, managing, and scaling any distributed and containerized workloads, here we can provision the EKS cluster on AWS from ground up and using an automated way \(infra-as-code\) using [**terraform**](https://www.terraform.io/intro/index.html) and then deploy the DIGIT-iFIX Services config-as-code using [**Helm**](https://helm.sh/docs/).
+This quickstart assumes a basic understanding of Kubernetes concepts. For more information, see [Kubernetes core concepts for Azure Kubernetes Service \(AKS\)](https://docs.microsoft.com/en-us/azure/aks/concepts-clusters-workloads).
 
-## Pre-read: <a id="pre-read"></a>
+If you don't have an [Azure subscription](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio) before you begin.
 
-* Know about EKS: [https://www.youtube.com/watch?v=SsUnPWp5ilc](https://www.youtube.com/watch?v=SsUnPWp5ilc)
-* Know what is terraform: [https://youtu.be/h970ZBgKINg](https://youtu.be/h970ZBgKINg)
+### Prerequisites <a id="prerequisites"></a>
 
-## Prerequisites <a id="Prerequisites"></a>
+* Use the Bash environment in [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart).
 
-1. ​[**AWS account**](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=default&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) with the admin access to provision EKS Service, you can always subscribe to free AWS account to learn the basics and try, but there is a limit to [**what is offered as free**](https://aws.amazon.com/free/), for this demo you need to have a commercial subscription to the EKS service, if you want to try out for a day or two, it might cost you about Rs 500 - 1000. **\(Note: Post the Demo, for the internal folks, eGov will provide a 2-3 hrs time bound access to eGov's AWS account based on the request and available number of slots per day\)**
-2. Install [**kubectl**](https://kubernetes.io/docs/tasks/tools/) on your local machine that helps you interact with the kubernetes cluster
-3.  Install [**Helm**](https://helm.sh/docs/intro/install/) that helps you package the services along with the configurations, envs, secrets, etc into a [**kubernetes manifests**](https://devspace.cloud/docs/cli/deployment/kubernetes-manifests/what-are-manifests)
-4. Install [**terraform**](https://releases.hashicorp.com/terraform/0.14.10/) version \(0.14.10\) for the Infra-as-code \(IaC\) to provision cloud resources as code and with desired resource graph and also it helps to destroy the cluster at one go.
-5. **​**[**Install AWS CLI**](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) on your local machine so that you can use aws cli commands to provision and manage the cloud resources on your account.
-6. Install [**AWS IAM Authenticator**](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html) that helps you authenticate your connection from your local machine so that you should be able to deploy DIGIT services.
-7. Use the [**AWS IAM User**](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) **credentials provided** for the Terraform \([**Infra-as-code**](https://devops.digit.org/devops-general/infra-as-code)\) to connect with your AWS account and provision the cloud resources.
+  [![Launch Cloud Shell in a new window](https://docs.microsoft.com/en-us/azure/includes/media/cloud-shell-try-it/hdi-launch-cloud-shell.png)](https://shell.azure.com/)
 
-   ​
+* If you prefer, [install](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) the Azure CLI to run CLI reference commands.
+  * If you're using a local installation, sign in to the Azure CLI by using the [az login](https://docs.microsoft.com/en-us/cli/azure/reference-index#az_login) command. To finish the authentication process, follow the steps displayed in your terminal. For additional sign-in options, see [Sign in with the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/authenticate-azure-cli).
+  * When you're prompted, install Azure CLI extensions on first use. For more information about extensions, see [Use extensions with the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview).
+  * Run [az version](https://docs.microsoft.com/en-us/cli/azure/reference-index?#az_version) to find the version and dependent libraries that are installed. To upgrade to the latest version, run [az upgrade](https://docs.microsoft.com/en-us/cli/azure/reference-index?#az_upgrade).
+* This article requires version 2.0.64 or greater of the Azure CLI. If using Azure Cloud Shell, the latest version is already installed.
+* The identity you are using to create your cluster has the appropriate minimum permissions. For more details on access and identity for AKS, see [Access and identity options for Azure Kubernetes Service \(AKS\)](https://docs.microsoft.com/en-us/azure/aks/concepts-identity).
 
-   1. You'll get a **Secret Access Key** and **Access Key ID**. **Save them safely.**
-   2. Open the terminal and Run the following command you have already installed the AWS CLI and you have the credentials saved. \(Provide the credentials and you can leave the region and output format as blank\)
+ Note:  Run the commands as administrator if you plan to run the commands in this quickstart locally instead of in Azure Cloud Shell.
+
+### Create a resource group <a id="create-a-resource-group"></a>
+
+An [Azure resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview) is a logical group in which Azure resources are deployed and managed. When you create a resource group, you will be prompted to specify a location. This location is:
+
+* The storage location of your resource group metadata.
+* Where your resources will run in Azure if you don't specify another region during resource creation.
+
+The following example creates a resource group named _myResourceGroup_ in the _&lt;India&gt;_ location.
+
+Create a resource group using the [az group create](https://docs.microsoft.com/en-us/cli/azure/group#az_group_create) command.
+
+```text
+az group create --name myResourceGroup --location <India regions>
+```
+
+Output for successfully created resource group:JSONCopy
+
+```text
+{
+  "id": "/subscriptions/<guid>/resourceGroups/myResourceGroup",
+  "location": "eastus",
+  "managedBy": null,
+  "name": "myResourceGroup",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null
+}
+```
+
+
+
+### Connect to the cluster <a id="connect-to-the-cluster"></a>
+
+To manage a Kubernetes cluster, use the Kubernetes command-line client, [kubectl](https://kubernetes.io/docs/user-guide/kubectl/). `kubectl` is already installed if you use Azure Cloud Shell.
+
+1. Install `kubectl` locally using the [az aks install-cli](https://docs.microsoft.com/en-us/cli/azure/aks#az_aks_install_cli) command:Azure CLICopy
 
    ```text
+   az aks install-cli
+   ```
+
+2. Configure `kubectl` to connect to your Kubernetes cluster using the [az aks get-credentials](https://docs.microsoft.com/en-us/cli/azure/aks#az_aks_get_credentials) command. The following command:
+
+   * Downloads credentials and configures the Kubernetes CLI to use them.
+   * Uses `~/.kube/config`, the default location for the [Kubernetes configuration file](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/). Specify a different location for your Kubernetes configuration file using _--file_.
+
+   Azure CLICopyTry It
+
+   ```text
+   az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+   ```
+
+3. Verify the connection to your cluster using the [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) command. This command returns a list of the cluster nodes.Azure CLICopyTry It
+
+   ```text
+   kubectl get nodes
+   ```
+
+   Output shows the single node created in the previous steps. Make sure the node status is _Ready_:OutputCopy
+
+   ```text
+   NAME                       STATUS   ROLES   AGE     VERSION
+   aks-nodepool1-31718369-0   Ready    agent   6m44s   v1.12.8
+   ```
+
+###  <a id="run-the-application"></a>
+
+![](../../.gitbook/assets/image.png)
+
+1. ```text
    aws configure --profile ifix-infra-account 
 
    AWS Access Key ID []:<Your access key>
@@ -44,8 +109,6 @@ The [**Amazon Elastic Kubernetes Service \(EKS\)**](https://docs.aws.amazon.com/
    ```
 
 Before we provision the cloud resources, we need to understand and be sure about what resources need to be provisioned by terraform to deploy DIGIT. The following picture shows the various key components. \(EKS, Worker Nodes, Postgress DB, EBS Volumes, Load Balancer\)
-
-![](https://gblobscdn.gitbook.com/assets%2F-MEQnEQWBZ6Gjip-3pEg%2F-Md1lfe6NwE0P1OdZlxg%2F-Md1rBSubx1ny2pReDeE%2Fimage.png?alt=media&token=45a75d9d-f45a-466c-9298-9c1db825cd8d)
 
 EKS Architecture for iFix Setup
 

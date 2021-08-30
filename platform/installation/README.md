@@ -25,6 +25,10 @@ Choose you cloud and follow the Instruction to setup a Kubernetes cluster before
 
 {% page-ref page="on-aws.md" %}
 
+{% page-ref page="on-azure.md" %}
+
+
+
 ## 3. Deployment-as-code
 
 {% page-ref page="ifix-deployment-1.md" %}
