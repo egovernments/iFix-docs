@@ -1,6 +1,7 @@
 # Table of contents
 
 * [FIX](README.md)
+* [Strategy and Approach](strategy-and-approach.md)
 * [Platform](platform/README.md)
   * [Principles](platform/principles.md)
   * [Architecture](platform/architecture.md)
