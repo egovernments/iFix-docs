@@ -1,10 +1,12 @@
 # API Access Key
 
-ADMIN ONLY
+**ADMIN ONLY**
+
+Only the administrator can generate the API key and secret. The steps for doing is as follows.
 
 Keycloak console will be available at `https://<host-name>/auth`.  The admin will log in using the username and password secret.
 
-### Step 1 : Import Realm
+### Step 1 : Import Realm \(If not already done\)
 
 1. Open the Keycloak console
 2. Near the top-left corner in the realm drop down menu, select **Add Realm**.
