@@ -8,19 +8,17 @@ description: Standards
 
 1. Government
 2. Department
-3. Fund
-4. Location
-5. Chart of Account
-6. Program
-7. Project
-8. Fiscal Event
+3. Chart of Account
+4. Expenditure
+5. Project
+6. Fiscal Event
 
 ## APIs \(v 0.1\)
 
-1. Registry Services
-   1. Government
-2. Business Services
-   1. Post Fiscal Event
+1. Business Services
+   1. Fiscal Event
+      1. Post Fiscal Event
+      2. Search Fiscal Event
 
 
 
