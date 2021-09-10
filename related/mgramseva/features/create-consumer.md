@@ -2,7 +2,7 @@
 
 The house hold masters need to be created in the system to initiate the demand generation and collection. These are consumer or also called as house hold which will be issued the water connection and supplied on regular basis.
 
-![Non Metered Connection](../../../.gitbook/assets/image%20%2817%29.png)
+![Non Metered Connection](../../../.gitbook/assets/image%20%2818%29.png)
 
 On selecting the option “Create consumer” from the list of tile/cards on the home page, the user will be navigated to this create consumer page. Data elements for the consumer -
 
