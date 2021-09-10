@@ -4,7 +4,7 @@
 
 User can click on HouseHold register from home screen and land on this screen. This provides a single view snapshot of all pending collections by consumers till date.
 
-![](../../../.gitbook/assets/image%20%2834%29.png)
+![](../../../.gitbook/assets/image%20%2842%29.png)
 
 <table>
   <thead>

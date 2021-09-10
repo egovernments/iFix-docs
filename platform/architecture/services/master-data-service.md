@@ -23,7 +23,7 @@ Maintains the expenditure details And provide create and search functionality. I
 
 Maintains the project details and provide create and search functionality. In case of creating the project, need to pass Government, name, code, expenditure id, department entity id, location ids. While searching, pass the ids, Government id, name, code, expenditure id, location id.
 
-![](../../../.gitbook/assets/image%20%2811%29.png)
+![](../../../.gitbook/assets/image%20%2814%29.png)
 
 References
 

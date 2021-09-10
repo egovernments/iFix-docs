@@ -6,7 +6,7 @@ The search screen used to list the consumer based on various criteria. This woul
 2. Download bills and receipts
 3. Update consumer information
 
-![Search Consumer](../../../.gitbook/assets/image%20%2836%29.png)
+![Search Consumer](../../../.gitbook/assets/image%20%2845%29.png)
 
 The consumer can be searched based on these parameters -
 
@@ -21,7 +21,7 @@ The consumer can be searched based on these parameters -
 5. Old Connection id - Should be able to search consumer records that matches the old Connection id entered.
 6. New Connection id - Should be able to search consumer records that matches the New Connection id entered.
 
-![Search Consumer Expanded](../../../.gitbook/assets/image%20%289%29.png)
+![Search Consumer Expanded](../../../.gitbook/assets/image%20%2811%29.png)
 
 1. As the user starts entering one field, other fields should be made non editable. When the user removes text/numbers entered in the field, other fields will be made accessible.
 2. Show more, Show less expands and contracts the view
@@ -29,7 +29,7 @@ The consumer can be searched based on these parameters -
 
 **Search Result:**
 
-![](../../../.gitbook/assets/image%20%2819%29.png)
+![](../../../.gitbook/assets/image%20%2823%29.png)
 
 The result set will have below information
 

@@ -2,7 +2,7 @@
 
 For mGramSeva users, different notifications will be shown on home screen based on different system triggers.
 
-![](../../../.gitbook/assets/image%20%287%29.png)
+![](../../../.gitbook/assets/image%20%288%29.png)
 
 1. A new card will be used for each notification displayed below.
 2. Card will have countdown timer - today, 1 day ago, 2 days ago, 3 days ago, and so on.

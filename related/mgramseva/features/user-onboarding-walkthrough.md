@@ -2,7 +2,7 @@
 
 On few screens users can walkthrough of application for better understanding of different user actions. 
 
-![](../../../.gitbook/assets/image%20%2818%29.png)
+![](../../../.gitbook/assets/image%20%2822%29.png)
 
 
 
