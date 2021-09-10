@@ -1,0 +1,32 @@
+# Expenditure - Add Expense
+
+The expense entry for the O&M on regular basis is captured in this screen.
+
+![](../../../.gitbook/assets/image%20%283%29.png)
+
+On selecting the option “Add Expense Record” from the list of tile/cards on the home page, the user is navigated to the expense entry screen. The screen displays the following fields.
+
+| **Field Name** | **Type** | **Mandatory Y/N** | **Description** |
+| :--- | :--- | :--- | :--- |
+| Vendor Name | Text \(With Suggestions drop down\) | Y | Name of the Vendor. The suggestion list is shown as the user entry is done for every character. The new Name will also create a Vendor Register. |
+| Type of Expense | Drop Down | Y | Type of expense list From Master |
+| Amount | Numeric | Y | Expense amount for the Bill |
+| Bill Date | Date | Y | Date on which the bill is to be recorded in the registers. Validation - Before Current Date and after party Bill Date. |
+| Party Bill Date | Date | N | Date on which the Party/vendor bill was issued. Validation - Before the Bill Date. |
+| Bill Paid | Radio Buttons | N | With option Yes/No. To update status if it is paid. If yes, “Paid Date” is captured. |
+| Paid Date | Date | N | Date on which the bill is paid. Displayed if the Bill paid option is selected as “Yes”. Validation - After Bill date and less than current Date. |
+| Attach Documents | Doc Attachments | N | Option to upload a documents \(Max of 5\). Supported files - PDF, JPEG, PNG. Should show required validation for other types of files. |
+| Submit | Button | - | On click, the consumer master get created with the detail entered above. The new connection id also should get generated as per the configuration. |
+
+On Submitting, the Expense entry gets created with a Bill number assigned. The Bill number generated would be based on logic defined as - “EB-&lt;FY&gt;-&lt;4 digit running seq No&gt;”
+
+On Successful creation of expense entry, a acknowledgement screen is shown “Expense Entry successful” along with the Bill Number. 
+
+![](../../../.gitbook/assets/image%20%2837%29.png)
+
+
+
+| **Expenditure Entry** | **Expenditure entry Successful** |  |
+| :--- | :--- | :--- |
+|  |  |  |
+

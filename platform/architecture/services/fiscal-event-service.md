@@ -2,7 +2,7 @@
 
 Fiscal Event Service enables iFIX clients to post and search fiscal events. 
 
-![](../../../.gitbook/assets/image%20%282%29.png)
+![](../../../.gitbook/assets/image%20%285%29.png)
 
 References
 
