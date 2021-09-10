@@ -2,7 +2,7 @@
 description: Fiscal Information Exchange Platform
 ---
 
-# FIX
+# iFIX
 
 ## Introduction
 

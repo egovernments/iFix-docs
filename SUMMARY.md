@@ -1,7 +1,7 @@
 # Table of contents
 
-* [FIX](README.md)
-* [Strategy and Approach](strategy-and-approach.md)
+* [iFIX](README.md)
+* [Blue Print](strategy-and-approach.md)
 * [Platform](platform/README.md)
   * [Principles](platform/principles.md)
   * [Architecture](platform/architecture.md)
@@ -22,4 +22,12 @@
 * [Roadmap](https://github.com/egovernments/iFix/projects/1)
 * [Discussions](https://github.com/egovernments/iFix/discussions)
 * [Issues](https://github.com/egovernments/iFix/issues)
+
+## Related
+
+* [mGramSeva](related/mgramseva/README.md)
+  * [Features](related/mgramseva/features.md)
+  * [Architecture](related/mgramseva/architecture.md)
+  * [Source Code](https://github.com/egovernments/punjab-mgramseva)
+  * [Installation](related/mgramseva/installation.md)
 

@@ -1,10 +1,8 @@
-# Strategy and Approach
+# Blue Print
 
-asdfasdfasfd
+## What is PFM?
 
-asdfasdf
+## Pivotal Problems 
 
-asdf
-
-asdf
+## Platform Based Approach
 
