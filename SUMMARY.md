@@ -17,6 +17,8 @@
     * [On AWS](platform/installation/on-aws.md)
     * [On Azure](platform/installation/on-azure.md)
     * [Deployment](platform/installation/ifix-deployment-1.md)
+    * [API Access Key](platform/installation/api-access-key.md)
+    * [Configuring Master Data](platform/installation/configuring-master-data.md)
   * [Source Code](https://github.com/egovernments/iFix)
 * [Ecosystem](ecosystem/README.md)
   * [News and Events](ecosystem/news-and-events.md)
