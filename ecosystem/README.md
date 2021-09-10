@@ -3,7 +3,7 @@
 ## Executive Committee <a id="divoc-presentations"></a>
 
 1. K L Rao
-2. ..
+2. Devesh Sharma
 3. ...
 4. ...
 5. 
