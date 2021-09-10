@@ -1,0 +1,10 @@
+# Fiscal Event Service
+
+Fiscal Event Service enables iFIX clients to post fiscal event into the platform.
+
+![](../../../.gitbook/assets/image%20%282%29.png)
+
+References
+
+1. [Swagger YAML ](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/egovernments/iFix-Dev/develop/domain-services/fiscal-event-service/fiscal-event-service-0.1.0.yaml)
+
