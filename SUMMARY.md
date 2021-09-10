@@ -6,6 +6,7 @@
   * [Principles](platform/principles.md)
   * [Architecture](platform/architecture/README.md)
     * [Services](platform/architecture/services/README.md)
+      * [Master Data Service](platform/architecture/services/master-data-service.md)
       * [Fiscal Event Service](platform/architecture/services/fiscal-event-service.md)
     * [Technology](platform/architecture/technology.md)
   * [Standards](platform/standards/README.md)

@@ -1,6 +1,6 @@
 # Fiscal Event Service
 
-Fiscal Event Service enables iFIX clients to post fiscal event into the platform.
+Fiscal Event Service enables iFIX clients to post and search fiscal events. 
 
 ![](../../../.gitbook/assets/image%20%282%29.png)
 
