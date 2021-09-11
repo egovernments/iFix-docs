@@ -4,7 +4,7 @@ description: Work in Progress
 
 # Architecture
 
-mGramSeva is built on top of the Digit Platform. It consists of the following layers
+mGramSeva is built on top of the [Digit ](https://docs.digit.org/)Platform. It consists of the following layers
 
 1. Front End
 2. Back End

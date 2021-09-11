@@ -1,7 +1,3 @@
----
-description: Work in Progress
----
-
 # iFIX Adapter
 
 iFIX Adapter enables existing or new source systems to integrate seamlessly with iFIX. iFIX Adapter has been developed as a reference implementation for developers of source systems who want to integrate their departmental system with iFIX. 
