@@ -15,7 +15,7 @@ The platform is being built as a Digital Public Good and follows a key set of de
 * Performance at Scale
   * The system must be designed to perform at scale.
 * Open Standards
-  * The system must be based on open standards so that it is easy to comprehend, integrate, operate and evolve. 
+  * The system must be based on open standards so that it is easy to discover, comprehend, integrate, operate and evolve. 
 
 ## 
 
