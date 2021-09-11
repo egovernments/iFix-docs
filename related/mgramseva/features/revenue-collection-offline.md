@@ -1,6 +1,6 @@
 # Revenue Collection - Offline
 
-![](../../../.gitbook/assets/image%20%2837%29.png)
+![](../../../.gitbook/assets/image%20%2839%29.png)
 
 After the demand is generated for Metered and non-metered connections Revenue collector will come to this screen to collect payments.
 
@@ -93,9 +93,9 @@ Details on the card
   </tbody>
 </table>
 
-![](../../../.gitbook/assets/image%20%2848%29.png)
+![](../../../.gitbook/assets/image%20%2850%29.png)
 
-![](../../../.gitbook/assets/image%20%2819%29.png)
+![](../../../.gitbook/assets/image%20%2820%29.png)
 
 1. When Online is selected for payment method, the “Collect Payment” Option is disabled. Since HH will scan the QR and Revenue collector does’t have control on the online process.
 2. Partial amount can’t be greater than full amount.

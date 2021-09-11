@@ -1,8 +1,8 @@
 # Bill and Receipt PDF
 
-![Non Metered Bill](../../../.gitbook/assets/image%20%2835%29.png)
+![Non Metered Bill](../../../.gitbook/assets/image%20%2837%29.png)
 
-![Metered Bill](../../../.gitbook/assets/image%20%2821%29.png)
+![Metered Bill](../../../.gitbook/assets/image%20%2822%29.png)
 
 Bill and Receipt PDFs can be sent to consumers at multiple touchpoints
 

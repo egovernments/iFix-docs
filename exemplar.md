@@ -13,7 +13,7 @@ To enable real time, fiscal visibility of these projects, the following solution
 3. [iFIX Platform](./) - stores micro level fiscal data and provides secure standard APIs for source systems to post and query fiscal data in raw and aggregate form.
 4. [iFIX Dashboard](related/ifix-dashboard/) - provides a dashboard for department to have real time view the fiscal sustainability of various projects.
 
-![](.gitbook/assets/image%20%2824%29.png)
+![](.gitbook/assets/image%20%2825%29.png)
 
 The project is current in the last stages of development. Deployment and roll out is expected to commence shortly. 
 

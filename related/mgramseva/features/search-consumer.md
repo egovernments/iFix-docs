@@ -6,7 +6,7 @@ The search screen used to list the consumer based on various criteria. This woul
 2. Download bills and receipts
 3. Update consumer information
 
-![Search Consumer](../../../.gitbook/assets/image%20%2850%29.png)
+![Search Consumer](../../../.gitbook/assets/image%20%2852%29.png)
 
 The consumer can be searched based on these parameters -
 
@@ -29,7 +29,7 @@ The consumer can be searched based on these parameters -
 
 **Search Result:**
 
-![](../../../.gitbook/assets/image%20%2825%29.png)
+![](../../../.gitbook/assets/image%20%2826%29.png)
 
 The result set will have below information
 

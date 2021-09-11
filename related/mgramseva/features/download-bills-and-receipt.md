@@ -4,5 +4,5 @@
 2. Clicking on this will take the user to consumer search page. Searching by a phone number/ connection ID goes to Household detail page.
    1. There is an option to download bills without clicking on collect payment.
 
-![](../../../.gitbook/assets/image%20%2832%29.png)
+![](../../../.gitbook/assets/image%20%2834%29.png)
 

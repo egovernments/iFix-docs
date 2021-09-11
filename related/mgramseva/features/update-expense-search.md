@@ -19,5 +19,5 @@ On selection of “Modify Expense” Option, below search screen will be shown f
 
 On Click of Bill id, the Expense Bill will be displayed in edit mode based on the validations.
 
-![](../../../.gitbook/assets/image%20%2829%29.png)
+![](../../../.gitbook/assets/image%20%2831%29.png)
 

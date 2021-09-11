@@ -16,7 +16,7 @@ The users will be invited by sending a link over SMS which will have the web add
 
 #### **On Success full login or on Validations of user id and password**
 
-![](../../../.gitbook/assets/image%20%2836%29.png)
+![](../../../.gitbook/assets/image%20%2838%29.png)
 
 **First Time Login:** The user should be navigated to the password reset screen where the user enter OTP generated when she comes onto this screen & the new password and confirms. On Submit, the the acknowledgment screen will be displayed. On choosing continue on acknowledgment screen, the user will be taken back to the login page.
 

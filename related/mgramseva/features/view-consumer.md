@@ -81,11 +81,11 @@ Static HH card which displays HH details
   </tbody>
 </table>
 
-![New Connection Before First Bill Generation](../../../.gitbook/assets/image%20%2847%29.png)
+![New Connection Before First Bill Generation](../../../.gitbook/assets/image%20%2849%29.png)
 
-![First bill is generated   Payment Collection is pending](../../../.gitbook/assets/image%20%2841%29.png)
+![First bill is generated   Payment Collection is pending](../../../.gitbook/assets/image%20%2843%29.png)
 
-![2 payments are already made](../../../.gitbook/assets/image%20%2838%29.png)
+![2 payments are already made](../../../.gitbook/assets/image%20%2840%29.png)
 
 **For Metered Connection**
 
@@ -134,7 +134,7 @@ Static HH card which displays HH details
 
 ![](../../../.gitbook/assets/image%20%285%29.png)
 
-![](../../../.gitbook/assets/image%20%2834%29.png)
+![](../../../.gitbook/assets/image%20%2836%29.png)
 
-![](../../../.gitbook/assets/image%20%2822%29.png)
+![](../../../.gitbook/assets/image%20%2823%29.png)
 

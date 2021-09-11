@@ -27,7 +27,7 @@ For Demand Generation Logic refer to [Demand/Bill Generation for metered connect
 
 
 
-![ Bill Generation Successful](../../../.gitbook/assets/image%20%2827%29.png)
+![ Bill Generation Successful](../../../.gitbook/assets/image%20%2829%29.png)
 
 1. All 5 Digits in Meter reading has to be entered. Show error message “ Old Meter Reading entered is Invalid” , “ New Meter Reading entered is invalid” respectively.
 2. New Meter reading should be greater than old meter reading

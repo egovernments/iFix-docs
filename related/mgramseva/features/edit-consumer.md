@@ -5,7 +5,7 @@ The Consumer information that can be edited under certain conditions
 1. Before first demand is generated from system
 2. After first demand is generated from system
 
-![](../../../.gitbook/assets/image%20%2833%29.png)
+![](../../../.gitbook/assets/image%20%2835%29.png)
 
 1. User with permissions to edit consumer record and on clicking “ Edit consumer info” tile on home screen will go to consumer search screen.
 2. User can come from search screen or search results screen \(Case when multiple search results are displayed\) to Consumer Edit Screen

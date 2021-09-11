@@ -39,5 +39,5 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 ### Interaction Diagram <a id="Interaction-Diagram"></a>
 
-![](../.gitbook/assets/image%20%2849%29.png)
+![](../.gitbook/assets/image%20%2851%29.png)
 
