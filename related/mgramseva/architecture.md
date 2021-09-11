@@ -19,7 +19,7 @@ mGramSeva is built on top of the [Digit ](https://docs.digit.org/)Platform. It c
       8. [Persister](https://digit-discuss.atlassian.net/wiki/spaces/EPE/pages/37322761/Persister-Service)
       9. [Indexer](https://docs.digit.org/configuration/configure-digit/services-overview/core-services/indexer-service)
       10. [Encryption Service ](https://digit-discuss.atlassian.net/wiki/spaces/EPE/pages/5832708/Encryption+Service)\(data-encryption-service\)
-      11. [Localisation Service ](https://digit-discuss.atlassian.net/wiki/spaces/EPE/pages/336920792/eGov-Localisation)\(localization-service\)
+      11. [Localization Service ](https://digit-discuss.atlassian.net/wiki/spaces/EPE/pages/336920792/eGov-Localisation)\(localization-service\)
       12. [Boundary Service](https://docs.digit.org/configuration/configure-digit/services-overview/core-services/location-services) \(location-service\)
       13. [URL Shortening Service](https://docs.digit.org/configuration/configure-digit/services-overview/core-services/url-shortening-service) \(url-shortening-service\)
       14. [PDG Generation Service](https://docs.digit.org/configuration/configure-digit/services-overview/core-services/pdf-generation-services) \(pdf-generator\)
