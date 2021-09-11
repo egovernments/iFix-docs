@@ -15,3 +15,5 @@ To enable real time, fiscal visibility of these projects, the following solution
 
 ![](.gitbook/assets/image%20%2824%29.png)
 
+The project is current in the last stages of development. Deployment and roll out is expected to commence shortly. 
+
