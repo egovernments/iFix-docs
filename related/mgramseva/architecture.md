@@ -11,10 +11,10 @@ mGramSeva is built on top of the [Digit ](https://docs.digit.org/)Platform. It c
    1. Core Services
       1. [User Service](https://docs.digit.org/configuration/configure-digit/services-overview/core-services/user-services) \(egov-user\)
       2. User OTP \(user-otp\)
-      3. [Access Control](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/695664711/Access+Control+Service) \(access-control\)
-      4. [MDMS](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/723189807/MDMS+Master+Data+Management+Service)
+      3. [Access Control](https://docs.digit.org/configuration/configure-digit/services-overview/core-services/access-control-services) \(access-control\)
+      4. [MDMS](https://docs.digit.org/configuration/configure-digit/services-overview/core-services/mdms-services)
       5. [ID Generation Service](https://digit-discuss.atlassian.net/wiki/spaces/EPE/pages/37060616/ID-Generation-Service) \(id-gen\)
-      6. pg-service
+      6. [Payment Gateway](https://docs.digit.org/configuration/configure-digit/services-overview/core-services/payment-gateway-services) \(pg-service\)
       7. [Workflow Service ](https://digit-discuss.atlassian.net/wiki/spaces/EPE/pages/37093389/Workflow-Service)\(wf-service\)
       8. [Persister](https://digit-discuss.atlassian.net/wiki/spaces/EPE/pages/37322761/Persister-Service)
       9. [Indexer](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/888963174/Indexer+Service)
