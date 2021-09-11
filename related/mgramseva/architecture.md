@@ -9,7 +9,7 @@ mGramSeva is built on top of the [Digit ](https://docs.digit.org/)Platform. It c
 1. Front End
 2. Back End
    1. Core Services
-      1. [User Service](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/669450371/User+Service) \(egov-user\)
+      1. [User Service](https://docs.digit.org/configuration/configure-digit/services-overview/core-services/user-services) \(egov-user\)
       2. User OTP \(user-otp\)
       3. [Access Control](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/695664711/Access+Control+Service) \(access-control\)
       4. [MDMS](https://digit-discuss.atlassian.net/wiki/spaces/DD/pages/723189807/MDMS+Master+Data+Management+Service)
