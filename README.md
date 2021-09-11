@@ -14,11 +14,11 @@ Instead of doing point to point integration to flow required information in a no
 
 iFIX is being designed keeping in view the federal structure of governments. Each government agency can define what it can share with other agencies and iFIX will enable real time seamless exchange of this information through standards based protocols.
 
-![](.gitbook/assets/image%20%2816%29.png)
+![Proposed Federated Architecture of iFIX Platform](.gitbook/assets/image%20%2816%29.png)
 
 Each iFIX instance will itself be multi-tenant and will enable multiple local systems to post standardized and anonymized micro level fiscal data as **Fiscal Events.** Fiscal Events can be of type - Demand, Receipt, Bill, Payment. In the future, it will also include Budget events e.g. Sanction, Appropriation, Allocation and Transfers. This will enable IFMS/PFMS systems to communicate seamless to downstream systems.
 
-![](.gitbook/assets/image%20%2841%29.png)
+![iFIX Platform Architecture](.gitbook/assets/image%20%2841%29.png)
 
 iFIX facilitates exchange of fiscal information through a standard set of API \(Application Program Interfaces\)  and events that are available in the [Standards](platform/standards/) section.
 
