@@ -1,6 +1,6 @@
 # Bill and Receipt PDF
 
-![Non Metered Bill](../../../.gitbook/assets/image%20%2834%29.png)
+![Non Metered Bill](../../../.gitbook/assets/image%20%2835%29.png)
 
 ![Metered Bill](../../../.gitbook/assets/image%20%2821%29.png)
 

@@ -22,7 +22,7 @@ On Submitting, the Expense entry gets created with a Bill number assigned. The B
 
 On Successful creation of expense entry, a acknowledgement screen is shown “Expense Entry successful” along with the Bill Number. 
 
-![](../../../.gitbook/assets/image%20%2849%29.png)
+![](../../../.gitbook/assets/image%20%2851%29.png)
 
 
 

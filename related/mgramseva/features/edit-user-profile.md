@@ -21,7 +21,7 @@ mGramSeva users will be able to edit their basic information like name, add gend
       3. Changing password will show a nudge to user “ Password updated successfully” and closing this nudge will take user to user profile screen.
    6. Clicking save will show a nudge to user” Details saved successfully”. Upon closing this user will remain on the screen but fields will show as edited.
 
-![Edit Profile](../../../.gitbook/assets/image%20%2825%29.png)
+![Edit Profile](../../../.gitbook/assets/image%20%2826%29.png)
 
-![Change Password](../../../.gitbook/assets/image%20%2830%29.png)
+![Change Password](../../../.gitbook/assets/image%20%2831%29.png)
 

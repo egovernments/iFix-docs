@@ -20,6 +20,7 @@
     * [API Access Key](platform/installation/api-access-key.md)
     * [Configuring Master Data](platform/installation/configuring-master-data.md)
   * [Source Code](https://github.com/egovernments/iFix)
+* [Exemplar](exemplar.md)
 * [Ecosystem](ecosystem/README.md)
   * [News and Events](ecosystem/news-and-events.md)
 
