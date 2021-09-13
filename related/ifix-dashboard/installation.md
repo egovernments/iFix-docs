@@ -11,3 +11,7 @@ Essentially,  iFix dashboard deployment means that we need to generate Kubernete
 1. From [**local machine**](../mgramseva/installation/local-setup.md) - whatever we are trying in this sample exercise so far.
 2. Advanced: ****[**Setup CI/CD System**](../mgramseva/installation/ci-cd.md) like Jenkins - Depending on how you want to setup your CI/CD and the expertise the steps will vary, however here you can find how we eGov has set up a exemplar CI/CD on Jenkins and the pipelines are created automatically without any manual intervention.
 
+You can choose the infra type and the env to either [single fat server](https://druid.apache.org/docs/latest/operations/single-server.html) or [distributed setup](https://druid.apache.org/docs/latest/tutorials/cluster.html) on docker compose or kubernetes.
+
+
+
