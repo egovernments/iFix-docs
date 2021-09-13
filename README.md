@@ -8,11 +8,11 @@ description: Fiscal Information Exchange Platform
 
 iFIX is an information exchange infrastructure \(similar to highways\) that will facilitate the exchange of fiscal information across central, state and local governments and also between various departments in a standardized manner.  It is being developed as an open Public Digital Good \(PDG\) that can be leveraged by any government. 
 
-Instead of doing point to point integration to flow required information in a non-standard way, iFIX enables any existing and future government agency to exchange information with each other through a standard fiscal information exchange bus. 
+Fiscal information exchange has followed the conventional route using point to point integration so far.  iFIX enables any existing and future government agency to exchange information with each other through a standard fiscal information exchange bus. 
 
 ![Point to Point vs Bus Based Integration](.gitbook/assets/image%20%2845%29.png)
 
-iFIX is being designed keeping in view the federal structure of governments. Each government agency can define what it can share with other agencies and iFIX will enable the real-time seamless exchange of this information through standards-based protocols.
+iFIX is designed keeping in view the federal structure of governments. Each government agency can define what it can share with other agencies and iFIX will enable the real-time seamless exchange of this information through standards-based protocols.
 
 ![Proposed Federated Architecture of iFIX Platform](.gitbook/assets/image%20%2816%29.png)
 
