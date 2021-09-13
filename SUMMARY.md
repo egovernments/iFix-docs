@@ -62,6 +62,7 @@
   * [Architecture](related/mgramseva/architecture.md)
   * [Source Code](https://github.com/egovernments/punjab-mgramseva)
   * [Installation](related/mgramseva/installation/README.md)
+    * [Quickstart](related/mgramseva/installation/quickstart.md)
     * [On AWS](related/mgramseva/installation/on-aws.md)
   * [Documents](related/mgramseva/user-manual.md)
 * [iFIX Adapter](related/ifix-adapter.md)
