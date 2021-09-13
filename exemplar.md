@@ -9,7 +9,7 @@ Due to various reasons, if a GPWSC is unable to fiscally manage the project - th
 To enable real time, fiscal visibility of these projects, the following solution was proposed.  The solution consists of 4 components 
 
 1. [mGramSeva ](related/mgramseva/)- A mobile based application that will enable GPWSC members and collection agents to collect & manage revenue and expenditure.
-2. [iFIX Adapter](related/ifix-adapter.md) - Transforms the Demand, Receipt, Bill and Payment information entered in mGramSeva into anonymized and standardized fiscal event. These are then posted into iFIX Platform.
+2. [iFIX Adapter](related/ifix-adapter/) - Transforms the Demand, Receipt, Bill and Payment information entered in mGramSeva into anonymized and standardized fiscal event. These are then posted into iFIX Platform.
 3. [iFIX Platform](./) - stores micro level fiscal data and provides secure standard APIs for source systems to post and query fiscal data in raw and aggregate form.
 4. [iFIX Dashboard](related/ifix-dashboard/) - provides a dashboard for department to have real time view the fiscal sustainability of various projects.
 
