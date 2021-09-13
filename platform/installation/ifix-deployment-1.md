@@ -13,7 +13,7 @@ The simplest way to get started with **deployment process** is to manage deploym
 **Prepare an &lt;**[**env.yaml**](https://github.com/egovernments/iFix-DevOps/blob/ifix/deploy-as-code/helm/environments/ifix-dev.yaml)**&gt; master config file, you can name this file as you wish which will have the following configurations, this env file need to be in line with your cluster name. Eg: iFix-dev.yaml**
 
 * Each service's global, local env variables
-* credentials, secrets \(You need to encrypt using [sops](https://github.com/mozilla/sops#updatekeys-command) and create a**-secret.yaml** separately\)
+* credentials, secrets \(You need to encrypt using [sops](https://github.com/mozilla/sops#updatekeys-command) and create a **&lt;env&gt;-secret.yaml** separately\)
 * Number of replicas/scale of individual services \(Depending on whether dev or prod\)
 * mdms, config repos \(Master Data, ULB, Tenant details, Users, etc\)
 * sms g/w, email g/w, payment g/w
