@@ -73,6 +73,7 @@
   * [Installation](related/ifix-adapter/untitled/README.md)
     * [Local Setup](related/ifix-adapter/untitled/local-setup.md)
 * [iFIX Dashboard](related/ifix-dashboard/README.md)
+  * [Installation](related/ifix-dashboard/installation.md)
   * [Features](related/ifix-dashboard/features.md)
   * [Architecture](related/ifix-dashboard/architecture.md)
   * [Tools used](related/ifix-dashboard/tools-used.md)
