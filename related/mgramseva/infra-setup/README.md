@@ -23,15 +23,21 @@ Choose you cloud and follow the Instruction to setup a Kubernetes cluster before
 
 ## 2. Deployment Architecture <a id="v-1-choose-the-cloud"></a>
 
-Before we begin the deployment, it is important to understand the deployment architecture that starts from the source code to production ready.
+Before we begin the deployment, it is important to understand the deployment architecture that starts from the source code to production ready. Deploying and managing Kubernetes have emerged as a streamlined way to deploy containers in the Cloud Infrastructure. When running Kubernetes at scale, managing, operating, and scaling its infrastructure to maximize cluster utilization — without suffering from idle resources — can be a big challenge. There are too many your development team needs to manage and configure. This includes selecting the best instance type and size, determining when to scale up or down, and making sure all of the containers are scheduled and running on the best instances — and that is even before starting to think about cost resource optimization.
 
 ![](https://lh4.googleusercontent.com/JkymqACmPBvb3Y77UrqghaQifq1YYC_IfujLtK9eaXcIcMwvkBBx0thuGO7UD2BssAflbyyE2u9teNkqKLywDet09cl0fVO6GfgqFnRjUIRSLahvj5v7mT97sl8MKuYcFj2qfntM8Zs=s0)
 
-## 3. Deployment-as-code <a id="3-deployment-as-code"></a>
+## 3. Deployment Pipeline-as-code <a id="3-deployment-as-code"></a>
 
+Pipeline as code is a practice of defining deployment pipelines through source code, such as Git. Pipeline as code is part of a larger “as code” movement that includes infrastructure as code. Teams can configure builds, tests, and deployment in code that is trackable and stored in a centralized source repository. Teams can use a declarative [YAML](https://about.gitlab.com/blog/2020/10/01/three-yaml-tips-better-pipelines/) approach or a vendor-specific programming language, such as Jenkins and Groovy, but the premise remains the same.
 
+A pipeline as code file specifies the stages, jobs, and actions for a pipeline to perform. Because the file is versioned, changes in pipeline code can be tested in branches with the corresponding application release.
 
-[Deployment/platform/installation/ifix-deployment-1](https://app.gitbook.com/@egov-digit/s/ifix/~/drafts/-Mi9dGyD982zFQXSCUd0/platform/installation/ifix-deployment-1/@merged)‌
+The pipeline as code model of creating continuous integration pipelines is an industry best practice, but deployment pipelines used to be created very differently. Below are the two different ways you can deploy the services with pipeline-as-code
+
+{% page-ref page="../installation/local-setup.md" %}
+
+{% page-ref page="../installation/ci-cd.md" %}
 
 ## 4. Destroy the Setup <a id="5-destroy-the-cluster"></a>
 
@@ -41,11 +47,7 @@ Finally, cleanup the cluster Setup if you wish, using the following command. Thi
 cd DIGIT-DevOps/infra-as-code/terraform/my-iFix-eksterraformdestroy​
 ```
 
-‌
-
 ## Conclusion: <a id="conclusion"></a>
-
-‌
 
 All Done, we have successfully Created infra on Local, Cloud, Deployed iFix into kubernetes cluster.
 
