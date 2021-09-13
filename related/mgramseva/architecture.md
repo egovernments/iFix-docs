@@ -43,17 +43,11 @@ mGramSeva is built on top of the [Digit ](https://docs.digit.org/)Platform. It c
       6. [User Events](https://digit-discuss.atlassian.net/wiki/spaces/EPE/pages/231407688/egov-user-events) \(user-event\)
       7. [Vendor](https://docs.digit.org/product/modules/faecal-sludge-management-fsm/fsm-service-configuration/fsm-vendor-registry-v1.0)
 
-## Information Model
-
 ## Services Architecture
 
-Each service is built as a microservices
+The sequence diagram below illustrates a typical interaction between the various services.
 
-## Technology 
-
-## Deployment 
-
-## Security 
+![](../../.gitbook/assets/image%20%2855%29.png)
 
 
 
