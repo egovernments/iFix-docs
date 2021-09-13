@@ -49,7 +49,5 @@ The sequence diagram below illustrates a typical interaction between the various
 
 ![Sample sequence diagram for a typical flow of digit Microservices](../../.gitbook/assets/digit_sequence_diagram%20%281%29.png)
 
-![](../../.gitbook/assets/image%20%2855%29.png)
-
 
 

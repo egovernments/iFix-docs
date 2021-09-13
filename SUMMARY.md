@@ -62,6 +62,7 @@
   * [Architecture](related/mgramseva/architecture.md)
   * [Source Code](https://github.com/egovernments/punjab-mgramseva)
   * [Installation](related/mgramseva/installation.md)
+  * [User Manual](related/mgramseva/user-manual.md)
 * [iFIX Adapter](related/ifix-adapter.md)
 * [iFIX Dashboard](related/ifix-dashboard/README.md)
   * [Features](related/ifix-dashboard/features.md)
