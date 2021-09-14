@@ -17,9 +17,13 @@ mGramSeva is microservices based distributed cloud-native application, it contai
 
 Choose you cloud and follow the Instruction to setup a Kubernetes cluster before moving on to the Deployment.
 
-{% page-ref page="../../../platform/installation/ifix-quickstart.md" %}
+{% page-ref page="quickstart.md" %}
 
-{% page-ref page="../../../platform/installation/on-aws.md" %}
+{% page-ref page="on-aws.md" %}
+
+{% page-ref page="on-oracle-cloud.md" %}
+
+{% page-ref page="on-azure.md" %}
 
 ## 2. Deployment Architecture <a id="v-1-choose-the-cloud"></a>
 

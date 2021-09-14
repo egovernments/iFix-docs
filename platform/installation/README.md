@@ -4,6 +4,30 @@ description: iFix Infra Setup & Deployment
 
 # Installation
 
+iFix is a distributed microservice-based platform that comprises many services which are containerized as dockers, depending upon the required features we can run only those dockerized services on any container orchestration platform like docker compose, Kubernetes, etc.
+
+{% page-ref page="../../related/mgramseva/infra-setup/" %}
+
+### Deployment
+
+The simplest way to get started with the **deployment process** is to manage deployment **configuration as code**. Each service deployment configuration is defined as Helm charts and deployed into the Kubernetes cluster. We can collocate the deployment-as-code as source code, leveraging all the benefits of source control including change tracking and branching, then package it. So below is the source code repo that contains all the deployment-as-code for iFix.
+
+#### 1. mGramSeva Installation
+
+{% page-ref page="../../related/mgramseva/installation/" %}
+
+#### 2. iFix-adapter Installation
+
+{% page-ref page="../../related/ifix-adapter/installation/" %}
+
+#### 3. iFix Dashboard Installation
+
+{% page-ref page="../../related/ifix-dashboard/installation.md" %}
+
+
+
+##  <a id="pre-read"></a>
+
 ## Pre-reads <a id="pre-read"></a>
 
 * Know the basics of Kubernetes: [https://www.youtube.com/watch?v=PH-2FfFD2PU&t=3s](https://www.youtube.com/watch?v=PH-2FfFD2PU&t=3s)
@@ -21,17 +45,11 @@ description: iFix Infra Setup & Deployment
 
 Choose your cloud and follow the Instruction to set up a Kubernetes cluster before moving on to the Deployment.
 
-{% page-ref page="ifix-quickstart.md" %}
-
-{% page-ref page="on-aws.md" %}
-
-{% page-ref page="on-azure.md" %}
+{% page-ref page="../../related/mgramseva/infra-setup/on-azure.md" %}
 
 
 
 ## 3. Deployment-as-code
-
-{% page-ref page="ifix-deployment-1.md" %}
 
 ## 4. Destroy the Setup <a id="5-destroy-the-cluster"></a>
 
