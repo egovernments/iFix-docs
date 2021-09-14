@@ -87,7 +87,7 @@ To manage a Kubernetes cluster, use the Kubernetes command-line client, [kubectl
 
 ###  <a id="run-the-application"></a>
 
-![](../../../.gitbook/assets/image.png)
+![](../../.gitbook/assets/image.png)
 
 1. ```text
    aws configure --profile ifix-infra-account 

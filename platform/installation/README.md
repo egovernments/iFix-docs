@@ -4,10 +4,6 @@ description: iFix Infra Setup & Deployment
 
 # Installation
 
-iFix is a distributed microservice-based platform that comprises many services which are containerized as dockers, depending upon the required features we can run only those dockerized services on any container orchestration platform like docker compose, Kubernetes, etc.
-
-{% page-ref page="../../related/mgramseva/infra-setup/" %}
-
 ### Deployment
 
 The simplest way to get started with the **deployment process** is to manage deployment **configuration as code**. Each service deployment configuration is defined as Helm charts and deployed into the Kubernetes cluster. We can collocate the deployment-as-code as source code, leveraging all the benefits of source control including change tracking and branching, then package it. So below is the source code repo that contains all the deployment-as-code for iFix.
@@ -45,7 +41,7 @@ The simplest way to get started with the **deployment process** is to manage dep
 
 Choose your cloud and follow the Instruction to set up a Kubernetes cluster before moving on to the Deployment.
 
-{% page-ref page="../../related/mgramseva/infra-setup/on-azure.md" %}
+{% page-ref page="../infra-setup/on-azure.md" %}
 
 
 
