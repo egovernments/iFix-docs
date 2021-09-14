@@ -9,7 +9,7 @@ description: >-
 
 iFix is a distributed microservice-based platform that comprises many services which are containerized as dockers, depending upon the required features we can run only those dockerized services on any container orchestration platform like docker compose, Kubernetes, etc.
 
-Here in this Quickstart guide where we'll install basic services to get the platform up, before we setup iFix services, we'll create a lightweight Kubernetes cluster called [k3d](https://github.com/rancher/k3d) on a local machine with specified H/W requirements. The H/W requirements are listed below to ensure before we proceed further.
+Here in this Quickstart guide where we'll install basic services to get the platform up, before we set up iFix services, we'll create a lightweight Kubernetes cluster called [k3d](https://github.com/rancher/k3d) on a local machine with specified H/W requirements. The H/W requirements are listed below to ensure before we proceed further.
 
 ## **1. Infra Setup** <a id="1-infra-setup"></a>
 
@@ -77,7 +77,7 @@ Here in this Quickstart guide where we'll install basic services to get the plat
 k3d cluster create --k3s-server-arg "--no-deploy=traefik" --agents 2 -v "/kube:/kube@agent[0,1]" -v "/kube:/kube@server[0]" --port "80:80@loadbalancer"
 ```
 
-* When cluster creation is successful, Get the kubeconfig file, which will allow you to connect the to the cluster at any time.
+* When cluster creation is successful, Get the kubeconfig file, which will allow you to connect to the cluster at any time.
 
 ```text
 k3d kubeconfig get k3s-default > k3dconfig
@@ -140,7 +140,7 @@ Now that we have the Infra setup to proceed with the DIGIT Deployment. Following
 1. iFix uses [golang](https://golang.org/doc/install#download) \(required v1.13.3\) automated scripts to deploy the builds on to Kubernetes - [Linux](https://golang.org/dl/go1.13.3.linux-amd64.tar.gz) or [Windows](https://golang.org/dl/go1.13.3.windows-amd64.msi) or [Mac](https://golang.org/dl/go1.13.3.darwin-amd64.pkg)​
 2. All iFix services are packaged using helm charts[ ![](https://helm.sh/img/favicon-152.png)Installing Helm](https://helm.sh/docs/intro/install/)​
 3. ​[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) is a CLI to connect to the kubernetes cluster from your machine
-4. Install [CURL](https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux) for making api calls
+4. Install [CURL](https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux) for making API calls
 5. ​[Install Visualstudio](https://code.visualstudio.com/download) IDE Code for better code/configuration editing capabilities
 6. All the iFix services deployment configurations are in [GitRepo](https://github.com/egovernments/DIGIT-DevOps) which you would need to [install git](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) and then [git clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository) it to your local.
 7. ​[Install Postman](https://www.postman.com/downloads/) to run some digit bootstrap scripts

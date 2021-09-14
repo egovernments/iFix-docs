@@ -1,12 +1,12 @@
 # On Azure
 
-The **Azure Kubernetes Service \(AKS\)** is one of the Azure services for deploying, managing, and scaling any distributed and containerized workloads, here we can provision the AKS cluster on Azure from ground up and using an automated way \(infra-as-code\) using [**terraform**](https://www.terraform.io/intro/index.html) and then deploy the DIGIT-iFIX Services config-as-code using [**Helm**](https://helm.sh/docs/).
+The **Azure Kubernetes Service \(AKS\)** is one of the Azure services used for deploying, managing, and scaling any distributed and containerized workloads. Here we can provision the AKS cluster on Azure from the ground up and using an automated way \(infra-as-code\) using [**terraform**](https://www.terraform.io/intro/index.html) and then deploy the DIGIT-iFIX Services config-as-code using [**Helm**](https://helm.sh/docs/).
 
 This quickstart assumes a basic understanding of Kubernetes concepts. For more information, see [Kubernetes core concepts for Azure Kubernetes Service \(AKS\)](https://docs.microsoft.com/en-us/azure/aks/concepts-clusters-workloads).
 
 If you don't have an [Azure subscription](https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio) before you begin.
 
-### Prerequisites <a id="prerequisites"></a>
+## Prerequisites
 
 * Use the Bash environment in [Azure Cloud Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart).
 
@@ -21,7 +21,7 @@ If you don't have an [Azure subscription](https://docs.microsoft.com/en-us/azure
 
  Note:  Run the commands as administrator if you plan to run the commands in this quickstart locally instead of in Azure Cloud Shell.
 
-### Create a resource group <a id="create-a-resource-group"></a>
+## Create a resource group
 
 An [Azure resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview) is a logical group in which Azure resources are deployed and managed. When you create a resource group, you will be prompted to specify a location. This location is:
 
@@ -51,9 +51,7 @@ Output for successfully created resource group:JSONCopy
 }
 ```
 
-
-
-### Connect to the cluster <a id="connect-to-the-cluster"></a>
+## Connect to the cluster
 
 To manage a Kubernetes cluster, use the Kubernetes command-line client, [kubectl](https://kubernetes.io/docs/user-guide/kubectl/). `kubectl` is already installed if you use Azure Cloud Shell.
 
@@ -121,7 +119,7 @@ Considering the above deployment architecture, the following is the resource gra
 * VPCs \(Private network\)
 * Users to access, deploy and read-only
 
-## Understand the **Resource Graph in** Terraform script: <a id="Set-up-and-initialize-your-Terraform-workspace-1"></a>
+## Understand the **Resource Graph in** Terraform Script <a id="Set-up-and-initialize-your-Terraform-workspace-1"></a>
 
 * Ideally, one would write the terraform script from the scratch using this [doc](https://learn.hashicorp.com/collections/terraform/modules).
 * Here we have already written the terraform script that provisions the production-grade DIGIT Infra and can be customized with the specified configuration.
@@ -416,7 +414,7 @@ module "kafka" {
 }
 ```
 
-## Custom variables/configurations:  <a id="Set-up-an-environment"></a>
+## Custom Variables/Configurations <a id="Set-up-an-environment"></a>
 
 You can define your configurations in **variables.tf** and provide the env specific cloud requirements so that using the same terraform template you can customize the configurations.
 
@@ -494,8 +492,8 @@ variable "db_password" {}
 
 ### **Important: Create your own keybase key before you run the terraform**  <a id="important-create-your-own-keybase-key-before-you-run-the-terraform"></a>
 
-* Use this URL [https://keybase.io/](https://keybase.io/) to [create your own PGP key](https://pgpkeygen.com/), this will create both public and private key in your machine, upload the public key into the [keybase](https://keybase.io/) account that you have just created, and give a name to it and ensure that you mention that in your terraform. This allows to encrypt all the sensitive information.
-  * Example user keybase user in eGov case is "_egovterraform_" needs to be created and has to uploaded his public key here - [https://keybase.io/egovterraform/pgp\_keys.asc](https://keybase.io/egovterraform/pgp_keys.asc)​
+* Use this URL [https://keybase.io/](https://keybase.io/) to [create your own PGP key](https://pgpkeygen.com/), this will create both public and private key in your machine, upload the public key into the [keybase](https://keybase.io/) account that you have just created, and give a name to it and ensure that you mention that in your terraform. This allows the encryption of sensitive information.
+  * Example - Create user keybase - in eGov case it is "_egovterraform_". Next, upload the public key here - [https://keybase.io/egovterraform/pgp\_keys.asc](https://keybase.io/egovterraform/pgp_keys.asc)​
   * you can use this [portal](https://8gwifi.org/pgpencdec.jsp) to Decrypt your secret key. To decrypt PGP Message, Upload the PGP Message, PGP Private Key and Passphrase.
 
 ## Run terraform <a id="run-terraform"></a>
@@ -523,8 +521,8 @@ terraform apply
 
 * **s3 bucket:** to store terraform state.
 * **Network:** VPC, security groups.
-* **IAM users auth:** using keybase to create admin, deployer, the user. Use this URL [https://keybase.io/](https://keybase.io/) to [create your own PGP key](https://pgpkeygen.com/), this will create both public and private key in your machine, upload the public key into the [keybase](https://keybase.io/) account that you have just created, and give a name to it and ensure that you mention that in your terraform. This allows to encrypt all the sensitive information.
-  * Example user keybase user in eGov case is "_egovterraform_" needs to be created and has to uploaded his public key here - [https://keybase.io/egovterraform/pgp\_keys.asc](https://keybase.io/egovterraform/pgp_keys.asc)​
+* **IAM users auth:** using keybase to create admin, deployer, the user. Use this URL [https://keybase.io/](https://keybase.io/) to [create your own PGP key](https://pgpkeygen.com/), this will create both public and private key in your machine, upload the public key into the [keybase](https://keybase.io/) account that you have just created, and give a name to it and ensure that you mention that in your terraform. This allows the encryption of sensitive information.
+  * Example - Create user keybase - in eGov case it is "_egovterraform_". Next, upload the public key here - [https://keybase.io/egovterraform/pgp\_keys.asc](https://keybase.io/egovterraform/pgp_keys.asc)​
   * you can use this [portal](https://8gwifi.org/pgpencdec.jsp) to Decrypt your secret key. To decrypt PGP Message, Upload the PGP Message, PGP Private Key and Passphrase.
 * **EKS cluster:** with master\(s\) & worker node\(s\).
 * **Storage\(s\):** for es-master, es-data-v1, es-master-infra, es-data-infra-v1, zookeeper, kafka, kafka-infra.
@@ -552,5 +550,5 @@ ip-192-168-xx-3.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369  
 ip-192-168-xx-4.ap-south-1.compute.internal   Ready  45d   v1.15.10-eks-bac369   Amazon Linux 2 
 ```
 
-Whola! All set and now you can go with Deploy Product..
+Whola! All set and now you can go with Deploy Product.
 
