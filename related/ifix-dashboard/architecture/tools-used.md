@@ -2,7 +2,7 @@
 description: Tools used to create the OLAP system for the iFix
 ---
 
-# Tools used
+# Technology
 
 iFix dashboard is developed using the opensource tools that included the complete OLAP system that streams the data from various sources, transform and process data and visualize the data using dashboards
 
