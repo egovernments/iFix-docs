@@ -1,7 +1,8 @@
 ---
 description: >-
   Quickstart Installation helps you jump start with the iFix basic installation
-  steps with limited functionalities to test it standalone or on local machine.
+  steps with limited functionalities to test it standalone or on the local
+  machine.
 ---
 
 # Quickstart
