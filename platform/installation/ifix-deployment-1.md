@@ -8,7 +8,7 @@ description: >-
 
 The simplest way to get started with the **deployment process** is to manage deployment **configuration as code**. Each service deployment configuration is defined as Helm charts and deployed into the Kubernetes cluster. We can collocate the deployment-as-code as source code, leveraging all the benefits of source control including change tracking and branching, then package it. So below is the source code repo that contains all the deployment-as-code for iFix.
 
-**Stage 1:  Clone the DevOps** [**repo**](https://github.com/egovernments/iFix-DevOps/tree/ifix)**,  choose your Ifix product branch.** 
+### **Stage 1:  Clone the DevOps** [**repo**](https://github.com/egovernments/iFix-DevOps/tree/ifix)**,  choose your Ifix product branch.** 
 
 **Prepare an &lt;**[**env.yaml**](https://github.com/egovernments/iFix-DevOps/blob/ifix/deploy-as-code/helm/environments/ifix-dev.yaml)**&gt; master config file, you can name this file as you wish which will have the following configurations, this env file needs to be in line with your cluster name. Eg: iFix-dev.yaml**
 
@@ -24,7 +24,7 @@ The simplest way to get started with the **deployment process** is to manage dep
 * SSL Certificate for the above URL
 * End-points configs \(Internal/external\)
 
-**Stage 2: Run the digit\_setup deployment script and simply answer the questions that it asks.**
+### **Stage 2: Run the digit\_setup deployment script and simply answer the questions that it asks.**
 
 ```text
 cd iFix-DevOps/deploy-as-code/egov-deployer

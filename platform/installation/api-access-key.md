@@ -1,12 +1,12 @@
 # API Access Key
 
-**ADMIN ONLY**
+## **ADMIN ONLY**
 
-Only the administrator can generate the API key and secret. The steps for doing is as follows.
+Only the administrator can generate the API key and secret. The steps for doing this is as follows.
 
 Keycloak console will be available at `https://<host-name>/auth`.  The admin will log in using the username and password secret.
 
-### Step 1 : Import Realm \(If not already done\)
+### Step 1: Import Realm \(If not already done\)
 
 1. Open the Keycloak console
 2. Near the top-left corner in the realm drop down menu, select **Add Realm**.
@@ -17,11 +17,11 @@ Keycloak console will be available at `https://<host-name>/auth`.  The admin wil
 
 1. Remember to select the `ifix` realm from the Keycloak console before proceeding.
 2. From the Clients section of Keycloak Admin Console, create a client.
-3. Provide unique username for the client.
-4. Go to client's settings
+3. Provide a unique username for the client.
+4. Go to the client's settings
 5. Change Access Type to **confidential**
 6. Turn on **Service Account Enabled**
-7. In the **Valid Redirect URIs** field provide the root url of the iFIX Instance. \(Not important for our purposes but need to set it because it is mandatory\)
+7. In the **Valid Redirect URIs** field provide the root URL of the iFIX Instance. \(Not important for our purposes but need to set it because it is mandatory\)
 8. And Save these changes
 9. In the **Service Account Roles** tab, assign the role "fiscal-event-producer"
 10. In the **Mappers** tab, create a new mapper to associate the client with a tenantId
