@@ -47,7 +47,7 @@ mGramSeva is built on top of the [Digit ](https://docs.digit.org/)Platform. It c
 
 The sequence diagram below illustrates a typical interaction between the various services.
 
-![Sample sequence diagram for a typical flow of digit Microservices](../../.gitbook/assets/digit_sequence_diagram%20%281%29.png)
+![Sample sequence diagram for a typical flow of digit Microservices](../../../.gitbook/assets/digit_sequence_diagram%20%281%29.png)
 
 
 

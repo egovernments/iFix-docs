@@ -2,7 +2,7 @@
 description: 'Tools and technologies used to setup, build and deploy mGramSeva stack.'
 ---
 
-# Tools used
+# Technology
 
 DIGIT being an open source platform, all the tools and tech stack used to build, deploy and operate DIGIT - are also [open source](https://opensource.com/resources/what-open-source) and community edition. All the various tools used are listed below with the specific versions used and their short description.
 
