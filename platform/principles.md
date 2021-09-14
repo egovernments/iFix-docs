@@ -1,3 +1,7 @@
+---
+description: Platform Design Principles
+---
+
 # Principles
 
 The platform is being built as a Digital Public Good and follows a key set of design principles
