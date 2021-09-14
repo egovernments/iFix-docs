@@ -42,6 +42,38 @@ As a result of the pipeline execution, the respective app/service docker image w
 
 ## **Continuous Integration \(CI\)** <a id="continuous-integration-ci"></a>
 
+Post infra setup \(Kubernetes Cluster\), We start with deploying the Jenkins and kaniko-cache-warmer.
+
+### Prerequisites:
+
+* Sub Domain to expose CI/CD URL
+* GitHub [Oauth App](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)
+* [GitHub User ssh key](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)
+* With [GitHub user generate a personal read only access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
+* [Docker hub account details](https://hub.docker.com/signup) \(username and password\)
+* SSL Certificate for the sub-domain
+
+**Prepare an &lt;**[**ci.yaml&gt; master config file**](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo.yaml) **and &lt;**[**ci-secrets.yaml**](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo-secrets.yaml)**&gt;, you can name this file as you wish which will have the following configurations.**
+
+* credentials, secrets \(You need to encrypt using [sops](https://github.com/mozilla/sops#updatekeys-command) and create a **ci-secret.yaml** separately\)
+* Check and Update [**ci-secrets.yaml**](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo-secrets.yaml) ****details \(like github Oauth app clientId and clientSecret, GitHub user details gitReadSshPrivateKey and gitReadAccessToken etc..\)
+* To create Jenkins namespace mark this [flag](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo.yaml#L5) **true**
+* Add your env's kubconfigs under kubConfigs like [https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo-secrets.yaml\#L12](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo-secrets.yaml#L12)
+* KubeConfig env's name and deploymentJobs name from ci.yaml should be the same 
+* Update the [CIOps](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/charts/backbone-services/jenkins/values.yaml#L419) and [DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/charts/backbone-services/jenkins/values.yaml#L484) repo name with your forked repo name and provide read-only access to github user to those repo's.
+* SSL Certificate for the sub-domain
+
+```
+cd DIGIT-DevOps/tree/release/deploy-as-code
+```
+
+```text
+kubectl config use-context <your cluster name>
+go run main.go deploy -c -e ci 'jenkins,kaniko-cache-warmer,nginx-ingress'
+```
+
+You have launch the Jenkins, Same you can access through your sub-domain which you configured in ci.yaml
+
 The Jenkins CI pipeline is configured and managed 'as code'.
 
 ​[New Service Integration - Example](https://digit-discuss.atlassian.net/wiki/spaces/DOPS/pages/111673399/New+Service+Integration+-+Example) URL - [https://builds.digit.org/](https://builds.digit.org/%E2%80%8B)​
