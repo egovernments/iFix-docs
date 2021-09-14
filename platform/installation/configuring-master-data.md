@@ -1,13 +1,13 @@
 # Configuring Master Data
 
-**ADMIN ONLY**
+## **ADMIN ONLY**
 
 Before the iFIX platform can be used, the master data must be configured directly into the respective collections in MongoDB. Associated APIs for configuring Master Data will be made available in the next version. 
 
 1. Add Government - Insert into MongoDB collection
 2. Add Department 
 
-   Add Department Hierarchy - It defines hierarchy definition for department. 
+   Add Department Hierarchy - It defines the hierarchy definition for the department. 
 
    1. department id: It is master department id \(UUID\)
    2. level: It defines the depth of hierarchy of department level. 
