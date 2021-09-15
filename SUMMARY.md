@@ -71,6 +71,7 @@
   * [Documents](related/mgramseva/user-manual/README.md)
     * [Backend Services](related/mgramseva/user-manual/backend-services/README.md)
       * [Water Services](related/mgramseva/user-manual/backend-services/water-services.md)
+      * [Water Service Calculator](related/mgramseva/user-manual/backend-services/water-service-calculator.md)
     * [mGramSeva UI](related/mgramseva/user-manual/mgramseva-ui/README.md)
       * [Application Permissions](related/mgramseva/user-manual/mgramseva-ui/application-permissions.md)
       * [User Manual](related/mgramseva/user-manual/mgramseva-ui/user-manual.md)
