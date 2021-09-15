@@ -73,6 +73,7 @@
       * [Application Permissions](related/mgramseva/user-manual/mgramseva-ui/application-permissions.md)
       * [User Manual](related/mgramseva/user-manual/mgramseva-ui/user-manual.md)
 * [iFIX Adapter](related/ifix-adapter/README.md)
+  * [Adapter Services](related/ifix-adapter/adapter-services.md)
   * [Installation](related/ifix-adapter/installation/README.md)
     * [Local Setup](related/ifix-adapter/installation/local-setup.md)
 * [iFIX Dashboard](related/ifix-dashboard/README.md)
