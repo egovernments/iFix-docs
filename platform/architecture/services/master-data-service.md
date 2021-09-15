@@ -25,6 +25,13 @@ Maintains the project details and provide create and search functionality. In ca
 
 ![](../../../.gitbook/assets/image%20%2814%29.png)
 
+
+
+## Configurations and Setup
+
+1. Update all the DB and URI configuration in the dev.yaml, qa.yaml, prod.yaml file.
+2. Make sure keycloak server is up and running And have been configured with the required client ID.
+
 References
 
 1. [Swagger YAML ](https://redocly.github.io/redoc/?url=https://raw.githubusercontent.com/egovernments/iFix-Dev/develop/domain-services/ifix-master-data-service/ifix-master-data-service-0.1.0.yaml#tag/COA/paths/~1chartOfAccount~1v1~1_search/post)
