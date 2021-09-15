@@ -4,7 +4,7 @@
 
 mGramSeva is microservices based distributed cloud-native application, it contains many microservices that together in order work for the scale and speed. Each of this context specific microservices are dockerized and deployed on a kubernetes infrastructure. It is essential to understand some of the key concepts, benefits and best practices of kubernetes platform before we understand the deployment of the mGramSeva.   
 
-## Pre-read: <a id="pre-read"></a>
+## Pre-reads <a id="pre-read"></a>
 
 * Know the basics of Kubernetes: [https://www.youtube.com/watch?v=PH-2FfFD2PU&t=3s](https://www.youtube.com/watch?v=PH-2FfFD2PU&t=3s)​
 * Know the [basics of kubectl](https://www.tutorialspoint.com/kubernetes/kubernetes_kubectl_commands.htm) commands
@@ -51,7 +51,7 @@ Finally, cleanup the cluster Setup if you wish, using the following command. Thi
 cd DIGIT-DevOps/infra-as-code/terraform/my-iFix-eksterraformdestroy​
 ```
 
-## Conclusion: <a id="conclusion"></a>
+## Conclusion <a id="conclusion"></a>
 
 All Done, we have successfully Created infra on Local, Cloud, Deployed iFix into kubernetes cluster.
 

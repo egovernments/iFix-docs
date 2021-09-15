@@ -4,7 +4,7 @@ description: iFix Infra Setup & Deployment
 
 # Installation
 
-### Deployment
+## Deployment
 
 The simplest way to get started with the **deployment process** is to manage deployment **configuration as code**. Each service deployment configuration is defined as Helm charts and deployed into the Kubernetes cluster. We can collocate the deployment-as-code as source code, leveraging all the benefits of source control including change tracking and branching, then package it. So below is the source code repo that contains all the deployment-as-code for iFix.
 
@@ -19,10 +19,6 @@ The simplest way to get started with the **deployment process** is to manage dep
 #### 3. iFix Dashboard Installation
 
 {% page-ref page="../../related/ifix-dashboard/installation.md" %}
-
-
-
-##  <a id="pre-read"></a>
 
 ## Pre-reads <a id="pre-read"></a>
 
@@ -42,8 +38,6 @@ The simplest way to get started with the **deployment process** is to manage dep
 Choose your cloud and follow the Instruction to set up a Kubernetes cluster before moving on to the Deployment.
 
 {% page-ref page="../infra-setup/on-azure.md" %}
-
-
 
 ## 3. Deployment-as-code
 
