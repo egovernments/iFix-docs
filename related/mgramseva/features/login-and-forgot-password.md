@@ -1,24 +1,26 @@
 # Login and Forgot Password
 
-The users will be invited by sending a link over SMS which will have the web address to login to the application. The link will navigate to this screen and take user through the flow of logging in or resetting the password in case of first time login. The web link too will initiate from the same screen.
+The users receive a link through SMS. Clicking on this link redirects the users to the login page of mGramSeva app. The users can log in from this screen or even reset their password in case they are logging in for the first time. The mGramSeva application link initiates from this screen.
 
 ![](../../../.gitbook/assets/image%20%284%29.png)
 
-**Language Selection :** The users are shown the language selection screen and they select the preferred language and click “Continue”. The languages supported are Punjabi, Hindi & English with Punjabi defaulted when used lands on the page. Based on the language selection, the localization in the screens are displayed accordingly. 
+**Language Selection:** The link in the SMS redirects users to this screen which is the first screen which is the language selection screen. The user selects the preferred language and clicks on Continue. English, Hindi, and Punjabi are the supported languages with Punjabi as the default language. Localization in the screens is displayed based on the language selected.
 
 ![](../../../.gitbook/assets/image%20%281%29.png)
 
-**User Id and Password Entry :** The user enters the user id \( i.e. Mobile number \) and system generated password and choose “Continue” to login.
+**User Id and Password Entry:** The user enters the User ID, which is the registered mobile number of the user, and the system-generated password. Clicking on the Continue button logs in the user.
 
 ![](../../../.gitbook/assets/image%20%282%29.png)
 
-**Forgot Password:** The user will select forgot password to go to the password reset screen.
+**Forgot Password:** This link will navigate the user to the password reset screen.
 
 #### **On Success full login or on Validations of user id and password**
 
 ![](../../../.gitbook/assets/image%20%2838%29.png)
 
-**First Time Login:** The user should be navigated to the password reset screen where the user enter OTP generated when she comes onto this screen & the new password and confirms. On Submit, the the acknowledgment screen will be displayed. On choosing continue on acknowledgment screen, the user will be taken back to the login page.
+**First Time Login:** The user is redirected to the password reset screen and the user enters the OTP received on the registered mobile number. The next screen prompts the user to enter a new password and then confirm the same. This is similar to the first time login screens in DIGIT. On Submit, the acknowledgement screen is displayed. Clicking on the Continue to Login button on the acknowledgement screen takes the user to the login page.
 
-**Subsequent login:** The user should be navigated to the home page of the application showing the option appropriately based on his roles mapped.
+**Subsequent login:** The user is redirected to the home page of the application that displays the menu options based on the mapped user role.
+
+
 
