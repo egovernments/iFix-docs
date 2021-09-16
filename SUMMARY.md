@@ -71,6 +71,7 @@
   * [Documents](related/mgramseva/user-manual/README.md)
     * [User Manual](related/mgramseva/user-manual/user-manual.md)
     * [Demo video](related/mgramseva/user-manual/demo-video.md)
+    * [UI Mockups](related/mgramseva/user-manual/ui-mockups.md)
     * [mGramSeva UI](related/mgramseva/user-manual/mgramseva-ui/README.md)
       * [Application Permissions](related/mgramseva/user-manual/mgramseva-ui/application-permissions.md)
     * [Backend Services](related/mgramseva/user-manual/backend-services/README.md)
