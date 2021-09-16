@@ -73,6 +73,7 @@
       * [Water Services](related/mgramseva/user-manual/backend-services/water-services.md)
       * [Water Service Calculator](related/mgramseva/user-manual/backend-services/water-service-calculator.md)
       * [e-Challan Service](related/mgramseva/user-manual/backend-services/e-challan-service.md)
+      * [e-Challan Calculator](related/mgramseva/user-manual/backend-services/e-challan-calculator.md)
     * [mGramSeva UI](related/mgramseva/user-manual/mgramseva-ui/README.md)
       * [Application Permissions](related/mgramseva/user-manual/mgramseva-ui/application-permissions.md)
       * [User Manual](related/mgramseva/user-manual/mgramseva-ui/user-manual.md)
