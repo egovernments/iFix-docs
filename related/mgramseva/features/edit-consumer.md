@@ -168,9 +168,9 @@ The table below lists the editable field details -
 
 ## Edit Options
 
-1. Users can create connections without arrears after which the demand is generated.
-2. Users can modify the arrear value while updating if it is valid. In such a case, demand is updated with the updated value.
-3. Users can add arrear to the connection for which arrear was zero while creating connection. In this case, the new demand is generated.
+1. In case there are arrears, demand is generated. If there are no arrears, demand is not generated.
+2. Users can modify the arrear value. In such a case, demand is generated with the updated value.
+3. Users can add arrear to the connection, for which arrear was zero at the time of creating the connection. In this case, the new demand is generated.
 
 Clicking on the Submit button shows a nudge saying **Details Submitted Successfully**. Closing the nudge navigates the user back to the Home Screen.
 

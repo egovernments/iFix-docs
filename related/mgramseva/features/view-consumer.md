@@ -1,6 +1,8 @@
 # View Consumer
 
-1. User will land onto this screen when he comes from home screen via
+## Overview
+
+1. Users are redirected to the View Consumer screen from the home screen via
    1. Collect payments → Search Screen → Consumer Details Screen
    2. Download bills & receipts → Search screen → consumer details Screen
    3. Dashboard → Collections → Click on Consumer ID
@@ -10,18 +12,18 @@
 Static HH card which displays HH details
 
 1. New Connection ID \(also displayed as heading\)
-2. Consumer's name
+2. Consumer name
 3. Father's name
 4. Phone number
 5. Old connection ID
-6. Address - Door Number, Street number, Ward \(attached\).
+6. Address - Door Number, Street number, Ward \(attached\)
 7. Property type
 8. Service type
    1. for metered connections meter number is also displayed
 
-**For Non Metered Connection**
+## **For Non Metered Connection**
 
-1.  When Bill is not generated \(Post rollout until first month\)
+1. When Bill is not generated \(Post rollout until first month\)
    1. Only Data Card is shown - No Actions needs to be taken
    2. After first demand is generated
       1. A new consumer bill/Card gets generated with following data points and actions
