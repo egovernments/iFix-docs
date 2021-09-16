@@ -1,6 +1,8 @@
 # Search Consumer
 
-The search screen used to list the consumer based on various criteria. This would be the common search screen for all the transactions such as
+## Overview
+
+The search screen is used to filter the list of consumers based on selected criteria. This is the common search screen for all the transactions such as
 
 1. Collect Payments
 2. Download bills and receipts
@@ -8,39 +10,43 @@ The search screen used to list the consumer based on various criteria. This woul
 
 ![Search Consumer](../../../.gitbook/assets/image%20%2852%29.png)
 
-The consumer can be searched based on these parameters -
+## Search Parameters
 
-1. Owner Mobile Number - Should be able to search consumer records that matches the mobile number entered.
+The consumer can be searched on the following parameters -
+
+1. **Owner Mobile Number** - Allows search of consumer records that match the entered mobile number.
    1. OLD Mobile Number
    2. NEW Mobile Number
-2. User should be able to search only when he/she enters full mobile number. Partial mobile number search is not allowed
-3. Name of Consumer - Should be able to search consumer records that matches with the portion of the Name with text entered.
+   3. The user is able to search only when he/she enters the full mobile number. A partial mobile number search is not allowed.
+2. **Name of Consumer** - Allows search of consumer records that match consumer names with the input text.
    1. OLD Name
    2. New Name
-4. Name search can be done with partial name also.
-5. Old Connection id - Should be able to search consumer records that matches the old Connection id entered.
-6. New Connection id - Should be able to search consumer records that matches the New Connection id entered.
+   3. Name search can be done with a partial name also.
+3. **Old Connection id** - Allows search of consumer records that matches the old Connection id entered in the search bar.
+4. **New Connection id** - Allows search of consumer records that matches the New Connection id entered in the search bar.
 
 ![Search Consumer Expanded](../../../.gitbook/assets/image%20%2811%29.png)
 
-1. As the user starts entering one field, other fields should be made non editable. When the user removes text/numbers entered in the field, other fields will be made accessible.
-2. Show more, Show less expands and contracts the view
-3. When the user search matches with only one record, show HH detail screen directly. No need to show intermediary search details screen.
+{% hint style="info" %}
+* As the user starts entering one field, other fields are made non-editable. When the user removes text/numbers entered in the field, other fields are made accessible.
+* Show more, Show less expands and contracts the view.
+* When the user search matches with only one record, show HH detail screen directly. No need to show the intermediary search details screen.
+{% endhint %}
 
-**Search Result:**
+## **Search Result**
 
 ![](../../../.gitbook/assets/image%20%2826%29.png)
 
-The result set will have below information
+The search result set contains below information -
 
-1. Sub-Heading - Sub heading text should change dynamically on what type of search is carried out.
+1. **Sub-Heading** - Subheading text changes dynamically with the type of search carried out.
    1. Following consumers match search criteria with
       1. Phone Number as +91 - 7731045306
       2. Name as ABCxyZ
-2. New Connection ID
-3. Old Connection ID
-4. Consumer’s Name
-5. Phone Number
-6. Address - Combination of Door Number, street number, Ward \(if applicable\)
-7. On click of 'View Consumer Details', it should navigate to HH Details screen.
+2. **New Connection ID**
+3. **Old Connection ID**
+4. **Consumer’s Name**
+5. **Phone Number**
+6. **Address** - Combination of Door Number, street number, Ward \(if applicable\)
+7. Click on the **View Consumer Details** button redirects the user to the HH Details screen.
 
