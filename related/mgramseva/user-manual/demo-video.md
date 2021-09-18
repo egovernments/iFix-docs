@@ -6,9 +6,7 @@ description: Demo Video
 
 Quick walk through of the mGramseva 
 
-
-
-{% file src="../../../.gitbook/assets/mgramseva-demo \(1\).mp4" caption="mGramseva demo " %}
+{% embed url="https://www.youtube.com/watch?v=YWRk26uqlJ0" %}
 
 
 
