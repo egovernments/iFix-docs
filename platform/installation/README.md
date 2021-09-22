@@ -37,7 +37,7 @@ The simplest way to get started with the **deployment process** is to manage dep
 
 Choose your cloud and follow the Instruction to set up a Kubernetes cluster before moving on to the Deployment.
 
-{% page-ref page="../infra-setup/on-azure.md" %}
+{% page-ref page="infra-setup/on-azure.md" %}
 
 ## 3. Deployment-as-code
 

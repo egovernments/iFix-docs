@@ -20,7 +20,7 @@ Each iFIX instance will itself be multi-tenant and will enable multiple local sy
 
 ![iFIX Platform Architecture](.gitbook/assets/image%20%2841%29.png)
 
-iFIX facilitates exchange of fiscal information through a standard set of API \(Application Program Interfaces\)  and events that are available in the [Standards](platform/standards/) section.
+iFIX facilitates exchange of fiscal information through a standard set of API \(Application Program Interfaces\)  and events that are available in the [Standards](platform/architecture/standards/) section.
 
 iFIX provides standard APIs for management of master data like Departments, Funds, Charts of Accounts, Expenditures \(e.g. Schemes, Non-Scheme\) and Projects. Client systems can register into iFIX and based on the permissions granted use the APIs to manage the master data and/or post-primary fiscal events e.g. Demand, Receipt, Bill, Payment. FIX then makes this information available through Standard API for aggregated and dis-aggregated forms for other systems to query and leverage.
 
