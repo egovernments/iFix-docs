@@ -10,15 +10,15 @@ The simplest way to get started with the **deployment process** is to manage dep
 
 #### 1. mGramSeva Installation
 
-{% page-ref page="../../related/mgramseva/installation/" %}
+{% page-ref page="../../exemplar/mgramseva/installation/" %}
 
 #### 2. iFix-adapter Installation
 
-{% page-ref page="../../related/ifix-adapter/installation/" %}
+{% page-ref page="../../exemplar/ifix-adapter/installation/" %}
 
 #### 3. iFix Dashboard Installation
 
-{% page-ref page="../../related/ifix-dashboard/installation.md" %}
+{% page-ref page="../../exemplar/ifix-dashboard/installation.md" %}
 
 ## Pre-reads <a id="pre-read"></a>
 

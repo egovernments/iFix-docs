@@ -39,9 +39,9 @@ A pipeline as code file specifies the stages, jobs, and actions for a pipeline t
 
 The pipeline as code model of creating continuous integration pipelines is an industry best practice, but deployment pipelines used to be created very differently. Below are the two different ways you can deploy the services with pipeline-as-code
 
-{% page-ref page="../../../related/mgramseva/installation/local-setup.md" %}
+{% page-ref page="../../../exemplar/mgramseva/installation/local-setup.md" %}
 
-{% page-ref page="../../../related/mgramseva/installation/ci-cd.md" %}
+{% page-ref page="../../../exemplar/mgramseva/installation/ci-cd.md" %}
 
 ## 4. Destroy the Setup <a id="5-destroy-the-cluster"></a>
 
