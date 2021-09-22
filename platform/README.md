@@ -12,7 +12,7 @@ The services are designed to comply with standards which consist of the Common I
 
 The source code for the platform is hosted [here](https://github.com/egovernments/iFix).
 
-To set up the platform, follow the installation steps listed here.R
+To set up the platform, follow the installation steps listed here.
 
 
 
