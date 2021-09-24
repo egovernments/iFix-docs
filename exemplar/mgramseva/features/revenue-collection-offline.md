@@ -2,27 +2,27 @@
 
 ![](../../../.gitbook/assets/image%20%2839%29.png)
 
-After the demand is generated for Metered and non-metered connections Revenue collector will come to this screen to collect payments.
+After the demand is generated for Metered and non-metered connections Revenue collectors come to this screen to collect payments.
 
-1. User will see screen Consumer billing information will be seen
-2. Clicking on view details will expand the card and show more details. Clicking on Hide details should collapse the card to show only connection ID, Consumer Name & total due amount.
-3. Payment amount - Can be made as
-   1. Full amounts
-   2. Custom Amount - User can enter custom amount in the entry field, which is not zero & not greater than total due amount.
+1. Users can see the consumer billing information on the screen
+2. Clicking on View Details expands the card and shows more details. Clicking on the Hide Details collapses the card to show only connection ID, Consumer Name & Total Due Amount.
+3. Payment amount - can either pay
+   1. The full amount, or
+   2. Custom amount - Users can enter the custom amount in the input field - this cannot be zero or greater than the total due amount.
 4. Payment methods
-   1. Cash - selecting cash and proceeding to payment will take user to successful collection screen
-   2. Online - Clicking on online will show a Q/R code on users screen which can be scanned by another phone to pay amount.
+   1. Cash - select cash and proceed to payment takes the user to the successful collection screen
+   2. Online - The online payment option displays a Q/R code on the user screen that can be scanned by another phone to pay the due.
    3. Post payment via any mode - payment success screen is shown
    4. Receipt ID format - RB-dd/mm/yyyy-yy/running\_sequence\_number
-5. user actions
-   1. Download receipt - download PDF version of receipt with receipt ID as name of PDF while downloading
-   2. Share receipt via whatsapp - Should open Phone OS sharing options
-   3. back to home - should take user back to home screen
+5. User Actions
+   1. Download receipt - download PDF version of receipt with receipt ID as the name of PDF while downloading
+   2. Share receipt via WhatsApp - opens the Phone OS sharing options
+   3. back to home - takes the user back to the home screen
 6. SMS to HH
-   1. As soon as the amount is paid and Revenue collector reaches the Payment success screen SMS will be sent to HH.
+   1. As soon as the amount is paid and the Revenue collector reaches the Payment success screen SMS is sent to HH.
       1. SMS 1 - Dear ‘Username’, Paid Rs.X for water charges for bill period &lt;Cycle&gt;. Download receipt &lt;link&gt;
       2. SMS 2 - Dear ‘Username’, Please leave a review on water supply at &lt;GP&gt; at &lt;Link&gt;
-      3. HH should be able to leave a review for water charges. Refer [Feedback - Post Payments](feedback-post-payment.md).  
+      3. HH is able to leave a review for water charges. Refer [Feedback - Post Payments](feedback-post-payment.md).  
 
 Details on the card
 
@@ -57,11 +57,11 @@ Details on the card
       <td style="text-align:left">
         <p>for non-metered connections</p>
         <ol>
-          <li>This will be latest billing cycle for which demand is generated</li>
+          <li>This is the latest billing cycle for which demand is generated</li>
         </ol>
         <p>For metered connections</p>
         <ol>
-          <li>This will be new bill generated from meter reading between most recent
+          <li>This is the new bill generated from the meter reading between most recent
             2 billing dates.</li>
         </ol>
       </td>
@@ -75,12 +75,12 @@ Details on the card
     </tr>
     <tr>
       <td style="text-align:left">Water charges</td>
-      <td style="text-align:left">Amount for Most recent billing cycle</td>
-      <td style="text-align:left">For metered, calculate charges as per rate master between most recent
-        2 billing dates</td>
+      <td style="text-align:left">Amount for most recent billing cycle</td>
+      <td style="text-align:left">For metered, calculate charges as per rate master between the latest 2
+        billing dates</td>
     </tr>
     <tr>
-      <td style="text-align:left">Arreas</td>
+      <td style="text-align:left">Arrears</td>
       <td style="text-align:left">All old arrears accumulated for HH</td>
       <td style="text-align:left">Expansion should breakup of arrears by individual billing cycles/bill
         generation dates</td>
@@ -97,6 +97,6 @@ Details on the card
 
 ![](../../../.gitbook/assets/image%20%2820%29.png)
 
-1. When Online is selected for payment method, the “Collect Payment” Option is disabled. Since HH will scan the QR and Revenue collector does’t have control on the online process.
-2. Partial amount can’t be greater than full amount.
+1. When online is selected for payment method, the “Collect Payment” option is disabled. Since HH scans the QR, the Revenue collector does not have control over the online process.
+2. A partial amount can’t be greater than the full amount.
 
