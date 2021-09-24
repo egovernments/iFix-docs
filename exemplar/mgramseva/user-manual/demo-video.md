@@ -4,7 +4,7 @@ description: Demo Video
 
 # Demo video
 
-Quick walk through of the mGramseva 
+A quick walkthrough of mGramseva 
 
 {% embed url="https://www.youtube.com/watch?v=YWRk26uqlJ0" %}
 

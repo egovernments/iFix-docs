@@ -1,6 +1,18 @@
+---
+description: Product Documents & Resources
+---
+
 # Documents
 
-User Manual - [https://docs.google.com/document/d/1-vvXOhZH2nFMKa52yFaQC77IOGMWOOu3/edit?usp=sharing&ouid=100832630826720620567&rtpof=true&sd=true](https://docs.google.com/document/d/1-vvXOhZH2nFMKa52yFaQC77IOGMWOOu3/edit?usp=sharing&ouid=100832630826720620567&rtpof=true&sd=true)
+{% page-ref page="user-manual.md" %}
+
+{% page-ref page="demo-video.md" %}
+
+{% page-ref page="ui-mockups.md" %}
+
+{% page-ref page="mgramseva-ui/" %}
+
+{% page-ref page="backend-services/" %}
 
 Flyers - [https://drive.google.com/drive/folders/1QO4ukuzefT42VN1zpiX94WSQOo8knCYl](https://drive.google.com/drive/folders/1QO4ukuzefT42VN1zpiX94WSQOo8knCYl)
 

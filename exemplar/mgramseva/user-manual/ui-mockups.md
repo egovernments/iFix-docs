@@ -1,5 +1,5 @@
 ---
-description: UI Mockups figma file link.
+description: UI Mockups on Figma
 ---
 
 # UI Mockups
