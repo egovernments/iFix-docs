@@ -2,11 +2,11 @@
 
 Enables employees to update consumer details.
 
-![](../../../../../.gitbook/assets/image%20%2873%29.png)
+![](../../../../../.gitbook/assets/image%20%2878%29.png)
 
 Users are redirected to this screen/page when they click on the Update Consumer Details card
 
-![](../../../../../.gitbook/assets/image%20%2866%29.png)
+![](../../../../../.gitbook/assets/image%20%2868%29.png)
 
 ## **Link** 
 
