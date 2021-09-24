@@ -2,7 +2,7 @@
 
 Users are redirected to this screen if they click on the Forgot Password link on the home screen.
 
-![](../../../../.gitbook/assets/image%20%2863%29.png)
+![](../../../../.gitbook/assets/image%20%2868%29.png)
 
 ## **OTP Request**![](blob:https://digit-discuss.atlassian.net/ea9bdc8b-ca2e-466f-b4dc-e230cdcd8833#media-blob-url=true&id=842d8496-309a-430b-86bd-19f136d4b017&collection=contentId-1922728099&contextId=1922728099&mimeType=image%2Fpng&name=Screenshot%202021-09-16%20at%202.02.25%20AM.png&size=113713&width=328&height=580&alt=)
 
@@ -50,7 +50,7 @@ Pop → Login Screen Screen.
 
 → {base url}/mgramseva/selectLanguage/login/forgotPassword/resetPassword.
 
-![](../../../../.gitbook/assets/image%20%2865%29.png)
+![](../../../../.gitbook/assets/image%20%2871%29.png)
 
 Users are redirected to this screen if they click on the Continue button on Forgot Password screen.![](blob:https://digit-discuss.atlassian.net/c66daa8d-7438-4ae7-b673-b2010ba3fc31#media-blob-url=true&id=808f425b-2032-4943-96ea-53a8f39c452a&collection=contentId-1922728099&contextId=1922728099&mimeType=image%2Fpng&name=Reset%20Password.png&size=96701&width=377&height=813&alt=)
 

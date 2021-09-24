@@ -4,7 +4,7 @@
 
 → {base url}/mgramseva/selectLanguage/login
 
-![](../../../../.gitbook/assets/image%20%2859%29.png)
+![](../../../../.gitbook/assets/image%20%2861%29.png)
 
 Users are redirected to this screen once they select the preferred language in the previous screen
 
