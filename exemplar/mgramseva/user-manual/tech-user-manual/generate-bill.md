@@ -23,7 +23,7 @@ Users are redirected to this screen if they click on the Generate Demand card on
 * Set the Billing cycle which contains billing cycles for the selected financial year.
 * On Click of Generate Demand Button, Bulk Demand is generated and the user is navigated to the success screen.
 
-![](../../../../.gitbook/assets/image%20%2859%29.png)
+![](../../../../.gitbook/assets/image%20%2898%29.png)
 
 ### **Logic Implemented for Billing Cycles**
 

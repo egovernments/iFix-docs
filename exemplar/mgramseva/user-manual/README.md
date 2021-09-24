@@ -12,6 +12,8 @@ description: Product Documents & Resources
 
 {% page-ref page="mgramseva-ui/" %}
 
+{% page-ref page="tech-user-manual/" %}
+
 {% page-ref page="backend-services/" %}
 
 Flyers - [https://drive.google.com/drive/folders/1QO4ukuzefT42VN1zpiX94WSQOo8knCYl](https://drive.google.com/drive/folders/1QO4ukuzefT42VN1zpiX94WSQOo8knCYl)

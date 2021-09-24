@@ -1,6 +1,6 @@
 # Architecture
 
-Fiscal Event services flattens each fiscal event line items and posts them into Druid via the Kafka Druid connector. The raw events are stored in fiscal-events dataset in Druid. [Metabase ](https://www.metabase.com/)is used for visualisations. 
+Fiscal Event services flatten each fiscal event line item and post them into Druid via the Kafka Druid connector. The raw events are stored in the fiscal-events dataset in Druid. [Metabase ](https://www.metabase.com/)is used for visualisations. 
 
 The flattened fiscal event consists of the following attributes
 
