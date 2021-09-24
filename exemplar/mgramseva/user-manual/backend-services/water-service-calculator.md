@@ -1,4 +1,4 @@
-# Water Service Calculator
+# mGramSeva - Water Service Calculator
 
 ## Overview
 
