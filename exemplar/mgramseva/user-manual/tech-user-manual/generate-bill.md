@@ -6,7 +6,7 @@
 
 → {base url}/mgramseva/home/billmanualgenerate.
 
-![](../../../../.gitbook/assets/image%20%2862%29.png)
+![](../../../../.gitbook/assets/image%20%2863%29.png)
 
 Users are redirected to this screen if they click on the Generate Demand card on the home screen.
 
@@ -154,7 +154,7 @@ Widgets Utilised from Library
 
 → {base url}/mgramseva/home/householddetails/billgenerate.
 
-![](../../../../.gitbook/assets/image%20%2872%29.png)
+![](../../../../.gitbook/assets/image%20%2883%29.png)
 
 Users are redirected to the Generate New Bill screen if they click the Generate New Bill option in the household detail screen.
 
