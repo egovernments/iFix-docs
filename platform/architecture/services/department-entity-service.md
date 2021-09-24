@@ -68,7 +68,7 @@ Define the hierarchy level using the top to bottom because it has the parent's r
 
 ## Interaction Diagram
 
-![](../../../.gitbook/assets/image%20%2870%29.png)
+![](../../../.gitbook/assets/image%20%2871%29.png)
 
 ## Environment
 

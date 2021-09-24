@@ -4,7 +4,7 @@
 
 → {base url}/mgramseva/home/addExpense
 
-![](../../../../../.gitbook/assets/image%20%2866%29.png)
+![](../../../../../.gitbook/assets/image%20%2867%29.png)
 
 Enables employees to add expenses - the process of onboarding the end-users![](blob:https://digit-discuss.atlassian.net/6ecd56d9-fd43-4af9-b648-98388e99a418#media-blob-url=true&id=71b2de6b-37fa-413d-9270-4bfab1d1030b&collection=contentId-1926824121&contextId=1926824121&mimeType=image%2Fpng&name=Add%20expense.png&size=37466&width=378&height=813&alt=)
 
@@ -18,7 +18,7 @@ If a user logs in for the first time then a walkthrough is populated following t
 
 Clicking on the Submit button navigates the user to the Expenditure Added Successful acknowledgement screen.
 
-![](../../../../../.gitbook/assets/image%20%2887%29.png)
+![](../../../../../.gitbook/assets/image%20%2888%29.png)
 
 ## **Logic Implemented for Date Validation and File Attachments**
 

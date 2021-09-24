@@ -4,7 +4,7 @@
 
  → {base url}/mgramseva/household/details/collectPayment![](blob:https://digit-discuss.atlassian.net/7b871954-91b9-47a8-8250-33a09a1908c8#media-blob-url=true&id=91260146-5080-4158-83af-bae678dca7f3&collection=contentId-1928200243&contextId=1928200243&mimeType=image%2Fpng&name=Collect%20Payment%20Areears.png&size=46493&width=373&height=812&alt=)
 
-![](../../../../.gitbook/assets/image%20%2895%29.png)
+![](../../../../.gitbook/assets/image%20%2896%29.png)
 
 After the demand is generated for Metered and non-metered connections or if any arrears are present, the Revenue collector uses this screen to collect payments.  
 
@@ -20,7 +20,7 @@ Collect Payment card is available on the home screen to the user role having `CO
 
 The Arrears is broken into 'BL\_\(TaxHeadCode\)' which we get from Bill details--&gt;Bill Account details ---&gt; Tax Head Code and the amount of particular arrears is similar to the Bill details--&gt; amount from the Fetch Bill API.
 
-![](../../../../.gitbook/assets/image%20%2869%29.png)
+![](../../../../.gitbook/assets/image%20%2870%29.png)
 
 \(`Eg. if there are two bills with tax head codes is 10101 and 10102, then Arrears break up is represented as BL_10101(Water Charges) with the corresponding amount and BL_10102(Water Charges-Arrears) with the corresponding amount`\)
 

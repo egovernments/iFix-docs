@@ -4,7 +4,7 @@
 
 → {base url}/mgramseva/home/editProfile
 
-![](../../../../.gitbook/assets/image%20%2881%29.png)
+![](../../../../.gitbook/assets/image%20%2882%29.png)
 
 Users are navigated to this screen if they click on the Edit Profile option on the Side Bar app Drawer.![](blob:https://digit-discuss.atlassian.net/6fab3b7c-764f-4cd5-ad69-248197e2873e#media-blob-url=true&id=2cba3990-808e-45ec-8e26-0681e2361567&collection=contentId-1925709827&contextId=1925709827&mimeType=image%2Fpng&name=EditProfile.png&size=28631&width=377&height=818&alt=)
 

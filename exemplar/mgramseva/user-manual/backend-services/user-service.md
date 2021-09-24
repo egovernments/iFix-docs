@@ -23,9 +23,9 @@ Before you proceed with the configuration, make sure the following pre-requisite
 
 ## Interaction Diagram
 
-![](../../../../.gitbook/assets/image%20%2865%29.png)
+![](../../../../.gitbook/assets/image%20%2866%29.png)
 
-![](../../../../.gitbook/assets/image%20%2886%29.png)
+![](../../../../.gitbook/assets/image%20%2887%29.png)
 
 ## Deployment Details
 

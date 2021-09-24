@@ -4,7 +4,7 @@
 
  → {base url}/mgramseva/home/dashboard?tab=0.
 
-![](../../../../../.gitbook/assets/image%20%2872%29.png)
+![](../../../../../.gitbook/assets/image%20%2873%29.png)
 
 Users are redirected to this screen if they select the GPWSC Dashboard option on the home screen.![](blob:https://digit-discuss.atlassian.net/4f1fdd66-faab-4f6e-84a9-1c7e8084276f#media-blob-url=true&id=bc06571f-35c3-4599-b4b8-f0216bf41c68&collection=contentId-1926824058&contextId=1926824058&mimeType=image%2Fpng&name=dashboard_collections.PNG&size=30468&width=272&height=484&alt=)
 
