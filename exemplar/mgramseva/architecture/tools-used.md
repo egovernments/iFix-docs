@@ -4,7 +4,7 @@ description: 'Tools and technologies used to setup, build and deploy mGramSeva s
 
 # Technology
 
-DIGIT being an open source platform, all the tools and tech stack used to build, deploy and operate DIGIT - are also [open source](https://opensource.com/resources/what-open-source) and community edition. All the various tools used are listed below with the specific versions used and their short description.
+DIGIT being an open-source platform, all the tools and tech stack used to build, deploy and operate DIGIT - are also [open-source](https://opensource.com/resources/what-open-source)d and community edition. The various tools used for this platform are listed below with the specific versions used and their short description.
 
 <table>
   <thead>
@@ -23,7 +23,7 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       <td
       style="text-align:left">6.2.0</td>
         <td style="text-align:left">5.4.1</td>
-        <td style="text-align:left">Apache <b>Kafka</b> is a open sourced and community distributed event streaming
+        <td style="text-align:left">Apache <b>Kafka</b> is an open-sourced and community distributed event streaming
           platform capable of handling trillions of events a day.</td>
         <td style="text-align:left">&#x200B;<a href="https://www.confluent.io/confluent-community-license-faq/">Community License</a> &#x200B;</td>
         <td
@@ -34,7 +34,7 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       <td
       style="text-align:left">6.2.0</td>
         <td style="text-align:left">5.4.1</td>
-        <td style="text-align:left"><b>ZooKeeper</b> is an <b>open source</b> Apache project that provides a
+        <td style="text-align:left"><b>ZooKeeper</b> is an <b>open-source</b> Apache project that provides a
           centralized service for providing configuration information, naming, synchronization
           and group services over large clusters in distributed systems. When working
           with Apache <b>Kafka</b>, <b>ZooKeeper</b> is primarily used to track the
@@ -49,9 +49,9 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       style="text-align:left">&#x200B;<a href="https://github.com/Netflix/zuul/tree/v2.3.0">2.3.0</a>&#x200B;</td>
         <td
         style="text-align:left">2.2.2</td>
-          <td style="text-align:left"><b>Zuul</b> is an open sourced edge service that proxies requests to multiple
+          <td style="text-align:left"><b>Zuul</b> is an open-sourced edge service that proxies requests to multiple
             backing services. It provides a unified &#x201C;front door&#x201D; to your
-            system, which allows a browser, mobile app, or other user interface to
+            system, which allows a browser, mobile app, or other user interfaces to
             consume services from multiple hosts without managing cross-origin resource
             sharing (CORS) and authentication for each one.</td>
           <td style="text-align:left">&#x200B;<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache <b>License</b> 2.0</a>&#x200B;</td>
@@ -90,7 +90,7 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       style="text-align:left">&#x200B;<a href="https://github.com/fluent/fluent-bit/tree/v1.8.3">1.8.3</a>&#x200B;</td>
         <td
         style="text-align:left">1.0.6</td>
-          <td style="text-align:left"><em><b>Fluent Bit</b></em> is an open source and multi-platform Log Processor
+          <td style="text-align:left"><em><b>Fluent Bit</b></em> is an open-source and multi-platform Log Processor
             and Forwarder which allows you to collect data/logs from different sources,
             unify and send them to multiple destinations. It&apos;s fully compatible
             with Docker and Kubernetes environments.</td>
@@ -103,7 +103,7 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       <td
       style="text-align:left">13.4</td>
         <td style="text-align:left">9.6 and 10.6</td>
-        <td style="text-align:left"><em><b>PostgreSQL</b></em> is a powerful, open source object-relational
+        <td style="text-align:left"><em><b>PostgreSQL</b></em> is a powerful, open-source object-relational
           database system with over 30 years of active development that has earned
           it a strong reputation for reliability, feature robustness, and performance</td>
         <td
@@ -116,10 +116,10 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       <td style="text-align:left">&#x200B;<a href="https://github.com/redis/redis/tree/6.2.5">6.2.5</a>&#x200B;</td>
       <td
       style="text-align:left">3.2.6</td>
-        <td style="text-align:left"><em><b>Redis</b></em> is an open source (BSD licensed), in-memory data
+        <td style="text-align:left"><em><b>Redis</b></em> is an open-source (BSD licensed), in-memory data
           structure store, used as a database, cache, and message broker. Redis provides
           data structures such as strings, hashes, lists, sets, sorted sets with
-          range queries, bitmaps, hyperloglogs, geospatial indexes, and streams.</td>
+          range queries, bitmaps, hyper logs, geospatial indexes, and streams.</td>
         <td
         style="text-align:left">&#x200B;<a href="https://snyk.io/learn/what-is-bsd-license/">BSD License</a>&#x200B;</td>
           <td
@@ -131,7 +131,7 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       style="text-align:left">&#x200B;<a href="https://github.com/jaegertracing/jaeger/tree/v1.25.0">1.25.0</a>&#x200B;</td>
         <td
         style="text-align:left">1.18</td>
-          <td style="text-align:left"><em><b>Jaeger</b></em> is open source software for tracing transactions
+          <td style="text-align:left"><em><b>Jaeger</b></em> is open-source software for tracing transactions
             between distributed services. It&apos;s used for monitoring and troubleshooting
             complex microservices environments.</td>
           <td style="text-align:left">&#x200B;<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache <b>Lice</b></a>&#x200B;</td>
@@ -168,8 +168,8 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       <td
       style="text-align:left">JDK11</td>
         <td style="text-align:left">8u212</td>
-        <td style="text-align:left"><em><b>OpenJDK</b></em> is completely <b>open source</b> and can be used
-          it freely</td>
+        <td style="text-align:left"><em><b>OpenJDK</b></em> is completely <b>open-source</b> and can be used
+          freely</td>
         <td style="text-align:left">&#x200B;<a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html">GPL-2</a>&#x200B;</td>
         <td
         style="text-align:left">&#x200B;</td>
@@ -180,7 +180,7 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       style="text-align:left"> <a href="https://github.com/spring-projects/spring-boot/tree/v2.6.0-M1">2.6.0</a>&#x200B;</td>
         <td
         style="text-align:left">2.2.6</td>
-          <td style="text-align:left"><em><b>Spring Boot</b></em> is an open-source micro framework maintained
+          <td style="text-align:left"><em><b>Spring Boot</b></em> is an open-source micro-framework maintained
             by a company called Pivotal. It provides Java developers with a platform
             to get started with an auto configurable production-grade Spring application.</td>
           <td
@@ -194,7 +194,7 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       style="text-align:left">&#x200B;<a href="https://github.com/facebook/react/tree/v17.0.2">17.0.2</a>&#x200B;</td>
         <td
         style="text-align:left">16.7.0</td>
-          <td style="text-align:left"><em><b>React</b></em> is one of Facebook&apos;s first <b>open source</b> projects
+          <td style="text-align:left"><em><b>React</b></em> is one of Facebook&apos;s first <b>open-source</b> projects
             that is both under very active development and is also being used to ship
             code to everybody on facebook.com.</td>
           <td style="text-align:left">&#x200B;<a href="https://www.mit.edu/~amini/LICENSE.md">MIT</a>&#x200B;</td>
@@ -289,18 +289,17 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       <td
       style="text-align:left">1.1.0</td>
         <td style="text-align:left">v0.14.10</td>
-        <td style="text-align:left">Terraform allows infrastructure to be expressed as code in a simple, human
-          readable language called HCL (HashiCorp Configuration Language).</td>
+        <td style="text-align:left">Terraform allows infrastructure to be expressed as code in a simple, human-readable
+          language called HCL (HashiCorp Configuration Language).</td>
+        <td style="text-align:left">&#x200B;<a href="https://github.com/hashicorp/terraform/blob/main/LICENSE">Mozilla Public <em>License</em> 2.0</a>&#x200B;</td>
         <td
-        style="text-align:left">&#x200B;<a href="https://github.com/hashicorp/terraform/blob/main/LICENSE">Mozilla Public <em>License</em> 2.0</a>&#x200B;</td>
-          <td
-          style="text-align:left">&#x200B;</td>
+        style="text-align:left">&#x200B;</td>
     </tr>
     <tr>
       <td style="text-align:left">Jenkins</td>
       <td style="text-align:left">2.306</td>
       <td style="text-align:left">2.289</td>
-      <td style="text-align:left"><em>Jenkins</em> &#x2013; an open source automation server which enables
+      <td style="text-align:left"><em>Jenkins</em> &#x2013; an open-source automation server that enables
         developers around the world to reliably build, test, and deploy their software.</td>
       <td
       style="text-align:left">&#x200B;<a href="https://www.mit.edu/~amini/LICENSE.md">MIT</a>&#x200B;</td>
@@ -311,7 +310,7 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       <td style="text-align:left">Go Lang</td>
       <td style="text-align:left">1.16.7</td>
       <td style="text-align:left">1.13.3</td>
-      <td style="text-align:left">Go is an open source programming language that makes it easy to build
+      <td style="text-align:left">Go is an open-source programming language that makes it easy to build
         simple, reliable, and efficient software.</td>
       <td style="text-align:left">&#x200B;<a href="https://golang.org/LICENSE">3-clause BSD + patent grant</a>&#x200B;</td>
       <td
@@ -360,7 +359,7 @@ DIGIT being an open source platform, all the tools and tech stack used to build,
       <td style="text-align:left">&#x200B;<a href="https://github.com/ansible/ansible/releases/tag/v2.11.3">2.11.3</a>&#x200B;</td>
       <td
       style="text-align:left">v2.9.23</td>
-        <td style="text-align:left"><em>Ansible</em> is an open source community project sponsored by Red Hat,
+        <td style="text-align:left"><em>Ansible</em> is an open-source community project sponsored by Red Hat,
           it&apos;s the simplest way to automate IT.</td>
         <td style="text-align:left">GNU General Public <b>License</b>
         </td>

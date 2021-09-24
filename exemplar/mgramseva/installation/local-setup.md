@@ -1,12 +1,12 @@
 # Local Setup
 
-### The 2 Stages: <a id="the-2-stages"></a>
+### The 2 Stages <a id="the-2-stages"></a>
 
 Essentially, there are 2 stages that should allow you to use the full potential of DeploymentConfig and pipeline-as-code.
 
-**Stage 1: Clone the DevOps** [**repo**](https://github.com/egovernments/iFix-DevOps/)**, choose your iFix product branch as mGramSeva.**‌
+**Stage 1: Clone the DevOps** [**repo**](https://github.com/egovernments/iFix-DevOps/)**, choose your iFix product branch as mGramSeva**‌
 
- **Prepare an &lt;**[**env.yaml**](https://github.com/egovernments/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/mgramseva-qa.yaml)**&gt; master config file, you can name this file as you wish which will have the following configurations, this env file need to be in line with your cluster name.**‌
+ **Prepare an &lt;**[**env.yaml**](https://github.com/egovernments/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/mgramseva-qa.yaml)**&gt; master config file, you can name this file as you wish which will have the following configurations, this env file needs to be in line with your cluster name.**‌
 
 * each service global, local env variables
 * credentials, secrets \(You need to encrypt using [sops](https://github.com/mozilla/sops#updatekeys-command) and create a &lt;**env&gt;-secret.yaml** separately\)
@@ -19,7 +19,7 @@ Essentially, there are 2 stages that should allow you to use the full potential 
 * SSL Certificate for the above URL
 * End-points configs \(Internal/external\)
 
-**Stage 2: Run the mGramSeva\_setup deployment script and simply answer the questions that it asks.**
+**Stage 2: Run the mGramSeva\_setup deployment script and simply answer the questions that it asks**
 
 ```text
 cd iFix-DevOps/deploy-as-code/egov-deployer
