@@ -12,7 +12,7 @@
       * [Information Model](platform/architecture/standards/information-model.md)
       * [APIs](platform/architecture/standards/apis.md)
     * [Services](platform/architecture/services/README.md)
-      * [Master Data Service](platform/architecture/services/master-data-service.md)
+      * [iFix Master Data Service](platform/architecture/services/master-data-service.md)
       * [Fiscal Event Service](platform/architecture/services/fiscal-event-service.md)
       * [Fiscal Event Post Processor](platform/architecture/services/untitled.md)
       * [Department Entity Service](platform/architecture/services/department-entity-service.md)
