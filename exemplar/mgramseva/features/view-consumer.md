@@ -9,7 +9,7 @@
    4. Household register → Click on Consumer ID
 2. This screen contains all information related to HH
 
-Static HH card which displays HH details
+Static HH card which displays the following details
 
 1. New Connection ID \(also displayed as a heading\)
 2. Consumer name
@@ -54,36 +54,6 @@ Static HH card which displays HH details
 
 
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <ul>
-          <li></li>
-        </ul>
-      </th>
-      <th style="text-align:left">
-        <ul>
-          <li>First bill is generated</li>
-          <li>payment collection is pending</li>
-        </ul>
-      </th>
-      <th style="text-align:left">
-        <ul>
-          <li>2 payments are already made</li>
-        </ul>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-  </tbody>
-</table>
-
 ![New Connection Before First Bill Generation](../../../.gitbook/assets/image%20%2849%29.png)
 
 ![First bill is generated   Payment Collection is pending](../../../.gitbook/assets/image%20%2843%29.png)
@@ -97,13 +67,13 @@ Static HH card which displays HH details
    2. Below the data card - the Card to generate a new bill is also shown.
    3. This card contains
       1. Last bill generation date - For the first time this will be picked up from data entry. Next time onwards systems latest bill generation date will be captured.
-      2. Days from last bill generation Date - this is to indicate revenue collector how many days have passed by, since last time bill is generated
+      2. Days from last bill generation Date - this is to indicate revenue collector how many days have passed by since last time bill is generated
       3. Previous Meter reading - Units of the meter that is the last read will be displayed here.
       4. Pending Amount
          1. Before the first bill is generated this will just be arrears that are captured during data entry
          2. After the first bill is generated, this pending amount includes the whole pending amount by the user
       5. Generate a new bill
-         1. Clicking on generate a new bill initiates bill generation flow for metered connection
+         1. Clicking on Generate a New Bill initiates bill generation flow for metered connection
       6. Note
          1. Users have to generate a bill to start collecting payments, Without the first generation of bills, collection cant happen even for arrears entered in data entry.
    4. After the first bill is generated
@@ -116,15 +86,15 @@ Static HH card which displays HH details
          2. Action Items
             1. Download, Share Bill
                1. Clicking on download bill will prompt to download bill for the respective amount \(Bill details is given in separate user story\)
-               2. Share bill \(WhatsApp icon\) will open sharing options of phone OS and the user should be able to share bill via whatsapp
-               3. Message to go in whatsapp “ Please find Bill for water charges with Connection ID WS-83121-8312 generated on dd/mm/yyyy” along with bill PDF.
+               2. Share bill \(WhatsApp icon\) will open sharing options of phone OS and the user should be able to share bill via WhatsApp
+               3. Message to go in WhatsApp “ Please find Bill for water charges with Connection ID WS-83121-8312 generated on dd/mm/yyyy” along with bill PDF.
                4. Name of the PDF - “Bill ID”
             2. Collect Payment
-               1. Collect payment should take revenue collector to payment collection screen
-   5. After First payment collection is done
-      1. A reciept history block is visible only after first payment will happen through mgramseva.
-      2. List of all the receipts will be shown under this section as cards, with different data points as actions. Order of receipts will be newest → oldest from top to bottom
-      3. Each receipt card will contain
+               1. Collect payment should take revenue collector to the payment collection screen
+   5. After the first payment collection is done
+      1. A receipt history block is visible only after the first payment happens through mgramseva.
+      2. A list of all the receipts is shown under this section as cards, with different data points as actions. Order of receipts is newest → oldest from top to bottom
+      3. Each receipt card contains
          1. Receipt ID
          2. Amount Paid
          3. Paid Date
@@ -132,8 +102,8 @@ Static HH card which displays HH details
          1. Download Receipt - should download receipt in Revenue collectors phone as a PDF
             1. Name of PDF - “Receipt ID”
          2. Share\(WhatsApp\)
-            1. Message to go in whatsapp “ Please find receipt for water charges with Connection ID WS-83121-8312 paid on dd/mm/yyyy” along with receipt PDF.
-   6. If a new bill is generated again by clicking on ‘Generate a new bill’ reveneue collector will go through bill generation flow and a new single card appears between ‘Generate bill’ and ‘Consumer receipts block’
+            1. Message to go in WhatsApp “ Please find receipt for water charges with Connection ID WS-83121-8312 paid on dd/mm/yyyy” along with receipt PDF.
+   6. If a new bill is generated again by clicking on ‘Generate a new bill’ revenue collector goes through bill generation flow and a new single card appears between ‘Generate bill’ and ‘Consumer receipts block’
 
 ![](../../../.gitbook/assets/image%20%285%29.png)
 
