@@ -5,6 +5,7 @@
 * [Platform](platform/README.md)
   * [Release Notes](platform/release-notes/README.md)
     * [Service Build Updates](platform/release-notes/service-build-updates.md)
+    * [MDMS & Configuration Updates](platform/release-notes/mdms-and-configuration-updates.md)
   * [Features](platform/features/README.md)
     * [Tenant Management](platform/features/tenant-management.md)
   * [Architecture](platform/architecture/README.md)
