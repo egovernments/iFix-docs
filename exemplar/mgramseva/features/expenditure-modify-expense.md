@@ -6,9 +6,9 @@ Expense modification is allowed based on the status of the Payment as given in b
 
 **1:**  When the status is “Unpaid”
 
-Should allow to modify all the details except the Bill id. User will be able to Mark the Bill as “Cancelled” using option provided.
+Should allow users to modify all the details except the Bill id. Users are able to Mark the Bill as “Cancelled” using the option provided.
 
 **2:** When the status is “Paid”
 
-Would not allow to modify any details. But the user will be able to Mark the Bill as “Cancelled” using option provided.
+Would not allow users to modify any details. But the user is able to Mark the Bill as “Cancelled” using the option provided.
 
