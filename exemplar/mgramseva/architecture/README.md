@@ -36,7 +36,7 @@ mGramSeva is built on top of the [Digit ](https://docs.digit.org/)Platform. It c
       4. [eChallan](https://ifix.digit.org/exemplar/mgramseva/user-manual/backend-services/e-challan-service) \(echallan\)
       5. [User Events](https://digit-discuss.atlassian.net/wiki/spaces/EPE/pages/231407688/egov-user-events) \(user-event\)
       6. [Vendor](https://docs.digit.org/product/modules/faecal-sludge-management-fsm/fsm-service-configuration/fsm-vendor-registry-v1.0)
-      7. [IFIX Integration Service](https://ifix.digit.org/exemplar/mgramseva/user-manual/backend-services/ifix-adapter-integration-service)
+      7. [IFIX Adaptor Integration Service](https://ifix.digit.org/exemplar/mgramseva/user-manual/backend-services/ifix-adapter-integration-service)
 
 ## Services Architecture
 
