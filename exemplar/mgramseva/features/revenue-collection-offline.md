@@ -61,8 +61,8 @@ Details on the card
         </ol>
         <p>For metered connections</p>
         <ol>
-          <li>This is the new bill generated from the meter reading between most recent
-            2 billing dates.</li>
+          <li>This is the new bill generated from the meter reading between the 2 most
+            recent billing dates</li>
         </ol>
       </td>
       <td style="text-align:left">
@@ -75,7 +75,7 @@ Details on the card
     </tr>
     <tr>
       <td style="text-align:left">Water charges</td>
-      <td style="text-align:left">Amount for most recent billing cycle</td>
+      <td style="text-align:left">Amount for the latest billing cycle</td>
       <td style="text-align:left">For metered, calculate charges as per rate master between the latest 2
         billing dates</td>
     </tr>

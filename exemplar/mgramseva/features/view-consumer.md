@@ -60,7 +60,7 @@ Static HH card which displays the following details
 
 ![2 payments are already made](../../../.gitbook/assets/image%20%2840%29.png)
 
-**For Metered Connection**
+## **For Metered Connection**
 
 1.  When Bill is not generated \(Post rollout until the first month\)
    1. Data Card is shown
