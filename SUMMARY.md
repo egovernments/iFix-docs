@@ -111,6 +111,8 @@
     * [Architecture](exemplar/ifix-dashboard/architecture/README.md)
       * [Technology](exemplar/ifix-dashboard/architecture/tools-used.md)
     * [Installation](exemplar/ifix-dashboard/installation.md)
+    * [Documents](exemplar/ifix-dashboard/documents/README.md)
+      * [Fiscal Event Aggregator](exemplar/ifix-dashboard/documents/fiscal-event-aggregator.md)
 * [Ecosystem](ecosystem/README.md)
   * [News and Events](ecosystem/news-and-events.md)
 
