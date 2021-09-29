@@ -1,14 +1,14 @@
 # Home Page Notifications
 
-For mGramSeva users, different notifications will be shown on home screen based on different system triggers.
+For mGramSeva users, different notifications are displayed on the home screen based on various system triggers.
 
 ![](../../../.gitbook/assets/image%20%288%29.png)
 
-1. A new card will be used for each notification displayed below.
-2. Card will have countdown timer - today, 1 day ago, 2 days ago, 3 days ago, and so on.
-3. Card should have a close icon to right top corner. Upon closing, card should go away. Cards by default wont have an expiry date.
-4. A “New” text will be shown to user whenever there is a new notification after the user last time login.
-5. Beside the heading Notifications show in brackets - how many notifications are there for him.
+1. A new card is used for each notification displayed below.
+2. Cards have a countdown timer - today, 1 day ago, 2 days ago, 3 days ago, and so on.
+3. Cards have a close icon on the right top corner. Upon closing, the card view is removed from the screen. Cards, by default, do not have an expiry date.
+4. A “New” text is shown to the user whenever there is a new notification after the user last time login.
+5. The Notifications header shows the number of notifications in brackets.
 
 <table>
   <thead>
@@ -36,29 +36,29 @@ For mGramSeva users, different notifications will be shown on home screen based 
           raised and sent to X/X+Y households. Y bills have to be raised. Click here
           to see details</p>
       </td>
-      <td style="text-align:left">Take to filtered view of household register with &#x201C;Pending&#x201D;
+      <td style="text-align:left">Take to a filtered view of household register with &#x201C;Pending&#x201D;
         selected</td>
-      <td style="text-align:left">&lt;billing cycle&gt; - new billing cycle for which demand is generated.
+      <td style="text-align:left">&lt;billing cycle&gt; - new billing cycle for which demand is generated
         <br
-        />- Demand will be generated on 1st of each month.</td>
+        />- Demand will be generated on the 1st of each month</td>
     </tr>
     <tr>
       <td style="text-align:left">Use - Case 1</td>
       <td style="text-align:left"></td>
       <td style="text-align:left">
-        <p>If GP has all non-metered connections then, all X/X bills will be generated
-          using bulk demand. Notification will change as following</p>
+        <p>If GP has all non-metered connections then, all X/X bills are generated
+          using bulk demand. Notification change as following</p>
         <p><b>Demand Generated</b>
         </p>
         <p>Demand for &lt;billing cycle&gt; has been generated. X bills have been
           raised and sent to X/X households. Click here to see details</p>
       </td>
-      <td style="text-align:left">Take to filtered view of household register with &#x201C;Pending&#x201D;
+      <td style="text-align:left">Take to a filtered view of household register with &#x201C;Pending&#x201D;
         selected</td>
       <td style="text-align:left">
-        <p>&lt;billing cycle&gt; - new billing cycle for which demand is generated.</p>
+        <p>&lt;billing cycle&gt; - new billing cycle for which demand is generated</p>
         <ul>
-          <li>Demand will be generated on 1st of each month.</li>
+          <li>Demand will be generated on the 1st of each month</li>
         </ul>
       </td>
     </tr>
@@ -66,21 +66,21 @@ For mGramSeva users, different notifications will be shown on home screen based 
       <td style="text-align:left">Use - Case 2</td>
       <td style="text-align:left"></td>
       <td style="text-align:left">
-        <p>If GP has all metered connections then, all 0/Y bills will be generated
-          using bulk demand. Notification will change as following</p>
+        <p>If GP has all metered connections then, all 0/Y bills are generated using
+          bulk demand. Notification changes as following</p>
         <p><b>New Billing Cycle</b>
         </p>
         <p>New billing cycle will start today. Y bills have to be raised for last
           month. Click here to see details</p>
       </td>
-      <td style="text-align:left">Take to filtered view of household register with &#x201C;All&#x201D; selected</td>
-      <td
-      style="text-align:left">
-        <p>&lt;billing cycle&gt; - new billing cycle for which demand is generated.</p>
+      <td style="text-align:left">Take to a filtered view of household register with &#x201C;All&#x201D;
+        selected</td>
+      <td style="text-align:left">
+        <p>&lt;billing cycle&gt; - new billing cycle for which demand is generated</p>
         <ul>
-          <li>Demand will be generated on 1st of each month.</li>
+          <li>Demand will be generated on the 1st of each month</li>
         </ul>
-        </td>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">Every fortnight</td>
@@ -120,7 +120,7 @@ For mGramSeva users, different notifications will be shown on home screen based 
         <p>Rs. X has been collected in &lt;previous month&gt; for water charges and
           Rs. Y has been spent as expenditure. Click here to view more details</p>
       </td>
-      <td style="text-align:left">Go to most recent completed month&apos;s dashboard</td>
+      <td style="text-align:left">Go to the most recent completed month&apos;s dashboard</td>
       <td style="text-align:left">
         <p>X - Sum of receipts value generated that day in that GP via cash.</p>
         <p>Y - Expense Bills marked as paid last month (paid date is previous month)</p>

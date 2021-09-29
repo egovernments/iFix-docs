@@ -1,6 +1,6 @@
 # SMS Notifications
 
-Various SMS notifications are sent to different users on different actions. Below is a consolidated list of all notifications required
+Various SMS notifications are sent to different users on different actions. Below is a consolidated list of all SMS notifications required.
 
 | Event Type | Target user Type | Message | Comments |
 | :--- | :--- | :--- | :--- |
