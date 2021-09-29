@@ -6,10 +6,10 @@
 
 Bill and Receipt PDFs can be sent to consumers at multiple touchpoints
 
-1. When Bulk Demand is generated through SMS
+1. When bulk demand is generated through SMS
 2. When meter reading is done for metered connections, via SMS
 3. When revenue collector goes to HH screen and clicks on download PDF \(into his mobile\)
-4. when revenue collector goes to HH screen and clicks on WhatsApp share PDF \(Share PDF’s on WhatsApp\)
+4. When revenue collector goes to HH screen and clicks on WhatsApp share PDF \(Share PDF’s on WhatsApp\)
 
 Bill PDF
 
@@ -77,7 +77,7 @@ Bill PDF
     <tr>
       <td style="text-align:left">Breakup of Charges</td>
       <td style="text-align:left">
-        <p>Expansions of amount to be paid.</p>
+        <p>Expansions of the amount to be paid.</p>
         <p>For non metered connections</p>
         <ol>
           <li>Current water charges is the most recent billing cycle completed</li>
@@ -104,24 +104,24 @@ Bill PDF
           with collection and expenditure done by GP</p>
         <p>Example: If the bill is generated in November for October and previous
           months(arrears), all data shown will be w.r.t October.</p>
-        <p><b>Text :</b> Below is the User Feedback, Collections and Expenditure summary
+        <p><b>Text:</b> Below is the User Feedback, Collections and Expenditure summary
           of &lt;GPWSC&gt;</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">User ratings</td>
       <td style="text-align:left">Irrespective of service type, ratings of how many ever users, given in
-        the last billing cycle , will be shown.</td>
+        the last billing cycle, is shown.</td>
     </tr>
     <tr>
       <td style="text-align:left">Collections</td>
       <td style="text-align:left">
         <p>New Demand - Latest Demand generated</p>
-        <p>Actual Collections - Actual collections made in previous billing cycle</p>
+        <p>Actual Collections - Actual collections made in the previous billing cycle</p>
         <p>Total pending Collections (cumulative) - Total pending collections for
-          GP until last date of previous billing cycle</p>
+          GP until the last date of the previous billing cycle</p>
         <ul>
-          <li>If the same bill is donwloaded by a user after n days and more collections
+          <li>If the same bill is downloaded by a user after n days and more collections
             are made by GP by that date, pending collections number should go down.</li>
         </ul>
       </td>
@@ -129,12 +129,12 @@ Bill PDF
     <tr>
       <td style="text-align:left">Expenditure</td>
       <td style="text-align:left">
-        <p>New Expenditure - Expenses logged in previous billing month</p>
-        <p>Actual Payments - actual payments made in previous billing month</p>
+        <p>New Expenditure - Expenses logged in the previous billing month</p>
+        <p>Actual Payments - actual payments made in the previous billing month</p>
         <p>Total Pending Expenditure (cumulative)- total pending expenses until last
           date of the previous billing month</p>
         <ul>
-          <li>If the bill is downloaded again after few expenses are marked paid, these
+          <li>If the bill is downloaded again after few expenses are marked paid, the
             cumulative figures will go down.</li>
         </ul>
       </td>
@@ -192,15 +192,15 @@ Receipt PDF
         </ul>
       </td>
       <td style="text-align:left">
-        <p>As per Receipt generated,</p>
+        <p>As per the Receipt generated -</p>
         <p>For metered connections, after service type - metered, add meter number
           and meter reading as additional fields before Receipt ID</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">Text</td>
-      <td style="text-align:left">Below is the breakup of amount paid for water charges for connection ID
-        &lt;New Connection ID&gt;</td>
+      <td style="text-align:left">Below is the breakup of the amount paid for water charges for connection
+        ID &lt;New Connection ID&gt;</td>
     </tr>
     <tr>
       <td style="text-align:left">Breakup of Charges</td>
@@ -215,15 +215,15 @@ Receipt PDF
         <p>For metered connections</p>
         <ol>
           <li>Current charges are the amounts levied for the most recent bill read,
-            previous bill read.</li>
-          <li>Arrears are the previous dues in similar fashion</li>
+            the previous bill read.</li>
+          <li>Arrears are the previous dues in a similar fashion</li>
         </ol>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">Amount Paid</td>
       <td style="text-align:left">
-        <p>Total Amount paid by consumer for receipt to get generated</p>
+        <p>Total Amount paid by the consumer for the receipt to get generated</p>
         <ul>
           <li>Show amount paid in words also</li>
         </ul>
@@ -234,7 +234,7 @@ Receipt PDF
       <td style="text-align:left">
         <ul>
           <li>As of date, time (day receipt is generated)</li>
-          <li>Total amount yet to be paid</li>
+          <li>The total amount yet to be paid</li>
         </ul>
       </td>
     </tr>
@@ -245,24 +245,24 @@ Receipt PDF
           with collection and expenditure done by GP</p>
         <p>Example: If the bill is generated in November for October and previous
           months(arrears), all data shown will be w.r.t October.</p>
-        <p><b>Text :</b> Below is the User Feedback, Collections and Expenditure summary
+        <p><b>Text:</b> Below is the User Feedback, Collections and Expenditure summary
           of &lt;GPWSC&gt;</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">User ratings</td>
       <td style="text-align:left">Irrespective of service type, ratings of how many ever users, given in
-        the last billing cycle , will be shown.</td>
+        the last billing cycle, is shown.</td>
     </tr>
     <tr>
       <td style="text-align:left">Collections</td>
       <td style="text-align:left">
         <p>New Demand - Latest Demand generated</p>
-        <p>Actual Collections - Actual collections made in previous billing cycle</p>
+        <p>Actual Collections - Actual collections made in the previous billing cycle</p>
         <p>Total pending Collections (cumulative) - Total pending collections for
-          GP until last date of previous billing cycle</p>
+          GP until the last date of the previous billing cycle</p>
         <ul>
-          <li>If the same bill is donwloaded by a user after n days and more collections
+          <li>If the same bill is downloaded by a user after n days and more collections
             are made by GP by that date, pending collections number should go down.</li>
         </ul>
       </td>
@@ -270,8 +270,8 @@ Receipt PDF
     <tr>
       <td style="text-align:left">Expenditure</td>
       <td style="text-align:left">
-        <p>New Expenditure - Expenses logged in previous billing month</p>
-        <p>Actual Payments - actual payments made in previous billing month</p>
+        <p>New Expenditure - Expenses logged in the previous billing month</p>
+        <p>Actual Payments - actual payments made in the previous billing month</p>
         <p>Total Pending Expenditure (cumulative)- total pending expenses until last
           date of the previous billing month</p>
         <ul>
