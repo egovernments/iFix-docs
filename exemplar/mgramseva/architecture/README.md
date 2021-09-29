@@ -1,12 +1,8 @@
----
-description: Work in Progress
----
-
 # Architecture
 
 mGramSeva is built on top of the [Digit ](https://docs.digit.org/)Platform. It consists of the following layers
 
-1. Front End
+1. [Front End](https://ifix.digit.org/exemplar/mgramseva/user-manual/mgramseva-ui)
 2. Back End
    1. Core Services
       1. [User Service](https://ifix.digit.org/exemplar/mgramseva/user-manual/backend-services/user-service) \(egov-user\)
