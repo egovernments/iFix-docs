@@ -24,7 +24,7 @@
       <td style="text-align:left">mGramSeva UI</td>
       <td style="text-align:left"><a href="https://github.com/egovernments/punjab-mgramseva/releases/tag/frontend-mgramseva-v1.0.0">frontend-mgramseva-v1.0.0</a>
       </td>
-      <td style="text-align:left">frontend-mgramseva:v1.0.0-358b113-191</td>
+      <td style="text-align:left">frontend-mgramseva:v1.0.0-5ac9121-194</td>
       <td style="text-align:left">Flutter UI - New</td>
     </tr>
     <tr>
@@ -87,7 +87,7 @@
       <td style="text-align:left">Water Charges Calculator</td>
       <td style="text-align:left"><a href="https://github.com/egovernments/punjab-mgramseva/releases/tag/ws-calculator-v1.4.0">ws-calculator-v1.4.0</a>
       </td>
-      <td style="text-align:left">ws-calculator:v1.4.0-42e03a9-54</td>
+      <td style="text-align:left">ws-calculator:v1.4.0-77d843b-63</td>
       <td style="text-align:left">Customized from DIGIT</td>
     </tr>
     <tr>
@@ -95,7 +95,7 @@
       <td style="text-align:left">eChallan Services</td>
       <td style="text-align:left"><a href="https://github.com/egovernments/punjab-mgramseva/releases/tag/echallan-services-v1.1.0">echallan-services-v1.1.0</a>
       </td>
-      <td style="text-align:left">echallan-services:v1.1.0-42e03a9-56</td>
+      <td style="text-align:left">echallan-services:v1.1.0-6f347b3-59</td>
       <td style="text-align:left">Customized from DIGIT</td>
     </tr>
     <tr>
@@ -207,7 +207,7 @@
       <td style="text-align:left"></td>
       <td style="text-align:left">
         <br />Indexer</td>
-      <td style="text-align:left"><a href="https://github.com/egovernments/core-services/tree/url-shortening-v1.0.0">url-shortening-v1.0.0</a>
+      <td style="text-align:left"><a href="https://github.com/egovernments/core-services/releases/tag/indexer-v1.1.1">indexer-v1.1.1</a>
       </td>
       <td style="text-align:left">egov-indexer:v1.1.1-da68594-7</td>
       <td style="text-align:left">Used from DIGIT</td>
