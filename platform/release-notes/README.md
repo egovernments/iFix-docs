@@ -113,92 +113,92 @@ IFIX 1.0-alpha is a release that has got a new module, a few functional changes,
   <tbody>
     <tr>
       <td style="text-align:left">
-        <p><a href="../exemplar/mgramseva/">mGgramSeva</a>
+        <p><a href="../../exemplar/mgramseva/">mGgramSeva</a>
         </p>
         <ul>
-          <li> <a href="../exemplar/mgramseva/user-manual/tech-user-manual/">User Manual - Tech</a>
+          <li> <a href="../../exemplar/mgramseva/user-manual/tech-user-manual/">User Manual - Tech</a>
             <ul>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/language-selection.md">Language Selection</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/language-selection.md">Language Selection</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/login.md">Login</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/login.md">Login</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/update-password-ftl.md">Update Password - FTL</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/update-password-ftl.md">Update Password - FTL</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/forgot-password.md">Forgot Password</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/forgot-password.md">Forgot Password</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/home.md">Home</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/home.md">Home</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/edit-profile.md">Edit Profile</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/edit-profile.md">Edit Profile</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/change-password.md">Change Password</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/change-password.md">Change Password</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/generate-bill.md">Generate Bill</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/generate-bill.md">Generate Bill</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/search-connection.md">Search Connection</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/search-connection.md">Search Connection</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/consumer-details/create-consumer.md">Consumer Creation</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/consumer-details/create-consumer.md">Consumer Creation</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/consumer-details/update-consumer.md">Update Consumer</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/consumer-details/update-consumer.md">Update Consumer</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/expenses/add-expenses.md">Add Expenses</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/expenses/add-expenses.md">Add Expenses</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/expenses/search-expense-bills.md">Search Expense Bills</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/expenses/search-expense-bills.md">Search Expense Bills</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/expenses/modify-expenses.md">Modify Expenses</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/expenses/modify-expenses.md">Modify Expenses</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/dashboard/collections-dashboard.md">Collections Dashboard</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/dashboard/collections-dashboard.md">Collections Dashboard</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/dashboard/expenditure-dashboard.md">Expenditure Dashboard</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/dashboard/expenditure-dashboard.md">Expenditure Dashboard</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/collect-payment.md">Collect Payment</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/collect-payment.md">Collect Payment</a>
               </li>
-              <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/consumer-feedback.md">Consumer Feedback</a>
+              <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/consumer-feedback.md">Consumer Feedback</a>
               </li>
             </ul>
           </li>
-          <li><a href="../exemplar/mgramseva/user-manual/mgramseva-ui/application-permissions.md"> Application Permissions and Dependencies</a>
+          <li><a href="../../exemplar/mgramseva/user-manual/mgramseva-ui/application-permissions.md"> Application Permissions and Dependencies</a>
           </li>
-          <li><a href="../exemplar/mgramseva/user-manual/tech-user-manual/application-structure.md">Application Structure</a>
+          <li><a href="../../exemplar/mgramseva/user-manual/tech-user-manual/application-structure.md">Application Structure</a>
           </li>
         </ul>
       </td>
       <td style="text-align:left">
-        <p><a href="architecture/services/">IFIX Core (Domain Services)</a>
+        <p><a href="../architecture/services/">IFIX Core (Domain Services)</a>
         </p>
         <ul>
-          <li><a href="architecture/services/master-data-service.md">IFIX Master Data Service</a>
+          <li><a href="../architecture/services/master-data-service.md">IFIX Master Data Service</a>
           </li>
-          <li><a href="architecture/services/fiscal-event-service.md"> IFIX Fiscal Event Service</a>
+          <li><a href="../architecture/services/fiscal-event-service.md"> IFIX Fiscal Event Service</a>
           </li>
-          <li><a href="architecture/services/untitled.md"> IFIX Fiscal Event Post Processor</a>
+          <li><a href="../architecture/services/untitled.md"> IFIX Fiscal Event Post Processor</a>
           </li>
-          <li><a href="architecture/services/department-entity-service.md"> IFIX Department Entity Service</a>
+          <li><a href="../architecture/services/department-entity-service.md"> IFIX Department Entity Service</a>
           </li>
-          <li><a href="architecture/services/keycloak-setup.md">Keycloak Setup</a>
+          <li><a href="../architecture/services/keycloak-setup.md">Keycloak Setup</a>
           </li>
         </ul>
-        <p><a href="../exemplar/ifix-adapter/">IFIX Adaptor</a>
+        <p><a href="../../exemplar/ifix-adapter/">IFIX Adaptor</a>
         </p>
         <ul>
-          <li><a href="../exemplar/ifix-adapter/adapter-services.md"> IFIX Adapter Services v1.0</a>
+          <li><a href="../../exemplar/ifix-adapter/adapter-services.md"> IFIX Adapter Services v1.0</a>
           </li>
         </ul>
-        <p><a href="../exemplar/mgramseva/">mGramSeva</a>
+        <p><a href="../../exemplar/mgramseva/">mGramSeva</a>
         </p>
         <ul>
-          <li><a href="../exemplar/mgramseva/user-manual/backend-services/water-services.md">mGramSeva - Water Service</a>
+          <li><a href="../../exemplar/mgramseva/user-manual/backend-services/water-services.md">mGramSeva - Water Service</a>
           </li>
-          <li><a href="../exemplar/mgramseva/user-manual/backend-services/water-service-calculator.md">mGramSeva - Water Service Calculator</a>
+          <li><a href="../../exemplar/mgramseva/user-manual/backend-services/water-service-calculator.md">mGramSeva - Water Service Calculator</a>
           </li>
-          <li><a href="../exemplar/mgramseva/user-manual/backend-services/e-challan-service.md">mGramSeva - eChallan Service</a>
+          <li><a href="../../exemplar/mgramseva/user-manual/backend-services/e-challan-service.md">mGramSeva - eChallan Service</a>
           </li>
-          <li><a href="../exemplar/mgramseva/user-manual/backend-services/user-service.md">mGramSeva - User Service</a>
+          <li><a href="../../exemplar/mgramseva/user-manual/backend-services/user-service.md">mGramSeva - User Service</a>
           </li>
-          <li><a href="../exemplar/mgramseva/user-manual/backend-services/billing-service.md">mGramSeva - Billing Service</a>
+          <li><a href="../../exemplar/mgramseva/user-manual/backend-services/billing-service.md">mGramSeva - Billing Service</a>
           </li>
-          <li><a href="../exemplar/mgramseva/user-manual/backend-services/mgramseva-user-otp.md">mGramSeva - User OTP</a>
+          <li><a href="../../exemplar/mgramseva/user-manual/backend-services/mgramseva-user-otp.md">mGramSeva - User OTP</a>
           </li>
-          <li><a href="../exemplar/mgramseva/user-manual/backend-services/ifix-adapter-integration-service.md">mGramSeva - IFIX Adapter Integration Service</a>
+          <li><a href="../../exemplar/mgramseva/user-manual/backend-services/ifix-adapter-integration-service.md">mGramSeva - IFIX Adapter Integration Service</a>
           </li>
         </ul>
       </td>
