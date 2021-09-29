@@ -2,7 +2,7 @@
 
 **Context**
 
-User can click on HouseHold register from home screen and land on this screen. This provides a single view snapshot of all pending collections by consumers till date.
+Users can click on the HouseHold Register on the home screen and navigate to this screen. This provides a single view snapshot of all pending collections by consumers till date.
 
 ![](../../../.gitbook/assets/image%20%2848%29.png)
 
@@ -38,12 +38,12 @@ User can click on HouseHold register from home screen and land on this screen. T
       <td style="text-align:left">
         <p>Default is &#x201C;All&#x201D; selected</p>
         <p>User can switch to &#x201C;Pending&#x201D; or &#x201C;Paid&#x201D; view.
-          Based on selection, results will b displayed in the table</p>
+          Based on selection, results are displayed in the table</p>
       </td>
     </tr>
     <tr>
       <td style="text-align:left">Download PDF</td>
-      <td style="text-align:left">Download PDF should download PDF format of Household register with name
+      <td style="text-align:left">Download PDF should download PDF format of Household Register with name
         of document as HH_Register_&lt;Date&gt;</td>
     </tr>
     <tr>
@@ -57,8 +57,7 @@ User can click on HouseHold register from home screen and land on this screen. T
           <li>Connection ID
             <ul>
               <li>New Connection ID of the consumer. If there is a metered connection, an
-                &#x201C;M&#x201D; in &#x2B55;&#xFE0F; will be shown alongside connection
-                ID</li>
+                &#x201C;M&#x201D; in &#x2B55;&#xFE0F; is shown alongside connection ID</li>
             </ul>
           </li>
           <li>Name
@@ -73,13 +72,13 @@ User can click on HouseHold register from home screen and land on this screen. T
             </ul>
           </li>
         </ul>
-        <p>Table will have sort options by all columns.</p>
-        <p>Sorted and Filtered table as in the view, before printing the PDF will
-          be coming into the PDF dynamically.</p>
+        <p>The table has sort options by all columns.</p>
+        <p>The sorted and filtered table, as in the screen view, is exported into
+          the PDF format dynamically on printing.</p>
       </td>
     </tr>
   </tbody>
 </table>
 
-Clicking back will take user back to home screen
+Clicking back takes user back to home screen
 
