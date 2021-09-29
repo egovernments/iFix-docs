@@ -2,10 +2,10 @@
 
 ## Release Summary
 
-IFIX 1.0 is a release that has got a new module, a few functional changes, and non-functional changes.
+IFIX 1.0-alpha is a release that has got a new module, a few functional changes, and non-functional changes.
 
-* Functional: mGramSeva application and Reference Dashboard.
-* Non-functional: IFIX Core \(Domain Services\) and IFIX Adaptor.
+* Functional: mGramSeva application and Reference Dashboard
+* Non-functional: IFIX Core \(Domain Services\) and IFIX Adaptor
 
 ## New ‌Feature Additions
 
@@ -27,7 +27,7 @@ IFIX 1.0 is a release that has got a new module, a few functional changes, and n
       <td style="text-align:left">
         <ol>
           <li>Employee Login and User Profile (Forgot, Update/Reset, and Change Password,
-            Update Profile).</li>
+            Update Profile)</li>
           <li>Tenant Selection</li>
           <li>Household information (New/Edit/Search Connection)</li>
           <li>Generate Bulk Demand</li>
@@ -38,6 +38,8 @@ IFIX 1.0 is a release that has got a new module, a few functional changes, and n
           <li>Post Payment Feedback</li>
           <li>SMS Notifications</li>
           <li>App Onboarding/Walkthrough</li>
+          <li>Localization support in English, Hindi, and Punjabi for Labels, messages,
+            SMS Notifications, Master data, and PDFs</li>
         </ol>
       </td>
     </tr>
@@ -92,7 +94,7 @@ IFIX 1.0 is a release that has got a new module, a few functional changes, and n
       <td style="text-align:left">4</td>
       <td style="text-align:left">IFIX Adaptor</td>
       <td style="text-align:left">API for receiving data from client (mGramSeva - Water Bill/Receipt and
-        Expense Bills) - events/v1/_push.</td>
+        Expense Bills) - events/v1/_push</td>
     </tr>
   </tbody>
 </table>
