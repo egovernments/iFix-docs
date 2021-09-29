@@ -1,6 +1,6 @@
 # User Onboarding/Walkthrough
 
-On few screens users can walkthrough of application for better understanding of different user actions. 
+Users can walk through the application for a better understanding of different user actions available on key screens. 
 
 ![](../../../.gitbook/assets/image%20%2824%29.png)
 
@@ -8,16 +8,19 @@ On few screens users can walkthrough of application for better understanding of 
 
 **Home Screen**
 
+{% hint style="info" %}
 **Note:**
 
-1. For first time user login, walkthrough will automatically start on home page.
-   1. for a multi-tenant user this will start after selecting the tenant and landing on the home screen
+For first-time users after login, the walkthrough automatically starts on the home page.
+
+For multi-tenant users, the walkthrough starts after selecting the tenant and landing on the home screen
+{% endhint %}
 
 | **Step No.** | **Element** | **Note** |
 | :--- | :--- | :--- |
 | 1 | Tenant selection | Click here to switch to other Gram Panchayats |
-| 2 | Household Register | Household Register contains list of all consumers and their pending amounts |
-| 3 | Collect Payments | Use collect payments to search for consumer, generate bill and collect payments |
+| 2 | Household Register | Household Register contains a list of all consumers and their pending amounts |
+| 3 | Collect Payments | Use collect payments to search for consumers, generate bills and collect payments |
 | 4 | Download Bills and Receipts | Search by consumer details such as name or phone number to download bills & receipts |
 | 5 | Add Expense Record | Use this to make a new expenditure entry into the system |
 | 6 | Update Expenses |  |
@@ -31,20 +34,20 @@ On few screens users can walkthrough of application for better understanding of 
 
 | **Step No.** | **Element** | **Note** |
 | :--- | :--- | :--- |
-| 1 | Consumer’s Name | Start creating a consumer record by entering consumers name |
+| 1 | Consumer’s Name | Start creating a consumer record by entering the consumer name |
 | 2 | Gender | Select gender of the consumer |
-| 3 | Father's Name | Add Father’s name of the consumer |
-| 4 | Mobile Number | Enter Mobile number of the consumer |
+| 3 | Father's Name | Add father’s name of the consumer |
+| 4 | Mobile Number | Enter the mobile number of the consumer |
 | 5 | Old Connection id | Enter OLD Connection ID Number. Eg.105 |
 | 6 | Door Number |  |
 | 7 | Street No/Street Name |  |
-| 8 | Ward | Select Ward, where the consumer resides |
+| 8 | Ward | Select the ward where the consumer resides |
 | 9 | Gram Panchayat |  |
-| 10 | Property Type | Select one from residential / commercial type of property |
-| 11 | Service Type | Select if the connection is metered or non-metered. |
+| 10 | Property Type | Select one from residential/commercial type of property |
+| 11 | Service Type | Select if the connection is metered or non-metered |
 | 12 | Meter Number | Add meter number of the connection of the consumer |
-| 13 | Previous meter reading date | Add date of the last meter reading |
-| 14 | Arrears | Add amount the household has to pay until today. |
+| 13 | Previous meter reading date | Add the date of the last meter reading |
+| 14 | Arrears | Add amount the household has to pay until today |
 
 **Expense Entry Screen**
 
@@ -52,7 +55,7 @@ On few screens users can walkthrough of application for better understanding of 
 | :--- | :--- | :--- |
 | 1 | Type of Expense | Select the category of expenditure |
 | 2 | Vendor Name | Mention the name of the vendor who raised the bill |
-| 3 | Amount | Add amount that is mentioned in the bill |
+| 3 | Amount | Add the amount that is mentioned in the bill |
 | 4 | Bill Date | Add date on which bill is entered into records |
 | 5 | Party Bill Date | Add date on which the bill is raised |
 | 6 | Attach Bill | Attach JPEG/ PDF formats of the bill here |
@@ -63,10 +66,10 @@ On few screens users can walkthrough of application for better understanding of 
 | **Step No.** | **Element** | **Note** |
 | :--- | :--- | :--- |
 | 1 | User feedback section | Feedback provided by consumers is shown here |
-| 2 | Collections Snapshot | Summary of collections made in selected time period |
-| 3 | Search field | You can search for consumer by Name or connection ID |
-| 4 | Filters | Use Filters to drill down by property type |
-| 5 | Connection ID Column | These are New Connection IDs of consumers. Clicking on a consumer ID will take you to respective Consumer detail Screen |
+| 2 | Collections Snapshot | Summary of collections made in the selected time period |
+| 3 | Search field | You can search for the consumer by Name or connection ID |
+| 4 | Filters | Use filters to drill down by property type |
+| 5 | Connection ID Column | These are new Connection IDs of consumers. Clicking on a consumer ID takes you to the respective Consumer Detail screen |
 | 6 | Name | Name of the consumer |
-| 7 | Collections | Collections made by consumer in selected time period. |
+| 7 | Collections | Collections made by the consumers in the selected time period |
 
