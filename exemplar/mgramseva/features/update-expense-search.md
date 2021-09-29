@@ -1,6 +1,6 @@
 # Update Expense Search
 
-On selection of “Modify Expense” Option, below search screen will be shown for user to search the Bill/s -
+On selection of “Modify Expense” Option, below search screen is shown for the users to search the Bill/s -
 
 **Search Criteria -**
 
@@ -8,7 +8,7 @@ On selection of “Modify Expense” Option, below search screen will be shown f
 * Expense Type
 * Bill D
 
-**Search Result -** Will list all the Expense bills matching the above search criteria
+**Search Result -** Lists all the Expense bills matching the above search criteria
 
 * Bill ID
 * Type of Expense
@@ -17,7 +17,7 @@ On selection of “Modify Expense” Option, below search screen will be shown f
 * Bill Date
 * Status
 
-On Click of Bill id, the Expense Bill will be displayed in edit mode based on the validations.
+On Click of Bill id, the Expense Bill is displayed in edit mode based on the validations.
 
 ![](../../../.gitbook/assets/image%20%2831%29.png)
 
