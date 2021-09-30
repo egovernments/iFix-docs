@@ -2,7 +2,7 @@
 
 ## Overview
 
-Water service is the egov application, which helps and gives flexibility to municipal and citizen to handle the water service like apply for water connection, search water connection. The application will go on different stages that the state can verify by given roles, If that role can take the action then the application will go to the next state. Based on the state, citizens will get notifications \(SMS and in-app \). Citizens also can pay for application fees or employees can collect the fee for the application.
+Water service is a DIGIT application that helps and gives flexibility to municipalities and citizens to manage water service requirements like apply for a water connection or search for water connections. The application goes through various steps as defined by the states. The application is passed through different users who verify and inspect the application details before moving it to the next stage. Based on the state, citizens get notifications \(SMS and in-app \). Citizens can also pay for application fees or employees can collect the fee for the application.
 
 ## Pre-requisites
 
