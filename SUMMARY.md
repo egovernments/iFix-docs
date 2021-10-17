@@ -11,7 +11,7 @@
     * [Tenant Management](platform/features/tenant-management.md)
   * [Architecture](platform/architecture/README.md)
     * [Principles](platform/architecture/principles.md)
-    * [Standards](platform/architecture/standards/README.md)
+    * [Specifications](platform/architecture/standards/README.md)
       * [Information Model](platform/architecture/standards/information-model.md)
       * [APIs](platform/architecture/standards/apis.md)
     * [Services](platform/architecture/services/README.md)
@@ -122,4 +122,3 @@
 * [Roadmap](https://github.com/egovernments/iFix/projects/1)
 * [Discussions](https://github.com/egovernments/iFix/discussions)
 * [Issues](https://github.com/egovernments/iFix/issues)
-

@@ -1,8 +1,8 @@
 ---
-description: Standards
+description: Information Model and APIs
 ---
 
-# Standards
+# Specifications
 
 ## Information Model
 
@@ -13,12 +13,10 @@ description: Standards
 5. Project
 6. Fiscal Event
 
-## APIs \(v 0.1\)
+## APIs (v 0.1)
 
 1. Business Services
    1. Fiscal Event
       1. Post Fiscal Event
       2. Search Fiscal Event
-
-
 
