@@ -15,13 +15,15 @@ Before you proceed with the configuration, make sure the following pre-requisite
 1. Java 8
 2. Apache Kafka and Kafka-Connect server should be up and running.
 3. Druid DB & MongoDB should be up and running.
-4. Below dependent services are required :  iFix Master data service.  iFix Fiscal Event service.
+4. Below dependent services are required :\
+   &#x20;iFix Master data service.\
+   &#x20;iFix Fiscal Event service.
 
 ## Features
 
 Fiscal Event post-processor consumes the fiscal event validated data from Kafka topic named “fiscal-event-request-validated” and process it by following below steps :
 
-1. Fiscal event validated data will get dereferenced. For dereferencing, pass the service ids like project id, COA id, Tenant id etc. to corresponding services - Master service & Department Entity service And get the corresponding object\(s\). Once the fiscal event data is dereferenced, push/send the same data to Mongo Sink and dereference Topic.
+1. Fiscal event validated data will get dereferenced. For dereferencing, pass the service ids like project id, COA id, Tenant id etc. to corresponding services - Master service & Department Entity service And get the corresponding object(s). Once the fiscal event data is dereferenced, push/send the same data to Mongo Sink and dereference Topic.
 2. Mongo connector will pick up the data from the “fiscal-event-mongodb-sink“ topic and push it to Mongo Datastore.
 3. Unbundle consumers will pick up the dereferenced fiscal event data from the dereferenced topic. Dereference fiscal event data will get unbundled and then flattened. Once the flattening is complete, push/send the same data to Druid Sink topic.
 4. Flattened fiscal event data will be pushed to Druid DB from a topic named: fiscal-event-druid-sink.
@@ -32,11 +34,12 @@ Fiscal Event post-processor consumes the fiscal event validated data from Kafka 
 
 We use Kafka-connect to push the data from a Kafka topic to MongoDB. Follow these steps to start the connector:
 
-1. Connect \(port-forward\) with the Kafka-connect server.
+1. Connect (port-forward) with the Kafka-connect server.
 2. Create a new connector with a POST API call to localhost:8083/connectors.
 3. The request body for that API call is written in the file [fiscal-event-mongodb-sink](https://github.com/egovernments/iFix-Dev/blob/develop/domain-services/fiscal-event-post-processor/fiscal-event-mongodb-sink.json).
-4.  Within that file, wherever ${---} replace it with the actual value based on the environment. Get ${mongo-db-authenticated-uri} from the configured secrets of the environment. \(Optional\) Verify and make changes to the topic names.
-5.  The connector is ready. You can check it using API call GET localhost:8083/connectors.
+4. &#x20;Within that file, wherever ${---} replace it with the actual value based on the environment. Get ${mongo-db-authenticated-uri} from the configured secrets of the environment.\
+   (Optional) Verify and make changes to the topic names.
+5. &#x20;The connector is ready. You can check it using API call GET localhost:8083/connectors.
 
 ### Druid Sink
 
@@ -58,13 +61,13 @@ We use the Druid console to start ingesting data from a Kafka topic to the Druid
 
 _**Note**: Kafka topic needs to be configured with respect to the environment_
 
-|  **Key** | **Value** | **Description** | **Remarks** |
-| :--- | :--- | :--- | :--- |
-| `fiscal-event-kafka-push-topic` | `fiscal-event-request-validated` | Fiscal event post-processor consumes data from this topic | Kafka topic should be the same as configured in the Fiscal event service. |
-| `fiscal-event-kafka-dereferenced-topic` | `fiscal-event-request-dereferenced` | Dereferenced fiscal event data is pushed to this topic | NA |
-| `fiscal-event-kafka-flattened-topic` | `fiscal-event-line-item-flattened` | NA | NA |
-| `fiscal-event-processor-kafka-mongodb-topic` | `fiscal-event-mongodb-sink` | Dereferenced fiscal event data is pushed to this topic and is consumed - Kafka connect to persist in Mongo Data Store | Mongo Kafka connects topic should be the same. |
-| `fiscal-event-processor-kafka-druid-topic` | `fiscal-event-druid-sink` | Flattened Fiscal Event data is pushed to this topic. | While druid ingests fiscal events, make sure it has the same topic as mentioned here |
+|  **Key**                                     | **Value**                           | **Description**                                                                                                       | **Remarks**                                                                          |
+| -------------------------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `fiscal-event-kafka-push-topic`              | `fiscal-event-request-validated`    | Fiscal event post-processor consumes data from this topic                                                             | Kafka topic should be the same as configured in the Fiscal event service.            |
+| `fiscal-event-kafka-dereferenced-topic`      | `fiscal-event-request-dereferenced` | Dereferenced fiscal event data is pushed to this topic                                                                | NA                                                                                   |
+| `fiscal-event-kafka-flattened-topic`         | `fiscal-event-line-item-flattened`  | NA                                                                                                                    | NA                                                                                   |
+| `fiscal-event-processor-kafka-mongodb-topic` | `fiscal-event-mongodb-sink`         | Dereferenced fiscal event data is pushed to this topic and is consumed - Kafka connect to persist in Mongo Data Store | Mongo Kafka connects topic should be the same.                                       |
+| `fiscal-event-processor-kafka-druid-topic`   | `fiscal-event-druid-sink`           | Flattened Fiscal Event data is pushed to this topic.                                                                  | While druid ingests fiscal events, make sure it has the same topic as mentioned here |
 
 ## Configurations and Setup
 
@@ -72,7 +75,6 @@ Update all the DB, Kafka producer & Consumer And URI configuration in the dev.ya
 
 ## References and Notes
 
-| **Title** | **Link** |
-| :--- | :--- |
+| **Title**    | **Link**                                                                                                                                                                                                                                                            |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Swagger Yaml | [![](https://github.com/fluidicon.png)iFix-Dev/fiscal-event-post-processor-1.0.0.yaml at develop · egovernments/iFix-Dev](https://github.com/egovernments/iFix-Dev/blob/develop/domain-services/fiscal-event-post-processor/fiscal-event-post-processor-1.0.0.yaml) |
-

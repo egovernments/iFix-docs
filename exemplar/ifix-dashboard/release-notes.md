@@ -10,13 +10,13 @@ Metabase, an open-source business intelligence platform is being used for visual
 
 Financial transactions are done on mGramSeva such as demand generation, receipt collection, the addition of bill and payment records come into Metabase through iFIX in the form of Fiscal events.
 
-These Fiscal event line items are aggregated to form various data points that provide insights to department officials on Reference Dashboard\(Metabase\)
+These Fiscal event line items are aggregated to form various data points that provide insights to department officials on Reference Dashboard(Metabase)
 
 ## Release Description
 
 Here, we’ll see how different options on Metabase works.
 
-![](../../.gitbook/assets/image%20%2859%29.png)
+![](<../../.gitbook/assets/image (59).png>)
 
 
 
@@ -28,19 +28,19 @@ The date & time filter on the dashboard defaults to the **current financial** ye
 
 ### **Department Hierarchy Filter**
 
-Currently, there are 6 levels of hierarchy as per administration set up by the Department of Water supply and Sanitation Punjab. These are State, Zone, Circle, Division, Sub Division, Section, Gram Panchayat. 
+Currently, there are 6 levels of hierarchy as per administration set up by the Department of Water supply and Sanitation Punjab. These are State, Zone, Circle, Division, Sub Division, Section, Gram Panchayat.&#x20;
 
 All these filters are independent and work on the dashboard irrespective of whether other filters in the hierarchy are selected or not.
 
 ### Visualisations/ Metrics on Dashboard
 
-#### Surplus/Deficit <a id="Surplus/Deficit"></a>
+#### Surplus/Deficit <a href="surplus-deficit" id="surplus-deficit"></a>
 
-This number shows whether the selected Administrative entity is financially surplus or not. It also compares with the previous year using the “trend” visualisation in Metabase. 
+This number shows whether the selected Administrative entity is financially surplus or not. It also compares with the previous year using the “trend” visualisation in Metabase.&#x20;
 
 **Pending Collections**
 
-For selected Administrative boundary what is the pending collections through water charges is represented in this card. If the pending amount is null. Then this card should display zero. 
+For selected Administrative boundary what is the pending collections through water charges is represented in this card. If the pending amount is null. Then this card should display zero.&#x20;
 
 **Outstanding Electricity Bills**
 
@@ -58,9 +58,9 @@ It is important to identify the risky GPWSCs and keep the officials of DWSS info
 
 **Collections & Expenditure time series graphs**
 
-These charts represent the Demand, Net Collections, Bills and Net Payments across time\(month-on-month\) so that officials get a fair idea of how the amount that is getting collected is being spent. 
+These charts represent the Demand, Net Collections, Bills and Net Payments across time(month-on-month) so that officials get a fair idea of how the amount that is getting collected is being spent.&#x20;
 
-Any abnormalities in the graphs \(Low collections or excessive spending\) is something that needs to be paid attention to. 
+Any abnormalities in the graphs (Low collections or excessive spending) is something that needs to be paid attention to.&#x20;
 
 **Expenditure by Chart of Accounts**
 
@@ -68,6 +68,4 @@ Expenditure is currently divided into 4 broad categories - Electricity Bills, Sa
 
 **Department hierarchy table**
 
-Here, we represent Total Demand, Receipt, Bills and Payments by all levels of the hierarchy so that officials at any point, instead of just viewing the charts, trends from the visualisations can also see the tables and compare best performing entities.   
-
-
+Here, we represent Total Demand, Receipt, Bills and Payments by all levels of the hierarchy so that officials at any point, instead of just viewing the charts, trends from the visualisations can also see the tables and compare best performing entities. \

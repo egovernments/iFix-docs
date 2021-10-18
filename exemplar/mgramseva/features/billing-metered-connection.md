@@ -9,28 +9,27 @@ A revenue collector can see a CTA to “Generate a new Bill” on the HH details
 3. Clicking on “Generate bill” takes the user to the bill generation successful screen
 4. Logic for Bill ID number - “RB - dd/mm/yyyy-yy/running\_sequence\_number”
 5. On the success screen there are 3 user actions
-   1. Download bill - Download bill as PDF \(name of PDF is always the Bill ID by default\)
+   1. Download bill - Download bill as PDF (name of PDF is always the Bill ID by default)
    2. Share bill on WhatsApp - Share bill as PDF on WhatsApp
    3. Collect Payment - navigates the revenue collector to the payment collection screen
-6. Share on WhatsApp opens the WhatsApp share popup with the option to choose contacts/groups. The bill is shared with the below text and attached PDF details -
+6.  Share on WhatsApp opens the WhatsApp share popup with the option to choose contacts/groups. The bill is shared with the below text and attached PDF details -
 
-   Text “ Dear &lt;ConsumerName&gt;, Please find water bill for billing cycle &lt;Cycle&gt; attached as PDF”
+    Text “ Dear \<ConsumerName>, Please find water bill for billing cycle \<Cycle> attached as PDF”
 
-| **Input Metric**  | \*\*\*\* | Comments |
-| :--- | :--- | :--- |
-| Previous Meter reading | Only for first-time bill generation |  |
-| New meter reading | For the first time and all consecutive bill generations | Previous meter reading units and previous meter reading dates will be taken from the last bill for new bill generation |
-| Meter reading date | The default is the current date. Revenue collectors can change it to a previous date if required. |  |
+| **Input Metric **      | ****                                                                                              | Comments                                                                                                               |
+| ---------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Previous Meter reading | Only for first-time bill generation                                                               |                                                                                                                        |
+| New meter reading      | For the first time and all consecutive bill generations                                           | Previous meter reading units and previous meter reading dates will be taken from the last bill for new bill generation |
+| Meter reading date     | The default is the current date. Revenue collectors can change it to a previous date if required. |                                                                                                                        |
 
 For Demand Generation Logic refer to [Demand/Bill Generation for metered connection](demand-bill-generation-for-metered-connection.md)
 
-![Bill Generation screen for Metered connections](../../../.gitbook/assets/image%20%2810%29.png)
+![Bill Generation screen for Metered connections](<../../../.gitbook/assets/image (10).png>)
 
 
 
-![ Bill Generation Successful](../../../.gitbook/assets/image%20%2829%29.png)
+![ Bill Generation Successful](<../../../.gitbook/assets/image (29).png>)
 
 1. All 5 Digits in the meter reading has to be entered. Show error message “ Old Meter Reading entered is Invalid”, “ New Meter Reading entered is invalid” respectively.
 2. The New Meter reading should be greater than the Old Meter Reading.
-3. The meter reading date is by default set to &lt;today's date&gt; but give the option to change to the user.
-
+3. The meter reading date is by default set to \<today's date> but give the option to change to the user.

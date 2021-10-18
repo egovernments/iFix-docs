@@ -11,30 +11,30 @@
 
 Static HH card which displays the following details
 
-1. New Connection ID \(also displayed as a heading\)
+1. New Connection ID (also displayed as a heading)
 2. Consumer name
 3. Father's name
 4. Phone number
 5. Old connection ID
-6. Address - Door Number, Street number, Ward \(attached\)
+6. Address - Door Number, Street number, Ward (attached)
 7. Property type
 8. Service type
    1. for metered connections meter number is also displayed
 
 ## **For Non-Metered Connection**
 
-* When Bill is not generated \(Post rollout until the first month\)
-  * Only Data Card is shown - No action required   
+* When Bill is not generated (Post rollout until the first month)
+  * Only Data Card is shown - No action required  &#x20;
   * After the first demand is generated - A new consumer bill/Card gets generated with the following data points and actions
-    *  ****Billing Cycle – the latest billing cycle
-      * Amount - 
+    * ** **Billing Cycle – the latest billing cycle
+      * Amount -&#x20;
         * Current Amount - fixed charges applicable to the billing cycle
         * Arrears - Arrears from the first month. From next month onwards this field will display any unpaid dues.
         * Total Amount - Sum of current amount and arrears
       * Action Items
         * Download, Share Bill
-          * Clicking on download bill prompts to download bill \(Bill details is given in a separate user story\)
-          * Share bill \(WhatsApp icon\) opens sharing options to phone OS and the user is able to share bills via WhatsApp
+          * Clicking on download bill prompts to download bill (Bill details is given in a separate user story)
+          * Share bill (WhatsApp icon) opens sharing options to phone OS and the user is able to share bills via WhatsApp
           * Message to go in WhatsApp “Please find Bill for water charges with Connection ID WS-83121-8312 generated on dd/mm/yyyy” along with bill PDF.
           * Name of the PDF - “Bill ID”
         * Collect Payment
@@ -49,20 +49,20 @@ Static HH card which displays the following details
     * Actions
       * Download Receipt - download receipt in Revenue collectors phone as a PDF
         * Name of PDF - “Receipt ID”
-      * Share \(WhatsApp\)
+      * Share (WhatsApp)
         * Message to go in WhatsApp “Please find the receipt for water charges with Connection ID WS-83121-8312 paid on dd/mm/yyyy” along with receipt PDF
 
 
 
-![New Connection Before First Bill Generation](../../../.gitbook/assets/image%20%2849%29.png)
+![New Connection Before First Bill Generation](<../../../.gitbook/assets/image (49).png>)
 
-![First bill is generated   Payment Collection is pending](../../../.gitbook/assets/image%20%2843%29.png)
+![First bill is generated   Payment Collection is pending](<../../../.gitbook/assets/image (43).png>)
 
-![2 payments are already made](../../../.gitbook/assets/image%20%2840%29.png)
+![2 payments are already made](<../../../.gitbook/assets/image (40).png>)
 
 ## **For Metered Connection**
 
-1.  When Bill is not generated \(Post rollout until the first month\)
+1. &#x20;When Bill is not generated (Post rollout until the first month)
    1. Data Card is shown
    2. Below the data card - the Card to generate a new bill is also shown.
    3. This card contains
@@ -85,8 +85,8 @@ Static HH card which displays the following details
             2. Total Amount - Sum of current amount and arrears
          2. Action Items
             1. Download, Share Bill
-               1. Clicking on download bill will prompt to download bill for the respective amount \(Bill details is given in separate user story\)
-               2. Share bill \(WhatsApp icon\) will open sharing options of phone OS and the user should be able to share bill via WhatsApp
+               1. Clicking on download bill will prompt to download bill for the respective amount (Bill details is given in separate user story)
+               2. Share bill (WhatsApp icon) will open sharing options of phone OS and the user should be able to share bill via WhatsApp
                3. Message to go in WhatsApp “ Please find Bill for water charges with Connection ID WS-83121-8312 generated on dd/mm/yyyy” along with bill PDF.
                4. Name of the PDF - “Bill ID”
             2. Collect Payment
@@ -101,13 +101,12 @@ Static HH card which displays the following details
       4. Actions
          1. Download Receipt - should download receipt in Revenue collectors phone as a PDF
             1. Name of PDF - “Receipt ID”
-         2. Share\(WhatsApp\)
+         2. Share(WhatsApp)
             1. Message to go in WhatsApp “ Please find receipt for water charges with Connection ID WS-83121-8312 paid on dd/mm/yyyy” along with receipt PDF.
    6. If a new bill is generated again by clicking on ‘Generate a new bill’ revenue collector goes through bill generation flow and a new single card appears between ‘Generate bill’ and ‘Consumer receipts block’
 
-![](../../../.gitbook/assets/image%20%285%29.png)
+![](<../../../.gitbook/assets/image (5).png>)
 
-![](../../../.gitbook/assets/image%20%2836%29.png)
+![](<../../../.gitbook/assets/image (36).png>)
 
-![](../../../.gitbook/assets/image%20%2823%29.png)
-
+![](<../../../.gitbook/assets/image (23).png>)

@@ -4,40 +4,24 @@
 
 ### Fiscal Service
 
-{% api-method method="post" host="https://<<Host URL>>" path="/fiscal/events/v1/\_push" %}
-{% api-method-summary %}
-Post Fiscal Event
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://<<Host URL>>" path="/fiscal/events/v1/_push" method="post" summary="Post Fiscal Event" %}
+{% swagger-description %}
 Post fiscal events to the iFIX platform.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
+{% swagger-parameter in="header" name="Authentication" type="string" %}
 Authentication token to track down who is emptying our stocks.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="requestHeader" type="object" required=true %}
+{% swagger-parameter in="query" name="requestHeader" type="object" %}
 The API will do its best to find a cake matching the provided recipe.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="fiscalEvent" type="object" required=true %}
+{% swagger-parameter in="query" name="fiscalEvent" type="object" %}
 Whether the cake should be gluten-free or not.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=202 %}
-{% api-method-response-example-description %}
-Fiscal Event Published Successfully
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="202" description="Fiscal Event Published Successfully" %}
 ```
 {
   "responseHeader": {
@@ -79,13 +63,9 @@ Fiscal Event Published Successfully
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Failed to process request.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Failed to process request." %}
 ```
 {
   "responseHeader": {
@@ -105,39 +85,23 @@ Failed to process request.
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://<<Host Url>>" path="/fiscal/events/v1/\_search" %}
-{% api-method-summary %}
-Search Fiscal Event
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://<<Host Url>>" path="/fiscal/events/v1/_search" method="get" summary="Search Fiscal Event" %}
+{% swagger-description %}
 Search fiscal events based on the provided search parameters
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-form-data-parameters %}
-{% api-method-parameter name="requestHeader" type="object" required=true %}
+{% swagger-parameter in="body" name="requestHeader" type="object" %}
 
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="crietria" type="object" required=true %}
+{% swagger-parameter in="body" name="crietria" type="object" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-form-data-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {
   "responseHeader": {
@@ -179,13 +143,9 @@ Search fiscal events based on the provided search parameters
   ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Invalid Input
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Invalid Input" %}
 ```
 {
   "ResponseHeader": {
@@ -205,8 +165,5 @@ Invalid Input
   ]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}

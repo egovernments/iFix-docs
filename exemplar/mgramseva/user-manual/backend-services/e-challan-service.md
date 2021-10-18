@@ -13,7 +13,7 @@ Before you proceed with the documentation, make sure the following pre-requisite
 * egov-persister service is running and has workflow persister config path added in it
 * PSQL server is running and a database is created to store workflow configuration and data
 
-### Key Functionalities <a id="Key-Functionalities"></a>
+### Key Functionalities <a href="key-functionalities" id="key-functionalities"></a>
 
 * Allow employees to capture service details for miscellaneous services and mark as paid
 * Allow employees to update/cancel challan.
@@ -22,15 +22,15 @@ Before you proceed with the documentation, make sure the following pre-requisite
 
 ![](../../../../.gitbook/assets/image-20210915-033153.png)
 
-### Configuration Details <a id="Configuration-Details"></a>
+### Configuration Details <a href="configuration-details" id="configuration-details"></a>
 
-_**MDMS Configuration**_  
-  
+_**MDMS Configuration**_\
+\
 Actions & Role Action Mapping
 
 **Actions**
 
-```text
+```
 [
    {
       "id": {{PLACEHOLDER1}},
@@ -111,7 +111,7 @@ Actions & Role Action Mapping
 
 **Role Action Mapping**
 
-```text
+```
 [
   {
       "rolecode": "EXPENSE_PROCESSING",
@@ -216,7 +216,7 @@ Actions & Role Action Mapping
 
 Roles available
 
-```text
+```
 
 		{
       "code": "GP_ADMIN",
@@ -278,17 +278,16 @@ The eChallan service is used to generate **e-challans / bills** for all miscella
 
 ### Doc Links
 
-| **Title**  | **Link** |
-| :--- | :--- |
+| **Title **                | **Link**                                                                                                                                                       |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | API Swagger Documentation | [Swagger Documentation](https://editor.swagger.io/?url=https://raw.githubusercontent.com/egovernments/municipal-services/master/docs/e-Challan-v1.0.0.yaml#!/) |
 
 ### API List
 
-|  | **Link** |
-| :--- | :--- |
-|  _echallan-services/eChallan/v1/\_create_ | [https://www.getpostman.com/collections/9724c55db3365b72c3e8](https://www.getpostman.com/collections/9724c55db3365b72c3e8) |
-| _echallan-services/eChallan/v1/\_update_ | [https://www.getpostman.com/collections/9724c55db3365b72c3e8](https://www.getpostman.com/collections/9724c55db3365b72c3e8) |
-| _echallan-services/eChallan/v1/\_search_ | [https://www.getpostman.com/collections/9724c55db3365b72c3e8](https://www.getpostman.com/collections/9724c55db3365b72c3e8) |
+|                                           | **Link**                                                                                                                   |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| _ echallan-services/eChallan/v1/\_create_ | [https://www.getpostman.com/collections/9724c55db3365b72c3e8](https://www.getpostman.com/collections/9724c55db3365b72c3e8) |
+| _echallan-services/eChallan/v1/\_update_  | [https://www.getpostman.com/collections/9724c55db3365b72c3e8](https://www.getpostman.com/collections/9724c55db3365b72c3e8) |
+| _echallan-services/eChallan/v1/\_search_  | [https://www.getpostman.com/collections/9724c55db3365b72c3e8](https://www.getpostman.com/collections/9724c55db3365b72c3e8) |
 
-_\(Note: All the API’s are in the same postman collection therefore the same link is added in each row\)_
-
+_(Note: All the API’s are in the same postman collection therefore the same link is added in each row)_
