@@ -23,36 +23,6 @@ If you don't have an [Azure subscription](https://docs.microsoft.com/en-us/azure
 
 &#x20;Note:  Run the commands as administrator if you plan to run the commands in this quickstart locally instead of in Azure Cloud Shell.
 
-## Create a resource group
-
-An [Azure resource group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview) is a logical group in which Azure resources are deployed and managed. When you create a resource group, you will be prompted to specify a location. This location is:
-
-* The storage location of your resource group metadata.
-* Where your resources will run in Azure if you don't specify another region during resource creation.
-
-The following example creates a resource group named _myResourceGroup_ in the _\<India>_ location.
-
-Create a resource group using the [az group create](https://docs.microsoft.com/en-us/cli/azure/group#az\_group\_create) command.
-
-```
-az group create --name myResourceGroup --location <India regions>
-```
-
-Output for successfully created resource group:JSONCopy
-
-```
-{
-  "id": "/subscriptions/<guid>/resourceGroups/myResourceGroup",
-  "location": "eastus",
-  "managedBy": null,
-  "name": "myResourceGroup",
-  "properties": {
-    "provisioningState": "Succeeded"
-  },
-  "tags": null
-}
-```
-
 ## AKS Architecture
 
 Before we provision the cloud resources, we need to understand and be sure about what resources need to be provisioned by terraform to deploy DIGIT. The following picture shows the various key components. (AKS, Worker Nodes, Postgres DB, Volumes, Load Balancer)&#x20;
