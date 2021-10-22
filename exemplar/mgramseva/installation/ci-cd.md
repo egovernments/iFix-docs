@@ -1,6 +1,6 @@
 # CI/CD
 
-## Overview <a href="overview" id="overview"></a>
+Overview
 
 Since there are many services and the development code is part of various git repos, you need to understand the concept of **cicd-as-service** which is open-sourced. This page also guides you through the process of creating a CI/CD pipeline.
 
@@ -72,18 +72,18 @@ Post infra setup (Kubernetes Cluster), We start with deploying the Jenkins and k
 
 
 
-**Prepare an <**[**ci.yaml> master config file**](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo.yaml)** and <**[**ci-secrets.yaml**](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo-secrets.yaml)**>, you can name this file as you wish which will have the following configurations.**
+**Prepare an <**[**ci.yaml**](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci.yaml)**> master config file and <**[**ci-secrets.yaml**](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml)**>, you can name this file as you wish which will have the following configurations.**
 
 * credentials, secrets (You need to encrypt using [sops](https://github.com/mozilla/sops#updatekeys-command) and create a **ci-secret.yaml** separately)
-* Check and Update [**ci-secrets.yaml**](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo-secrets.yaml)** **details (like github Oauth app clientId and clientSecret, GitHub user details gitReadSshPrivateKey and gitReadAccessToken etc..)
+* Check and Update [**ci-secrets.yaml**](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml)** **details (like github Oauth app clientId and clientSecret, GitHub user details gitReadSshPrivateKey and gitReadAccessToken etc..)
 * To create Jenkins namespace mark this [flag](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo.yaml#L5) **true**
-* Add your env's kubconfigs under kubConfigs like [https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo-secrets.yaml#L12](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo-secrets.yaml#L12)
+* Add your env's kubconfigs under kubConfigs like [https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml#L19](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml#L19)
 * KubeConfig env's name and deploymentJobs name from ci.yaml should be the same&#x20;
-* Update the [CIOps](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/charts/backbone-services/jenkins/values.yaml#L419) and [DIGIT-DevOps](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/charts/backbone-services/jenkins/values.yaml#L484) repo name with your forked repo name and provide read-only access to github user to those repo's.
+* Update the [CIOps](https://github.com/misdwss/CIOps) and [DIGIT-DevOps](https://github.com/misdwss/iFix-DevOps) repo name with your forked repo name and provide read-only access to github user to those repo's.
 * SSL Certificate for the sub-domain
 
 ```
-cd DIGIT-DevOps/tree/release/deploy-as-code
+cd iFix-DevOps/deploy-as-code/egov-deployer
 ```
 
 ```
@@ -95,7 +95,7 @@ You have launched the Jenkins. You can access the same through your sub-domain w
 
 The Jenkins CI pipeline is configured and managed 'as code'.
 
-​[New Service Integration - Example](https://digit-discuss.atlassian.net/wiki/spaces/DOPS/pages/111673399/New+Service+Integration+-+Example) URL - [https://builds.digit.org/](https://builds.digit.org/%E2%80%8B)​
+​[New Service Integration - Example](https://digit-discuss.atlassian.net/wiki/spaces/DOPS/pages/111673399/New+Service+Integration+-+Example) URL - https://\<Jenkins\_domain>​
 
 **Job Builder** – Job Builder is a Generic Jenkins job that creates the Jenkins pipeline automatically which are then used to build the application, create the docker image of it and push the image to the docker repository. The Job Builder job requires the git repository URL as a parameter. It clones the respective git repository and reads the [**build/build-config.yml**](https://github.com/misdwss/punjab-mgramseva/blob/master/build/build-config.yml) file for each git repository and uses it to create the service build job.
 
