@@ -9,7 +9,7 @@ The [**Amazon Elastic Kubernetes Service (EKS)**](https://docs.aws.amazon.com/ek
 
 ## Prerequisites <a href="prerequisites" id="prerequisites"></a>
 
-1. ​[**AWS account**](https://portal.aws.amazon.com/billing/signup?nc2=h\_ct\&src=default\&redirect\_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) with the admin access to provision EKS Service, you can always subscribe to free AWS account to learn the basics and try, but there is a limit to [**what is offered as free**](https://aws.amazon.com/free/), for this demo you need to have a commercial subscription to the EKS service, if you want to try out for a day or two, it might cost you about Rs 500 - 1000. **(Note: Post the Demo, for the internal folks, eGov will provide a 2-3 hrs time bound access to eGov's AWS account based on the request and available number of slots per day)**
+1. ​[**AWS account**](https://portal.aws.amazon.com/billing/signup?nc2=h\_ct\&src=default\&redirect\_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start) with the admin access to provision EKS Service, you can always subscribe to free AWS account to learn the basics and try, but there is a limit to [**what is offered as free**](https://aws.amazon.com/free/), for this demo you need to have a commercial subscription to the EKS service.
 2. Install [**kubectl**](https://kubernetes.io/docs/tasks/tools/) on your local machine that helps you interact with the kubernetes cluster
 3. &#x20;Install [**Helm**](https://helm.sh/docs/intro/install/) that helps you package the services along with the configurations, envs, secrets, etc into a [**kubernetes manifests**](https://devspace.cloud/docs/cli/deployment/kubernetes-manifests/what-are-manifests)
 4. Install [**terraform**](https://releases.hashicorp.com/terraform/0.14.10/) version (0.14.10) for the Infra-as-code (IaC) to provision cloud resources as code and with desired resource graph and also it helps to destroy the cluster at one go.
@@ -49,8 +49,9 @@ Considering the above deployment architecture, the following is the resource gra
 
 * EKS Control Plane (Kubernetes Master)
 * Work node group (VMs with the estimated number of vCPUs, Memory)
+* Node-pool's (mgramseva and ifix)
 * EBS Volumes (Persistent Volumes)
-* RDS (PostGres)
+* RDS (Postgresql)
 * VPCs (Private network)
 * Users to access, deploy and read-only
 
@@ -58,10 +59,10 @@ Considering the above deployment architecture, the following is the resource gra
 
 * Ideally, one would write the terraform script from the scratch using this [doc](https://learn.hashicorp.com/collections/terraform/modules).
 * Here we have already written the terraform script that provisions the production-grade DIGIT Infra and can be customized with the specified configuration.
-* Let's Clone the [iFix-DevOps](https://github.com/egovernments/iFix-DevOps) GitHub repo where the terraform script to provision EKS cluster is available and below is the structure of the files.
+* Let's Clone the [iFix-DevOps](https://github.com/misdwss/iFix-DevOps) GitHub repo where the terraform script to provision EKS cluster is available and below is the structure of the files.
 
 ```
-git clone --branch release https://github.com/egovernments/iFix-DevOps.git
+git clone https://github.com/misdwss/iFix-DevOps.git
 cd iFix-DevOps/infra-as-code/terraform
 
 
@@ -119,7 +120,7 @@ cd iFix-DevOps/infra-as-code/terraform
 
 1. The following main.tf with create s3 bucket to store all the state of the execution to keep track.
 
-&#x20;iFix-DevOps/Infra-as-code/terraform/sample-aws/remote-state
+&#x20;iFix-DevOps/Infra-as-code/terraform/sample-eks/remote-state
 
 &#x20;[**main.tf**](https://github.com/egovernments/DIGIT-DevOps/blob/release/infra-as-code/terraform/sample-aws/remote-state/main.tf)**​**
 
@@ -157,12 +158,11 @@ resource "aws_dynamodb_table" "terraform_state_lock" {
 
 2\. The following main.tf contains the detailed resource definitions that need to be provisioned, please have a look at it.
 
-&#x20;Dir: iFix-DevOps/Infra-as-code/terraform/sample-aws
+&#x20;Dir: iFix-DevOps/Infra-as-code/terraform/sample-eks
 
 &#x20;[**main.tf**](https://github.com/egovernments/DIGIT-DevOps/blob/release/infra-as-code/terraform/sample-aws/main.tf)
 
 ```
-# master configs, terraform state helps to maintain the flow of the execution
 terraform {
   backend "s3" {
     bucket = "try-workshop-yourname"
@@ -171,7 +171,6 @@ terraform {
   }
 }
 
-# Network Module
 module "network" {
   source             = "../modules/kubernetes/aws/network"
   vpc_cidr_block     = "${var.vpc_cidr_block}"
@@ -179,24 +178,7 @@ module "network" {
   availability_zones = "${var.network_availability_zones}"
 }
 
-# PostGres DB
-module "db" {
-  source                        = "../modules/db/aws"
-  subnet_ids                    = "${module.network.private_subnets}"
-  vpc_security_group_ids        = ["${module.network.rds_db_sg_id}"]
-  availability_zone             = "${element(var.availability_zones, 0)}"
-  instance_class                = "db.t3.medium"
-  engine_version                = "11.5"
-  storage_type                  = "gp2"
-  storage_gb                    = "100"
-  backup_retention_days         = "7"
-  administrator_login           = "egovdev"
-  administrator_login_password  = "${var.db_password}"
-  db_name                       = "${var.cluster_name}-db"
-  environment                   = "${var.cluster_name}"
-}
 
-# **********  Uses with various access like Admin, Dev, Deploy
 module "iam_user_deployer" {
   source  = "terraform-aws-modules/iam/aws//modules/iam-user"
 
@@ -233,9 +215,6 @@ module "iam_user_user" {
   pgp_key = "${var.iam_keybase_user}"
 }
 
-
-
-# ********** EKS Cluster (Control Plane) **********
 data "aws_eks_cluster" "cluster" {
   name = "${module.eks.cluster_id}"
 }
@@ -266,16 +245,14 @@ module "eks" {
 
   vpc_id = "${module.network.vpc_id}"
 
-  # ********** Worker Nodes
   worker_groups_launch_template = [
     {
       name                    = "spot"
       subnets                 = "${concat(slice(module.network.private_subnets, 0, length(var.availability_zones)), slice(module.network.public_subnets, 0, length(var.availability_zones)))}"
       override_instance_types = "${var.override_instance_types}"
-      asg_max_size            = 4
-      asg_desired_capacity    = 4
+      asg_max_size            = 1
+      asg_desired_capacity    = 1
       kubelet_extra_args      = "--node-labels=node.kubernetes.io/lifecycle=spot"
-      additional_security_group_ids = ["${module.network.worker_nodes_sg_id}"]
       spot_allocation_strategy= "capacity-optimized"
       spot_instance_pools     = null
     },
@@ -283,24 +260,39 @@ module "eks" {
   
   map_users    = [
     {
-      userarn  = "${module.iam_user_deployer.this_iam_user_arn}"
-      username = "${module.iam_user_deployer.this_iam_user_name}"
+      userarn  = "${module.iam_user_deployer.iam_user_arn}"
+      username = "${module.iam_user_deployer.iam_user_name}"
       groups   = ["system:masters"]
     },
     {
-      userarn  = "${module.iam_user_admin.this_iam_user_arn}"
-      username = "${module.iam_user_admin.this_iam_user_name}"
+      userarn  = "${module.iam_user_admin.iam_user_arn}"
+      username = "${module.iam_user_admin.iam_user_name}"
       groups   = ["global-readonly", "digit-user"]
     },
     {
-      userarn  = "${module.iam_user_user.this_iam_user_arn}"
-      username = "${module.iam_user_user.this_iam_user_name}"
+      userarn  = "${module.iam_user_user.iam_user_arn}"
+      username = "${module.iam_user_user.iam_user_name}"
       groups   = ["global-readonly"]
     },    
   ]
 }
 
-# ********** EBS Volumes for the statefulsets (PVCs)
+module "db" {
+  source                        = "../modules/db/aws"
+  subnet_ids                    = "${module.network.private_subnets}"
+  vpc_security_group_ids        = ["${module.network.rds_db_sg_id}"]
+  availability_zone             = "${element(var.availability_zones, 0)}"
+  instance_class                = "db.t3.medium"
+  engine_version                = "11.5"
+  storage_type                  = "gp2"
+  storage_gb                    = "100"
+  backup_retention_days         = "7"
+  administrator_login           = "egovdev"
+  administrator_login_password  = "${var.db_password}"
+  db_name                       = "${var.cluster_name}-db"
+  environment                   = "${var.cluster_name}"
+}
+
 module "es-master" {
 
   source = "../modules/storage/aws"
@@ -347,6 +339,45 @@ module "kafka" {
   disk_size_gb = "50"
   
 }
+
+module "zookeeper-ifix" {
+
+  source = "../modules/storage/aws"
+  storage_count = 3
+  environment = "${var.cluster_name}"
+  disk_prefix = "zookeeper-ifix"
+  availability_zones = "${var.availability_zones}"
+  storage_sku = "gp2"
+  disk_size_gb = "2"
+  
+}
+
+module "kafka-ifix" {
+
+  source = "../modules/storage/aws"
+  storage_count = 3
+  environment = "${var.cluster_name}"
+  disk_prefix = "kafka-ifix"
+  availability_zones = "${var.availability_zones}"
+  storage_sku = "gp2"
+  disk_size_gb = "50"
+  
+}
+
+module "node-group" {  
+  for_each = toset(["ifix-dev", "mgramseva"])
+  source = "../modules/node-pool/aws"
+
+  cluster_name        = "${var.cluster_name}"
+  node_group_name     = "${each.key}-ng"
+  kubernetes_version  = "${var.kubernetes_version}"
+  security_groups     =  ["${module.network.worker_nodes_sg_id}"]
+  subnet              = "${concat(slice(module.network.private_subnets, 0, length(var.node_pool_zone)))}"
+  node_group_max_size = 1
+  node_group_desired_size = 1
+}  
+
+
 ```
 
 ## Custom variables/configurations:  <a href="set-up-an-environment" id="set-up-an-environment"></a>
@@ -354,7 +385,7 @@ module "kafka" {
 You can define your configurations in **variables.tf** and provide the env specific cloud requirements so that using the same terraform template you can customize the configurations.
 
 ```
-├── iFix-dev
+├── sample-eks
 │   ├── main.tf 
 │   ├── outputs.tf
 │   ├── providers.tf
@@ -389,6 +420,10 @@ variable "availability_zones" {
   default = ["ap-south-1b"]
 }
 
+variable "node_pool_zone" {
+ default = "ap-south-1a"  
+}
+
 variable "kubernetes_version" {
   default = "1.18"
 }
@@ -405,7 +440,7 @@ variable "override_instance_types" {
 
 # number of machines as per estimate
 variable "number_of_worker_nodes" {
-  default = "3"
+  default = "1"
 }
 
 ##Add ssh key in case you want to ssh to nodes
@@ -440,13 +475,13 @@ Let's begin to run the terraform scripts to provision infra required to Deploy D
 1. First CD into the following directory and run the following command 1-by-1 and watch the output closely.
 
 ```
-cd DIGIT-DevOps/infra-as-code/terraform/sample-aws/remote-state
+cd iFix-DevOps/infra-as-code/terraform/sample-eks/remote-state 
 terraform init
 terraform plan
 terraform apply
 
 
-cd DIGIT-DevOps/infra-as-code/terraform/sample-aws
+cd iFix-DevOps/infra-as-code/terraform/sample-eks 
 terraform init
 terraform plan
 terraform apply
