@@ -11,25 +11,42 @@ Once the desired service is ready for the integration: decide the service name, 
 **Build-config.yml** –It is present under the build directory in each repository
 
 ```
-https://github.com/egovernments/DIGIT/blob/master/core-services/build/build-config.yml
+https://github.com/misdwss/punjab-mgramseva/blob/master/build/build-config.yml
 ```
 
 This file contains the below details which are used for creating the automated Jenkins pipeline job for your newly created service.
 
 ```
-# config:#   - name: < Name of the job, foo/bar would create job named bar inside folder foo >#     build:#     - work-dir: < Working directory of the app to be built >#       dockerfile: < Path to the dockerfile, optional, assumes dockerfile in working directory if not provided>                                                #       image-name: < Docker image name >
+config:
+  - name: < Name of the job, foo/bar would create job named bar inside folder foo>
+    build:
+    - work-dir: < Working directory of the app to be built >
+      dockerfile: < Path to the dockerfile, optional, assumes dockerfile in working directory if not provided >
+      image-name: < Docker image name  >
 ```
 
 While integrating a new service/app, the above content needs to be added in the build-config.yml file of that app repository. For example: If we are onboarding a new service called **egov-test,** then the build-config.yml should be added as mentioned below.
 
 ```
-config:   - name: core-services/egov-test     build:     - work-dir: egov-test       dockerfile: build/maven/Dockerfile       image-name: egov-test
+config:   
+  - name: core-services/egov-test     
+    build:     - work-dir: egov-test       
+    dockerfile: build/maven/Dockerfile       
+    image-name: egov-test
 ```
 
 If a job requires multiple images to be created (DB Migration) then it should be added as below,
 
 ```
-config:   - name: core-services/egov-test     build:     - work-dir: egov-test       dockerfile: build/maven/Dockerfile       image-name: egov-test     - work-dir: egov-test/src/main/resources/db       dockerfile: build/maven/Dockerfile       image-name: egov-test-db
+config:   
+  - name: core-services/egov-test     
+    build:     
+    - work-dir: egov-test       
+      dockerfile: build/maven/Dockerfile       
+      image-name: egov-test     
+    - work-dir: egov-test/src/main/resources/db       
+      dockerfile: build/maven/Dockerfile       
+      image-name: egov-test-db
 ```
 
 **Note -** **If a new repository is created then the build-config.yml should be created under the build folder and then the config values are added to it.**
@@ -80,9 +97,9 @@ The Jenkins CI pipeline is configured and managed 'as code'.
 
 ​[New Service Integration - Example](https://digit-discuss.atlassian.net/wiki/spaces/DOPS/pages/111673399/New+Service+Integration+-+Example) URL - [https://builds.digit.org/](https://builds.digit.org/%E2%80%8B)​
 
-**Job Builder** – Job Builder is a Generic Jenkins job that creates the Jenkins pipeline automatically which are then used to build the application, create the docker image of it and push the image to the docker repository. The Job Builder job requires the git repository URL as a parameter. It clones the respective git repository and reads the [**build/build-config.yml**](https://github.com/egovernments/DIGIT/blob/master/core-services/build/build-config.yml) file for each git repository and uses it to create the service build job.
+**Job Builder** – Job Builder is a Generic Jenkins job that creates the Jenkins pipeline automatically which are then used to build the application, create the docker image of it and push the image to the docker repository. The Job Builder job requires the git repository URL as a parameter. It clones the respective git repository and reads the [**build/build-config.yml**](https://github.com/misdwss/punjab-mgramseva/blob/master/build/build-config.yml) file for each git repository and uses it to create the service build job.
 
-‌**Check git repository URL is available in** [**ci.yaml**](https://github.com/egovernments/DIGIT-DevOps/blob/master/deploy-as-code/helm/environments/ci.yaml)​[‌](https://github.com/egovernments/eGov-infraOps/blob/master/helm/environments/ci.yaml)‌
+‌**Check git repository URL is available in** [**ci.yaml**](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci.yaml)​[‌](https://github.com/egovernments/eGov-infraOps/blob/master/helm/environments/ci.yaml)‌
 
 ![](https://gblobscdn.gitbook.com/assets%2F-MERG\_iQW5oN4ukgXP8K%2Fsync%2F3b7e0c5ac4c5064192777b45de690069ff11a674.png?alt=media)
 
@@ -97,13 +114,18 @@ If the git repository URL is not available ask the Devops team to add it.
 The services deployed and managed **on a Kubernetes cluster** in cloud platforms like **AWS, Azure, GCP, OpenStack, etc.** Here, we use **helm charts** to manage and generate the **Kubernetes manifest files** and use them for further deployment to the respective **Kubernetes cluster**. Each service is created as charts which will have the below-mentioned files in them.
 
 ```
-billing-service/   # Directory – name of the service/appChart.yaml         # A YAML file containing information about the chartLICENSE            # OPTIONAL: A plain text file containing the license for the chartREADME.md          # OPTIONAL: A human-readable README filevalues.yaml        # The default configuration values for this charttemplates/         # A directory of templates that, when combined with values, will generate valid Kubernetes manifest files.
+billing-service/   
+# Directory – name of the service/appChart.yaml         
+# A YAML file containing information about the chartLICENSE            
+# OPTIONAL: A plain text file containing the license for the chartREADME.md          # OPTIONAL: A human-readable README filevalues.yaml        
+# The default configuration values for this charttemplates/         
+# A directory of templates that, when combined with values, will generate valid Kubernetes manifest files.
 ```
 
-To deploy a new service, we need to create the helm chart for it. The chart should be created under the **charts/helm** directory in **eGov-infraOps** repository.
+To deploy a new service, we need to create the helm chart for it. The chart should be created under the **charts/helm** directory in iFix-DevOps repository.
 
 ```
-Github repository     https://github.com/egovernments/eGov-infraOps    https://github.com/egovernments/Train-InfraOps
+Github repository     https://github.com/misdwss/iFix-DevOps
 ```
 
 We have an automatic helm chart generator utility that needs to be installed on the local machine, the utility prompts for user inputs about the newly developed service (app specifications) for creating the helm chart. The requested chart with the configuration values (created based on the inputs provided) will be created for the user.
@@ -113,7 +135,11 @@ We have an automatic helm chart generator utility that needs to be installed on 
 The generated chart will have the following files.
 
 ```
-create Chart.yamlcreate values.yamlcreate templates/deployment.yamlcreate templates/service.yamlcreate templates/ingress.yaml
+create Chart.yaml
+create values.yaml
+create templates/deployment.yaml
+create templates/service.yaml
+create templates/ingress.yaml
 ```
 
 This chart can also be modified further based on user requirements.
