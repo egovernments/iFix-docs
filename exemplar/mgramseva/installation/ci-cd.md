@@ -1,6 +1,52 @@
+---
+description: CI/CD setup
+---
+
 # CI/CD
 
-Overview
+Post infra setup (Kubernetes Cluster), We start with deploying the Jenkins and kaniko-cache-warmer.
+
+### Pre-requisites
+
+* Sub Domain to expose CI/CD URL
+* GitHub [Oauth App](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)
+* [GitHub User ssh key](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)
+* With [GitHub user generate a personal read only access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)&#x20;
+* [Docker hub account details](https://hub.docker.com/signup) (username and password)
+*   SSL Certificate for the sub-domain
+
+
+
+**Prepare an <**[**ci.yaml**](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci.yaml)**> master config file and <**[**ci-secrets.yaml**](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml)**>, you can name this file as you wish which will have the following configurations.**
+
+* credentials, secrets (You need to encrypt using [sops](https://github.com/mozilla/sops#updatekeys-command) and create a **ci-secret.yaml** separately)
+* Check and Update [**ci-secrets.yaml**](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml)** **details (like github Oauth app clientId and clientSecret, GitHub user details gitReadSshPrivateKey and gitReadAccessToken etc..)
+* To create Jenkins namespace mark this [flag](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo.yaml#L5) **true**
+* Add your env's kubconfigs under kubConfigs like [https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml#L19](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml#L19)
+* KubeConfig env's name and deploymentJobs name from ci.yaml should be the same&#x20;
+* Update the [CIOps](https://github.com/misdwss/CIOps) and [DIGIT-DevOps](https://github.com/misdwss/iFix-DevOps) repo name with your forked repo name and provide read-only access to github user to those repo's.
+* SSL Certificate for the sub-domain
+
+```
+cd iFix-DevOps/deploy-as-code/egov-deployer
+```
+
+```
+kubectl config use-context <your cluster name>
+go run main.go deploy -c -e ci 'jenkins,kaniko-cache-warmer,nginx-ingress'
+```
+
+You have launched the Jenkins. You can access the same through your sub-domain which you configured in ci.yaml.
+
+The Jenkins CI pipeline is configured and managed 'as code'.
+
+​Example URL - https://\<Jenkins\_domain>​
+
+
+
+## **Continuous Integration (CI)** <a href="continuous-integration-ci" id="continuous-integration-ci"></a>
+
+****
 
 Since there are many services and the development code is part of various git repos, you need to understand the concept of **cicd-as-service** which is open-sourced. This page also guides you through the process of creating a CI/CD pipeline.
 
@@ -56,46 +102,6 @@ config:
 When the Jenkins Job => job builder is executed the CI Pipeline gets created automatically based on the above details in build-config.yml. Eg: **egov-test** job will be created under the **core-services** folder in Jenkins because the “build-config was edited under core-services” And it should be the “master” branch only. Once the pipeline job is created, it can be executed for any feature branch with build parameters (Specifying which branch to be built – master or any feature branch).
 
 As a result of the pipeline execution, the respective app/service docker image will be built and pushed to the Docker repository.
-
-## **Continuous Integration (CI)** <a href="continuous-integration-ci" id="continuous-integration-ci"></a>
-
-Post infra setup (Kubernetes Cluster), We start with deploying the Jenkins and kaniko-cache-warmer.
-
-### Pre-requisites
-
-* Sub Domain to expose CI/CD URL
-* GitHub [Oauth App](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)
-* [GitHub User ssh key](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)
-* With [GitHub user generate a personal read only access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)&#x20;
-* [Docker hub account details](https://hub.docker.com/signup) (username and password)
-*   SSL Certificate for the sub-domain
-
-
-
-**Prepare an <**[**ci.yaml**](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci.yaml)**> master config file and <**[**ci-secrets.yaml**](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml)**>, you can name this file as you wish which will have the following configurations.**
-
-* credentials, secrets (You need to encrypt using [sops](https://github.com/mozilla/sops#updatekeys-command) and create a **ci-secret.yaml** separately)
-* Check and Update [**ci-secrets.yaml**](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml)** **details (like github Oauth app clientId and clientSecret, GitHub user details gitReadSshPrivateKey and gitReadAccessToken etc..)
-* To create Jenkins namespace mark this [flag](https://github.com/egovernments/DIGIT-DevOps/blob/release/deploy-as-code/helm/environments/ci-demo.yaml#L5) **true**
-* Add your env's kubconfigs under kubConfigs like [https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml#L19](https://github.com/misdwss/iFix-DevOps/blob/mgramseva/deploy-as-code/helm/environments/ci-secrets.yaml#L19)
-* KubeConfig env's name and deploymentJobs name from ci.yaml should be the same&#x20;
-* Update the [CIOps](https://github.com/misdwss/CIOps) and [DIGIT-DevOps](https://github.com/misdwss/iFix-DevOps) repo name with your forked repo name and provide read-only access to github user to those repo's.
-* SSL Certificate for the sub-domain
-
-```
-cd iFix-DevOps/deploy-as-code/egov-deployer
-```
-
-```
-kubectl config use-context <your cluster name>
-go run main.go deploy -c -e ci 'jenkins,kaniko-cache-warmer,nginx-ingress'
-```
-
-You have launched the Jenkins. You can access the same through your sub-domain which you configured in ci.yaml.
-
-The Jenkins CI pipeline is configured and managed 'as code'.
-
-​[New Service Integration - Example](https://digit-discuss.atlassian.net/wiki/spaces/DOPS/pages/111673399/New+Service+Integration+-+Example) URL - https://\<Jenkins\_domain>​
 
 **Job Builder** – Job Builder is a Generic Jenkins job that creates the Jenkins pipeline automatically which are then used to build the application, create the docker image of it and push the image to the docker repository. The Job Builder job requires the git repository URL as a parameter. It clones the respective git repository and reads the [**build/build-config.yml**](https://github.com/misdwss/punjab-mgramseva/blob/master/build/build-config.yml) file for each git repository and uses it to create the service build job.
 
