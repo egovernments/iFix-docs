@@ -6,7 +6,15 @@ description: mGramSeva Deployment
 
 ## Deployment of mGramSeva <a href="deploy-mgramseva" id="deploy-mgramseva"></a>
 
-Post infra setup (Kubernetes Cluster), the deployment has got 2 stages and 2 modes. We can see the stages first and then the modes.‌
+Post infra setup (Kubernetes Cluster), there starts the deployment process.&#x20;
+
+Pipeline as code is a practice of defining deployment pipelines through source code, such as Git. Pipeline as code is part of a larger “as code” movement that includes infrastructure as code. Teams can configure builds, tests, and deployment in code that is trackable and stored in a centralized source repository. Teams can use a declarative [YAML](https://about.gitlab.com/blog/2020/10/01/three-yaml-tips-better-pipelines/) approach or a vendor-specific programming language, such as Jenkins and Groovy, but the premise remains the same.
+
+A pipeline as code file specifies the stages, jobs, and actions for a pipeline to perform. Because the file is versioned, changes in pipeline code can be tested in branches with the corresponding application release.
+
+The pipeline as code model of creating continuous integration pipelines is an industry best practice, but deployment pipelines used to be created very differently.
+
+The deployment process has got 2 stages and 2 modes. We can see the modes first and then the stages.‌
 
 ## The 2 Modes of Deployment
 

@@ -1,5 +1,5 @@
 ---
-description: CI/CD setup
+description: iFix Dashboard
 ---
 
 # CI/CD

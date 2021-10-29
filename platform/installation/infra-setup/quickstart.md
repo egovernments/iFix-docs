@@ -165,10 +165,10 @@ root@ip:DIGIT-DevOps# code .
 
 ‌
 
-1. Have look at the [sample deployment config file](https://github.com/egovernments/DIGIT-DevOps/blob/quickstart/deploy-as-code/helm/environments/quickstart-config.yaml) that needs to be configured as per any specific values according to your needs. (For a quick start you can run as it is)
+1. Have look at the[ sample deployment config](https://github.com/egovernments/iFix-DevOps/blob/quickstart/deploy-as-code/helm/environments/quickstart-config.yaml) file that needs to be configured as per any specific values according to your needs. (For a quick start you can run as it is)
 
 ```
-https://github.com/egovernments/iFix-DevOps/blob/quickstart/deploy-as-code/helm/environments/quickstart-config.yaml
+https://github.com/misdwss/iFix-DevOps/blob/quickstart/deploy-as-code/helm/environments/quickstart-config.yaml
 ```
 
 ‌

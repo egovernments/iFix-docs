@@ -1,5 +1,5 @@
 ---
-description: iFix Adapter
+description: iFix Dashboard
 ---
 
 # Local Setup
@@ -23,12 +23,12 @@ Essentially, there are 2 stages that should allow you to use the full potential 
 * SSL Certificate for the above URL
 * End-points configs (Internal/external)
 
-**Stage 2: Run the iFix\_Adapter\_setup deployment script and simply answer the questions that it asks.**
+**Stage 2: Run the iFix\_Dashboard\_setup deployment script and simply answer the questions that it asks.**
 
 ```
 cd iFix-DevOps/deploy-as-code/egov-deployer
 
-go run ifix_adapter_setup.go
+go run ifix_dashboard_setup.go
 
 #Be prepared for the following questions
 1. Do you have the Kubernetes Setup?

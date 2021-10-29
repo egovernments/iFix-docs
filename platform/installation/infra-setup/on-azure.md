@@ -44,7 +44,7 @@ Considering the above deployment architecture, the following is the resource gra
 
 * Ideally, one would write the terraform script from the scratch using this [doc](https://learn.hashicorp.com/collections/terraform/modules).
 * Here we have already written the terraform script that provisions the production-grade DIGIT Infra and can be customized with the specified configuration.
-* Let's Clone the [iFix-DevOps](https://github.com/egovernments/iFix-DevOps) GitHub repo where the terraform script to provision AKS cluster is available and below is the structure of the files.
+* Let's Clone the [iFix-DevOps](https://github.com/misdwss/iFix-DevOps) GitHub repo where the terraform script to provision AKS cluster is available and below is the structure of the files.
 
 ```
 git clone --branch release https://github.com/misdwss/iFix-DevOps.git
