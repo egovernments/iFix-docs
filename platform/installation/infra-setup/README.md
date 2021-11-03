@@ -1,10 +1,18 @@
+---
+description: >-
+  Choose your infra type and provision the necessary infra before you actually
+  deploy the services
+---
+
 # Infrastructure Setup
 
 ## Introduction
 
-iFix/mGramSeva is microservices based distributed cloud-native application, it contains many microservices that together in order work for the scale and speed. Each of this context specific microservices are dockerized and deployed on a kubernetes infrastructure. It is essential to understand some of the key concepts, benefits and best practices of kubernetes platform before we understand the deployment of the iFix/mGramSeva.  &#x20;
+iFix/mGramSeva is microservices based distributed cloud-native application, it contains many microservices that together in order work for the scale and speed. Each of this context specific microservices are dockerized and deployed on a kubernetes infrastructure. &#x20;
 
-## Pre-reads <a href="pre-read" id="pre-read"></a>
+### Pre-reads <a href="pre-read" id="pre-read"></a>
+
+It is essential to understand some of the key concepts, benefits and best practices of kubernetes platform before we understand the deployment of the iFix/mGramSeva. &#x20;
 
 * Know the basics of Kubernetes: [https://www.youtube.com/watch?v=PH-2FfFD2PU\&t=3s](https://www.youtube.com/watch?v=PH-2FfFD2PU\&t=3s)​
 * Know the [basics of kubectl](https://www.tutorialspoint.com/kubernetes/kubernetes\_kubectl\_commands.htm) commands
@@ -15,7 +23,7 @@ iFix/mGramSeva is microservices based distributed cloud-native application, it c
 
 ## 1. Choose the Install Type <a href="v-1-choose-the-cloud-1" id="v-1-choose-the-cloud-1"></a>
 
-Choose you cloud and follow the Instruction to setup a Kubernetes cluster before moving on to the Deployment.
+Choose you target infra type and follow the Instruction to setup a Kubernetes cluster before moving on to the Deployment.
 
 {% content-ref url="quickstart.md" %}
 [quickstart.md](quickstart.md)
@@ -39,8 +47,8 @@ The simplest way to get started with the **deployment process **is to manage dep
 
 #### 1. mGramSeva Installation
 
-{% content-ref url="../../../exemplar/mgramseva/installation/" %}
-[installation](../../../exemplar/mgramseva/installation/)
+{% content-ref url="../installation/" %}
+[installation](../installation/)
 {% endcontent-ref %}
 
 #### 2. iFix-adapter Installation
