@@ -25,21 +25,15 @@ Choose you cloud and follow the Instruction to setup a Kubernetes cluster before
 [on-aws.md](on-aws.md)
 {% endcontent-ref %}
 
-{% content-ref url="on-oracle-cloud.md" %}
-[on-oracle-cloud.md](on-oracle-cloud.md)
-{% endcontent-ref %}
-
 {% content-ref url="on-azure.md" %}
 [on-azure.md](on-azure.md)
 {% endcontent-ref %}
 
-## 2. Deployment Architecture <a href="v-1-choose-the-cloud" id="v-1-choose-the-cloud"></a>
+## 2. Deployment <a href="v-1-choose-the-cloud" id="v-1-choose-the-cloud"></a>
 
 Before we begin the deployment, it is important to understand the deployment architecture that starts from the source code to production ready. Deploying and managing Kubernetes have emerged as a streamlined way to deploy containers in the Cloud Infrastructure. When running Kubernetes at scale, managing, operating, and scaling its infrastructure to maximize cluster utilization — without suffering from idle resources — can be a big challenge. There are too many your development team needs to manage and configure. This includes selecting the best instance type and size, determining when to scale up or down, and making sure all of the containers are scheduled and running on the best instances — and that is even before starting to think about cost resource optimization.
 
 ![](https://lh4.googleusercontent.com/JkymqACmPBvb3Y77UrqghaQifq1YYC\_IfujLtK9eaXcIcMwvkBBx0thuGO7UD2BssAflbyyE2u9teNkqKLywDet09cl0fVO6GfgqFnRjUIRSLahvj5v7mT97sl8MKuYcFj2qfntM8Zs=s0)
-
-## 3. Deployment
 
 The simplest way to get started with the **deployment process **is to manage deployment** configuration as code**. Each service deployment configuration is defined as Helm charts and deployed into the Kubernetes cluster. We can collocate the deployment-as-code as source code, leveraging all the benefits of source control including change tracking and branching, then package it. So below is the source code repo that contains all the deployment-as-code for iFix.
 
@@ -55,7 +49,7 @@ The simplest way to get started with the **deployment process **is to manage dep
 [installation](../../../exemplar/ifix-adapter/installation/)
 {% endcontent-ref %}
 
-#### 3. iFix Dashboard Installation
+#### 3. iFix Ref Dashboard Installation
 
 {% content-ref url="../../../exemplar/ifix-dashboard/installation/" %}
 [installation](../../../exemplar/ifix-dashboard/installation/)
@@ -63,7 +57,7 @@ The simplest way to get started with the **deployment process **is to manage dep
 
 
 
-## 4. Destroy the Setup <a href="5-destroy-the-cluster" id="5-destroy-the-cluster"></a>
+## 3. Destroy the Setup <a href="5-destroy-the-cluster" id="5-destroy-the-cluster"></a>
 
 Finally, cleanup the cluster Setup if you wish, using the following command. This will delete the entire cluster and other cloud resources that were provisioned for the mGramSeva Infra Setup.
 

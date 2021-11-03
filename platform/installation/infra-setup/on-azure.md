@@ -294,4 +294,4 @@ NAME                       STATUS   ROLES   AGE     VERSION
 aks-nodepool1-31718369-0   Ready    agent   6m44s   v1.12.8 
 ```
 
-Whola! All set and now you can go with Deploy Product.
+Whola! All set and now you can go with [Deploy Product](./#v-1-choose-the-cloud)..

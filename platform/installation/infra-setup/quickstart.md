@@ -1,8 +1,8 @@
 ---
-description: mGramSeva Quickstart
+description: mGramSeva Quickstart, this is not for a production
 ---
 
-# Quickstart
+# Quickstart/Local Setup
 
 Quickstart Installation helps you jump start with the mGramSeva basic installation steps with the limited functionalities.‌
 
